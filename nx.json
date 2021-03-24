@@ -26,6 +26,7 @@
     "shared-data": { "tags": ["shared", "services"] },
     "shared-ui": { "tags": ["shared", "ui"] },
     "shared-form": { "tags": ["shared", "ui"] },
-    "shared-layout": { "tags": ["shared", "ui"] }
+    "shared-layout": { "tags": ["shared", "ui"] },
+    "domain-home": { "tags": ["domain", "page"] }
   }
 }
