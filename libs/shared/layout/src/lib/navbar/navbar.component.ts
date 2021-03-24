@@ -1,17 +1,13 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ab-layout-navbar',
+  selector: 'ab-navbar',
   templateUrl: './navbar.component.html',
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
