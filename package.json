@@ -30,7 +30,8 @@
     "dev:ssr": "ng run web:serve-ssr",
     "serve:ssr": "node dist/web/server/main.js",
     "build:ssr": "ng build --prod && ng run web:server:production",
-    "prerender": "ng run web:prerender"
+    "prerender": "ng run web:prerender",
+    "start:heroku": "npm run build:ssr && node dist/web/server/main.js"
   },
   "private": true,
   "dependencies": {
