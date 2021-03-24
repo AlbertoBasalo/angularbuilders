@@ -247,6 +247,43 @@
           }
         }
       }
+    },
+    "shared-form": {
+      "projectType": "library",
+      "root": "libs/shared/form",
+      "sourceRoot": "libs/shared/form/src",
+      "prefix": "ab-form",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/form/tsconfig.lib.json",
+            "project": "libs/shared/form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/form/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/form/src/**/*.ts",
+              "libs/shared/form/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/form"],
+          "options": {
+            "jestConfig": "libs/shared/form/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
