@@ -1,29 +1,19 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "main"
-  },
+  "affected": { "defaultBase": "main" },
   "npmScope": "@angularbuilders",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "NGIyZWJlYWItZjk4Zi00YjVlLWE2MmMtM2RjYWNhZDZjMmRmfHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -31,14 +21,8 @@
     }
   },
   "projects": {
-    "web": {
-      "tags": []
-    },
-    "web-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "web"
-      ]
-    }
+    "web": { "tags": [] },
+    "web-e2e": { "tags": [], "implicitDependencies": ["web"] },
+    "shared-data": { "tags": ["shared", "services"] }
   }
 }
