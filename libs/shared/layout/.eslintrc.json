@@ -12,12 +12,13 @@
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
-          { "type": "attribute", "prefix": "ab-layout", "style": "camelCase" }
+          { "type": "attribute", "prefix": "ab", "style": "camelCase" }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          { "type": "element", "prefix": "ab-layout", "style": "kebab-case" }
-        ]
+          { "type": "element", "prefix": "ab", "style": "kebab-case" }
+        ],
+        "@angular-eslint/no-empty-lifecycle-method": ["off"]
       }
     },
     {
