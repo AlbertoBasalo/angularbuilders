@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/domain/home',
     '<rootDir>/libs/domain/search',
     '<rootDir>/libs/domain/search-box',
+    '<rootDir>/libs/domain/auth',
   ],
 };

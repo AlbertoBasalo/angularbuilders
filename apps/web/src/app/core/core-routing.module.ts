@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('@ab/search').then((module) => module.SearchModule),
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('@ab/auth').then((module) => module.AuthModule),
+  },
 ];
 
 @NgModule({

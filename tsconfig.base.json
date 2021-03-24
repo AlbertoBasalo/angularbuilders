@@ -21,7 +21,8 @@
       "@ab/layout": ["libs/shared/layout/src/index.ts"],
       "@ab/home": ["libs/domain/home/src/index.ts"],
       "@ab/search": ["libs/domain/search/src/index.ts"],
-      "@ab/search-box": ["libs/domain/search-box/src/index.ts"]
+      "@ab/search-box": ["libs/domain/search-box/src/index.ts"],
+      "@ab/auth": ["libs/domain/auth/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
