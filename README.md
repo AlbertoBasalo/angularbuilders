@@ -1,6 +1,6 @@
-# Angularbuilders
+# Angular.Builders
 
-This project was generated using [Nx](https://nx.dev).
+This project was generated using these [Code Scripts](https://github.com/angularbuilders/code-scripts)
 
 ## 🎯 Goal
 
