@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ab/data": ["libs/shared/data/src/index.ts"]
+      "@ab/data": ["libs/shared/data/src/index.ts"],
+      "@ab/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
