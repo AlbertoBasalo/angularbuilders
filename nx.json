@@ -28,6 +28,7 @@
     "shared-form": { "tags": ["shared", "ui"] },
     "shared-layout": { "tags": ["shared", "ui"] },
     "domain-home": { "tags": ["domain", "page"] },
-    "domain-search": { "tags": ["domain", "page"] }
+    "domain-search": { "tags": ["domain", "page"] },
+    "domain-search-box": { "tags": ["domain", "widget"] }
   }
 }
