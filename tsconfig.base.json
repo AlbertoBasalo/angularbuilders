@@ -19,7 +19,8 @@
       "@ab/ui": ["libs/shared/ui/src/index.ts"],
       "@ab/form": ["libs/shared/form/src/index.ts"],
       "@ab/layout": ["libs/shared/layout/src/index.ts"],
-      "@ab/home": ["libs/domain/home/src/index.ts"]
+      "@ab/home": ["libs/domain/home/src/index.ts"],
+      "@ab/search": ["libs/domain/search/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

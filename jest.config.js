@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/shared/form',
     '<rootDir>/libs/shared/layout',
     '<rootDir>/libs/domain/home',
+    '<rootDir>/libs/domain/search',
   ],
 };

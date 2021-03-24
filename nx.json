@@ -27,6 +27,7 @@
     "shared-ui": { "tags": ["shared", "ui"] },
     "shared-form": { "tags": ["shared", "ui"] },
     "shared-layout": { "tags": ["shared", "ui"] },
-    "domain-home": { "tags": ["domain", "page"] }
+    "domain-home": { "tags": ["domain", "page"] },
+    "domain-search": { "tags": ["domain", "page"] }
   }
 }
