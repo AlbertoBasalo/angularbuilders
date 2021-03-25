@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/angularbuilders/angularbuilders/compare/v0.0.1...v0.0.2) (2021-03-25)
+
+
+### Features
+
+* show-category-list-at-home-page - Closes [#5](https://github.com/angularbuilders/angularbuilders/issues/5) ([295a966](https://github.com/angularbuilders/angularbuilders/commit/295a966cd52d42988df2786452b7f61aa9cf028c))
+
 ### 0.0.1 (2021-03-25)
 
 

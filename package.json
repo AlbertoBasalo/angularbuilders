@@ -1,6 +1,6 @@
 {
   "name": "angularbuilders",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "ng": "nx",
@@ -18,7 +18,10 @@
     "serve:ssr": "node dist/www/server/main.js",
     "build:ssr": "ng build --prod && ng run www:server:production",
     "prerender": "ng run www:prerender",
-    "start:heroku": "npm run build:ssr && node ./dist/www/server/main.js"
+    "prerelease": "standard-version ",
+    "release": "git push --follow-tags origin main",
+    "predeploy": "npm run release",
+    "deploy": "git checkout heroku-www && git merge main "
   },
   "private": true,
   "dependencies": {

@@ -1,16 +1,17 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HomeService } from './home.service';
 
 @Component({
   templateUrl: './home.page.html',
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePage implements OnInit {
-
-  constructor() { }
+  categories$!: Observable<any[]>;
+  constructor(private service: HomeService) {}
 
   ngOnInit(): void {
+    this.categories$ = this.service.getCategories$();
   }
-
 }
