@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/angularbuilders/angularbuilders/compare/v0.0.5...v0.0.6) (2021-03-25)
+
+
+### Features
+
+* new icons ([730e16e](https://github.com/angularbuilders/angularbuilders/commit/730e16ef0d32645deed67eee080b1fe55223c352))
+
 ### [0.0.5](https://github.com/angularbuilders/angularbuilders/compare/v0.0.4...v0.0.5) (2021-03-25)
 
 
