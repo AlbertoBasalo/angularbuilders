@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HomeService } from './home.service';
 
 @Component({
@@ -8,10 +7,9 @@ import { HomeService } from './home.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePage implements OnInit {
-  categories$!: Observable<any[]>;
+  categories$ = this.service.getCategories$();
+
   constructor(private service: HomeService) {}
 
-  ngOnInit(): void {
-    this.categories$ = this.service.getCategories$();
-  }
+  ngOnInit(): void {}
 }

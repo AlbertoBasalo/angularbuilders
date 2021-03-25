@@ -8,9 +8,8 @@
         "plugin:@nrwl/nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "parserOptions": { "project": ["libs/domain/home/tsconfig.*?.json"] },
+      "parserOptions": { "project": ["libs/shared/global/tsconfig.*?.json"] },
       "rules": {
-        "@angular-eslint/no-empty-lifecycle-method": ["off"],
         "@angular-eslint/directive-selector": [
           "error",
           { "type": "attribute", "prefix": "ab", "style": "camelCase" }
