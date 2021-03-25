@@ -1,29 +1,19 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "main"
-  },
+  "affected": { "defaultBase": "main" },
   "npmScope": "@angularbuilders",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "NGIyZWJlYWItZjk4Zi00YjVlLWE2MmMtM2RjYWNhZDZjMmRmfHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -31,64 +21,16 @@
     }
   },
   "projects": {
-    "shared-data": {
-      "tags": [
-        "shared",
-        "core"
-      ]
-    },
-    "shared-ui": {
-      "tags": [
-        "shared",
-        "ui"
-      ]
-    },
-    "shared-form": {
-      "tags": [
-        "shared",
-        "ui"
-      ]
-    },
-    "shared-layout": {
-      "tags": [
-        "shared",
-        "ui"
-      ]
-    },
-    "domain-home": {
-      "tags": [
-        "domain",
-        "page"
-      ]
-    },
-    "domain-search": {
-      "tags": [
-        "domain",
-        "page"
-      ]
-    },
-    "domain-search-box": {
-      "tags": [
-        "domain",
-        "widget"
-      ]
-    },
-    "domain-auth": {
-      "tags": [
-        "domain",
-        "page"
-      ]
-    },
-    "www": {
-      "tags": [
-        "app"
-      ]
-    },
-    "www-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "www"
-      ]
-    }
+    "shared-data": { "tags": ["shared", "core"] },
+    "shared-ui": { "tags": ["shared", "ui"] },
+    "shared-form": { "tags": ["shared", "ui"] },
+    "shared-layout": { "tags": ["shared", "ui"] },
+    "domain-home": { "tags": ["domain", "page"] },
+    "domain-search": { "tags": ["domain", "page"] },
+    "domain-search-box": { "tags": ["domain", "widget"] },
+    "domain-auth": { "tags": ["domain", "page"] },
+    "www": { "tags": ["app"] },
+    "www-e2e": { "tags": [], "implicitDependencies": ["www"] },
+    "domain-not-found": { "tags": ["domain", "page"] }
   }
 }

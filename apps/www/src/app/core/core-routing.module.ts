@@ -7,13 +7,22 @@ const routes: Routes = [
     loadChildren: () => import('@ab/home').then((module) => module.HomeModule),
   },
   {
+    path: 'auth',
+    loadChildren: () => import('@ab/auth').then((module) => module.AuthModule),
+  },
+  {
     path: 'search',
     loadChildren: () =>
       import('@ab/search').then((module) => module.SearchModule),
   },
   {
-    path: 'auth',
-    loadChildren: () => import('@ab/auth').then((module) => module.AuthModule),
+    path: 'not-found',
+    loadChildren: () =>
+      import('@ab/not-found').then((module) => module.NotFoundModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found',
   },
 ];
 
