@@ -1,1 +1,20 @@
-<p>card works!</p>
+<article class="card mb-4">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{ card.title }}
+    </p>
+  </header>
+  <main class="card-content">
+    <div *ngIf="!!card.description" class="content">
+      {{ card.description }}
+    </div>
+    <div *ngIf="!card.description" class="content">
+      <ng-content select=".content">
+      </ng-content>
+    </div>
+  </main>
+  <footer class="card-footer">
+    <ng-content select=".footer-content">
+    </ng-content>
+  </footer>
+</article>
