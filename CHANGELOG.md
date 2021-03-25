@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/angularbuilders/angularbuilders/compare/v0.0.2...v0.0.3) (2021-03-25)
+
+
+### Features
+
+* shared-environment - Closes [#7](https://github.com/angularbuilders/angularbuilders/issues/7) ([cf19419](https://github.com/angularbuilders/angularbuilders/commit/cf19419e7f3f7508bcffe986838b31e9b7ab833a))
+* shared-ui-card-component - Closes [#9](https://github.com/angularbuilders/angularbuilders/issues/9) ([3a66ade](https://github.com/angularbuilders/angularbuilders/commit/3a66adef682d5692d6f6a2de676055e3dc918b73))
+
 ### [0.0.2](https://github.com/angularbuilders/angularbuilders/compare/v0.0.1...v0.0.2) (2021-03-25)
 
 
