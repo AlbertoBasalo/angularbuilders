@@ -31,6 +31,7 @@
     "domain-auth": { "tags": ["domain", "page"] },
     "www": { "tags": ["app"] },
     "www-e2e": { "tags": [], "implicitDependencies": ["www"] },
-    "domain-not-found": { "tags": ["domain", "page"] }
+    "domain-not-found": { "tags": ["domain", "page"] },
+    "shared-global": { "tags": ["shared", "core"] }
   }
 }
