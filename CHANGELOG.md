@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/angularbuilders/angularbuilders/compare/v0.0.3...v0.0.4) (2021-03-25)
+
+
+### Features
+
+* home-page-as-a-landing - Closes [#11](https://github.com/angularbuilders/angularbuilders/issues/11) ([6ae18c9](https://github.com/angularbuilders/angularbuilders/commit/6ae18c9d611bb3978055eff0c3176fe817973660))
+
+
+### Bug Fixes
+
+*  depoly script ([29d7f45](https://github.com/angularbuilders/angularbuilders/commit/29d7f45fa98b4a0bc5e64c559746197813a01b1f))
+
 ### [0.0.3](https://github.com/angularbuilders/angularbuilders/compare/v0.0.2...v0.0.3) (2021-03-25)
 
 
