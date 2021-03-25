@@ -21,7 +21,7 @@
     "prerelease": "standard-version ",
     "release": "git push --follow-tags origin main",
     "predeploy": "npm run release",
-    "deploy": "git checkout heroku-www && git merge main && git push $$ git checkout main "
+    "deploy": "git checkout heroku-www && git merge main && git push && git checkout main "
   },
   "private": true,
   "dependencies": {
