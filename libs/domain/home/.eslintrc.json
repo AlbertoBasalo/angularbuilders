@@ -10,6 +10,7 @@
       ],
       "parserOptions": { "project": ["libs/domain/home/tsconfig.*?.json"] },
       "rules": {
+        "@angular-eslint/no-empty-lifecycle-method": ["off"],
         "@angular-eslint/directive-selector": [
           "error",
           { "type": "attribute", "prefix": "ab", "style": "camelCase" }
