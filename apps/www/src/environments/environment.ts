@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'https://api-angular-builders.herokuapp.com/v1',
 };
 
 /*
