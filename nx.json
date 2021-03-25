@@ -21,8 +21,6 @@
     }
   },
   "projects": {
-    "web": { "tags": [] },
-    "web-e2e": { "tags": [], "implicitDependencies": ["web"] },
     "shared-data": { "tags": ["shared", "services"] },
     "shared-ui": { "tags": ["shared", "ui"] },
     "shared-form": { "tags": ["shared", "ui"] },
