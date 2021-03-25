@@ -1,6 +1,6 @@
 module.exports = {
   projects: [
-    '<rootDir>/apps/web',
+    ,
     '<rootDir>/libs/shared/data',
     '<rootDir>/libs/shared/ui',
     '<rootDir>/libs/shared/form',
@@ -9,5 +9,6 @@ module.exports = {
     '<rootDir>/libs/domain/search',
     '<rootDir>/libs/domain/search-box',
     '<rootDir>/libs/domain/auth',
+    '<rootDir>/apps/www',
   ],
 };

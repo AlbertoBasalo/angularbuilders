@@ -9,7 +9,7 @@ import { AppServerModule } from './src/main.server';
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/web/browser');
+  const distFolder = join(process.cwd(), 'dist/www/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
     ? 'index.original.html'
     : 'index';
@@ -62,7 +62,7 @@ function run(): void {
 declare const __non_webpack_require__: NodeRequire;
 const mainModule = __non_webpack_require__.main;
 const moduleFilename = (mainModule && mainModule.filename) || '';
-console.log('Starting Universal Server');
+console.log(`Starting Angular Universal Server`);
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }
