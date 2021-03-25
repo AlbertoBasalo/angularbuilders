@@ -524,6 +524,43 @@
           }
         }
       }
+    },
+    "domain-not-found": {
+      "projectType": "library",
+      "root": "libs/domain/not-found",
+      "sourceRoot": "libs/domain/not-found/src",
+      "prefix": "ab",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/domain/not-found/tsconfig.lib.json",
+            "project": "libs/domain/not-found/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/domain/not-found/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/domain/not-found/src/**/*.ts",
+              "libs/domain/not-found/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/domain/not-found"],
+          "options": {
+            "jestConfig": "libs/domain/not-found/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

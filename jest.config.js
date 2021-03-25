@@ -10,5 +10,6 @@ module.exports = {
     '<rootDir>/libs/domain/search-box',
     '<rootDir>/libs/domain/auth',
     '<rootDir>/apps/www',
+    '<rootDir>/libs/domain/not-found',
   ],
 };
