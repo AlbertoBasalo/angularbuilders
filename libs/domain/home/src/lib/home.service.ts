@@ -1,14 +1,17 @@
+import { ENVIRONMENT, Environment } from '@ab/global';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HomeService {
-  private readonly categoriesUrl =
-    'https://api-angular-builders.herokuapp.com/v1' + '/categories';
-  constructor(private http: HttpClient) {}
+  private readonly categoriesUrl = `${this.environment.apiUrl}/categories`;
+  constructor(
+    @Inject(ENVIRONMENT) private readonly environment: Environment,
+    private http: HttpClient
+  ) {}
   getCategories$() {
     return this.http
       .get<any>(this.categoriesUrl)

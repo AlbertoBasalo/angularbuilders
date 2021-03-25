@@ -11,5 +11,6 @@ module.exports = {
     '<rootDir>/libs/domain/auth',
     '<rootDir>/apps/www',
     '<rootDir>/libs/domain/not-found',
+    '<rootDir>/libs/shared/global',
   ],
 };
