@@ -30,6 +30,8 @@
     "domain-home": { "tags": ["domain", "page"] },
     "domain-search": { "tags": ["domain", "page"] },
     "domain-search-box": { "tags": ["domain", "widget"] },
-    "domain-auth": { "tags": ["domain", "page"] }
+    "domain-auth": { "tags": ["domain", "page"] },
+    "www": { "tags": ["app"] },
+    "www-e2e": { "tags": [], "implicitDependencies": ["www"] }
   }
 }

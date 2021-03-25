@@ -27,10 +27,10 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "dev": "ng serve -o --hmr",
-    "dev:ssr": "ng run web:serve-ssr",
-    "serve:ssr": "node dist/web/server/main.js",
-    "build:ssr": "ng build --prod && ng run web:server:production",
-    "prerender": "ng run web:prerender"
+    "dev:ssr": "ng run www:serve-ssr",
+    "serve:ssr": "node dist/www/server/main.js",
+    "build:ssr": "ng build --prod && ng run www:server:production",
+    "prerender": "ng run www:prerender"
   },
   "private": true,
   "dependencies": {
