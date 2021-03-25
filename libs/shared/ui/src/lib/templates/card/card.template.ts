@@ -1,17 +1,20 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { Card } from '../../models/card';
 
 @Component({
   selector: 'ab-ui-card',
   templateUrl: './card.template.html',
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardTemplate implements OnInit {
+  @Input() card: Card = { title: '', description: '' };
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

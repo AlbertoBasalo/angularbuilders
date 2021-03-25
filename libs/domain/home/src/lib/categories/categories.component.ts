@@ -6,13 +6,13 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'ab-home',
-  templateUrl: './home.component.html',
-  styles: [],
+  selector: 'ab-categories',
+  templateUrl: './categories.component.html',
+  styleUrls: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
-  @Input() categories: any[] = [];
+export class CategoriesComponent implements OnInit {
+  @Input() categories: any = {};
   constructor() {}
 
   ngOnInit(): void {}
