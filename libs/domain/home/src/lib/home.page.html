@@ -1,10 +1,34 @@
-<section class="hero">
+<header class="hero is-primary mb-4">
   <div class="hero-body">
     <p class="title"> The home of the Angular Builders </p>
     <p class="subtitle"> A place to share and learn. </p>
   </div>
-</section>
-<section class="container">
-  <ab-categories *ngIf="categories$ | async as categories" [categories]="categories">
-  </ab-categories>
-</section>
+</header>
+<main class="container mt-4">
+  <article class="box">
+    <header class="hero is-danger mb-4">
+      <div class="hero-body">
+        <p class="title">Resources for Angular developers</p>
+        <p class="subtitle">Explore the categories.</p>
+      </div>
+    </header>
+    <ab-categories class="mt-4" *ngIf="categories$ | async as categories" [categories]="categories">
+    </ab-categories>
+  </article>
+  <article class="box">
+    <header class="hero is-info">
+      <div class="hero-body">
+        <p class="title">Services by angular.Builders</p>
+        <p class="subtitle">Consulting and learning services by Angular seasoned professionals.</p>
+      </div>
+    </header>
+    <main class="section">
+      <div class="message is-link "><span class="message-header">Struggling with your next great
+          Angular solution? </span>We can help you with architecture of your solution </div>
+      <div class="message is-link"><span class="message-header">If your team has any
+          doubt</span>They can ask anything</div>
+      <div class="message is-link"><span class="message-header">New or junior developers, no
+          worry.</span> We can teach them.</div>
+    </main>
+  </article>
+</main>
