@@ -4,3 +4,7 @@
     <p class="subtitle"> A place to share and learn. </p>
   </div>
 </section>
+<section class="container">
+  <ab-home *ngIf="categories$ | async as categories" [categories]="categories">
+  </ab-home>
+</section>
