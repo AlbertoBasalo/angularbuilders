@@ -1,17 +1,59 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  forwardRef,
+  Input,
+} from '@angular/core';
+import {
+  ControlValueAccessor,
+  FormGroup,
+  NG_VALUE_ACCESSOR,
+} from '@angular/forms';
 
 @Component({
   selector: 'ab-form-control',
   templateUrl: './control.component.html',
-  styles: [
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => ControlComponent),
+      multi: true,
+    },
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ControlComponent implements OnInit {
+export class ControlComponent implements ControlValueAccessor {
+  @Input() form!: FormGroup;
+  @Input() formControlName = '';
+  @Input() label = '';
+  @Input() placeholder = '';
+  @Input() type = 'text';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  value: unknown;
+  onChange: any;
+  onTouch: any;
+  onInput(event: any) {
+    this.value = event.target.value;
+    this.onTouch();
+    this.onChange(this.value);
+  }
+  writeValue(value: any): void {
+    this.value = value;
+  }
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+  registerOnTouched(fn: any): void {
+    this.onTouch = fn;
   }
 
+  hasErrorToShow() {
+    const control = this.form.controls[this.formControlName];
+    return control.touched && control.invalid;
+  }
+  getErrorMessage() {
+    const control = this.form.controls[this.formControlName];
+    return JSON.stringify(control.errors);
+  }
 }

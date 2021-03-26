@@ -1,0 +1,47 @@
+<header class="hero is-warning mb-4">
+  <div class="hero-body">
+    <p class="title">We can help you</p>
+    <p class="subtitle">Contact us.</p>
+  </div>
+</header>
+<form [formGroup]="form" (submit)="onSubmit()" class="box mt-4 mb-4">
+  <fieldset class="mb-4">
+    <ab-form-control
+                     [form]="form"
+                     formControlName="name"
+                     [label]="'Your name, please'"
+                     [placeholder]="'John Doe'">
+    </ab-form-control>
+    <ab-form-control
+                     [form]="form"
+                     formControlName="email"
+                     type="email"
+                     [label]="'Your email address'"
+                     [placeholder]="'john.doe@acme.com'">
+    </ab-form-control>
+    <ab-form-control
+                     [form]="form"
+                     formControlName="interest"
+                     [label]="'What do you need?'"
+                     [placeholder]="'consulting, courses...'">
+    </ab-form-control>
+    <ab-form-control
+                     [form]="form"
+                     formControlName="region"
+                     label="Where are you?"
+                     [placeholder]="'The internet'">
+    </ab-form-control>
+    <ab-form-control
+                     [form]="form"
+                     formControlName="isHuman"
+                     [label]="'Say yes if you are a human'"
+                     [placeholder]="'Yes I´m not a robot'">
+    </ab-form-control>
+  </fieldset>
+  <input type="submit" value="Ok, get in touch!" [disabled]="form.invalid"
+         class="button is-link" />
+</form>
+<section *ngIf="showSentContact" class="notification is-success mt-4">
+  <button class="delete" (click)="showSentContact = false"></button> Thanks for your interest. We
+  will get in contact with you ASAP!
+</section>
