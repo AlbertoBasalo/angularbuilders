@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class HomeService {
   private readonly categoriesUrl = `${this.environment.apiUrl}/categories`;
+  private readonly leadsUrl = `${this.environment.apiUrl}/leads`;
   constructor(
     @Inject(ENVIRONMENT) private readonly environment: Environment,
     private http: HttpClient
@@ -16,5 +17,8 @@ export class HomeService {
     return this.http
       .get<any>(this.categoriesUrl)
       .pipe(map((result) => result['data']));
+  }
+  postLead$(lead: any) {
+    return this.http.post(this.leadsUrl, lead);
   }
 }
