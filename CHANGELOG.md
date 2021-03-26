@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/angularbuilders/angularbuilders/compare/v0.0.7...v0.0.8) (2021-03-26)
+
+
+### Features
+
+* lead-form ([744e963](https://github.com/angularbuilders/angularbuilders/commit/744e9635cb09430946042a5a68d4ab7a8eaa7c05))
+
 ### [0.0.7](https://github.com/angularbuilders/angularbuilders/compare/v0.0.6...v0.0.7) (2021-03-26)
 
 ### [0.0.6](https://github.com/angularbuilders/angularbuilders/compare/v0.0.5...v0.0.6) (2021-03-25)
