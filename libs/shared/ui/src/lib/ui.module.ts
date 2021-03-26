@@ -13,6 +13,7 @@ import { PageTemplate } from './templates/page/page.template';
 import { PanelTemplate } from './templates/panel/panel.template';
 import { SectionTemplate } from './templates/section/section.template';
 import { NotificationComponent } from './components/notification/notification.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -30,6 +31,7 @@ import { NotificationComponent } from './components/notification/notification.co
     PageTemplate,
     SectionTemplate,
     NotificationComponent,
+    HeaderComponent,
   ],
   exports: [
     BreadcrumbComponent,
@@ -45,6 +47,7 @@ import { NotificationComponent } from './components/notification/notification.co
     PageTemplate,
     SectionTemplate,
     NotificationComponent,
+    HeaderComponent,
   ],
 })
 export class UiModule {}

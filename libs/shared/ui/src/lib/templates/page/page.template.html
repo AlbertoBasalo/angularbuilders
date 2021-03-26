@@ -1,10 +1,5 @@
-<header class="hero mt-4 mb-4 {{header.heroClass}} ">
-  <div class="hero-body">
-    <p class="title"> {{ header.title }} </p>
-    <p class="subtitle"> {{ header.subtitle }} </p>
-  </div>
-</header>
-<main class="container mt-4 mb-4">
-  <ng-content select="*">
+<main>
+  <ab-ui-header [header]="header"></ab-ui-header>
+  <ng-content class="mt-4 mb-4" select="*">
   </ng-content>
 </main>
