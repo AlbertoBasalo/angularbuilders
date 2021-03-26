@@ -10,6 +10,11 @@ import { HomeService } from './home.service';
 export class HomePage implements OnInit {
   categories$ = this.service.getCategories$();
   showSentContact$ = new BehaviorSubject<boolean>(false);
+  header = {
+    heroClass: 'is-primary',
+    title: 'The home of the Angular Builders',
+    subtitle: 'A place to share, get help and learn',
+  };
 
   constructor(private service: HomeService) {}
 

@@ -1,32 +1,6 @@
-<header class="hero is-primary mt-4 mb-4">
-  <div class="hero-body">
-    <p class="title"> The home of the Angular Builders </p>
-    <p class="subtitle"> A place to share, get help and learn. </p>
-  </div>
-</header>
-<main class="container mt-4">
-  <article class="box mt-4 mb-4">
-    <ab-categories [categories]="categories$ | async">
-    </ab-categories>
-  </article>
-  <article class="box mt-4 mb-4">
-    <header class="hero is-info">
-      <div class="hero-body">
-        <p class="title">Services by Angular.Builders</p>
-        <p class="subtitle">Consulting and learning services by Angular seasoned professionals.</p>
-      </div>
-    </header>
-    <main class="section">
-      <div class="box message is-link "><span class="message-header mb-4">Struggling with your next
-          great Angular solution? </span>We can help you with architecture of your solution with
-        scaffoldings, generators, snippets, advice... </div>
-      <div class="box message is-link "><span class="message-header mb-4">If your team has any
-          doubt</span>They can ask us anything about Angular</div>
-      <div class="box message is-link "><span class="message-header mb-4">New or junior developers?,
-          no worry.</span> We can teach them from the beginning to any level.</div>
-    </main>
-  </article>
-  <section class="box mt-4 mb-4">
-    <ab-lead (send)="onLeadSend($event)" [showSentContact]="showSentContact$ | async"></ab-lead>
-  </section>
-</main>
+<ab-ui-page [header]="header">
+  <ab-categories [categories]="categories$ | async">
+  </ab-categories>
+  <ab-services></ab-services>
+  <ab-lead (send)="onLeadSend($event)" [showSentContact]="showSentContact$ | async"></ab-lead>
+</ab-ui-page>

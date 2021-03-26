@@ -13,6 +13,11 @@ import {
 })
 export class CategoriesComponent implements OnInit {
   @Input() categories: any = {};
+  header = {
+    heroClass: 'is-danger',
+    title: 'Resources for Angular developers',
+    subtitle: 'Coming soon...',
+  };
   constructor() {}
 
   ngOnInit(): void {}
