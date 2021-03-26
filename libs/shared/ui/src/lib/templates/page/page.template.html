@@ -1,0 +1,10 @@
+<header class="hero mt-4 mb-4 {{header.heroClass}} ">
+  <div class="hero-body">
+    <p class="title"> {{ header.title }} </p>
+    <p class="subtitle"> {{ header.subtitle }} </p>
+  </div>
+</header>
+<main class="container mt-4 mb-4">
+  <ng-content select="*">
+  </ng-content>
+</main>

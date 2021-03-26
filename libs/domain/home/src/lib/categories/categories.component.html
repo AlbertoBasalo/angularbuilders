@@ -1,11 +1,7 @@
-<header class="hero is-danger mb-4">
-  <div class="hero-body">
-    <p class="title">Resources for Angular developers</p>
-    <p class="subtitle"><i>Coming soon...</i> </p>
-  </div>
-</header>
-<section class="columns">
-  <ab-ui-card class="column" *ngFor="let category of categories"
-              [card]="{title:category['name'], description:category['description'] }">
-  </ab-ui-card>
-</section>
+<ab-ui-section [header]="header">
+  <section class="columns">
+    <ab-ui-card class="column" *ngFor="let category of categories"
+                [card]="{title:category['name'], description:category['description'] }">
+    </ab-ui-card>
+  </section>
+</ab-ui-section>
