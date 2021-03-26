@@ -12,6 +12,7 @@ import { ModalTemplate } from './templates/modal/modal.template';
 import { PageTemplate } from './templates/page/page.template';
 import { PanelTemplate } from './templates/panel/panel.template';
 import { SectionTemplate } from './templates/section/section.template';
+import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -28,6 +29,7 @@ import { SectionTemplate } from './templates/section/section.template';
     TruncatePipe,
     PageTemplate,
     SectionTemplate,
+    NotificationComponent,
   ],
   exports: [
     BreadcrumbComponent,
@@ -42,6 +44,7 @@ import { SectionTemplate } from './templates/section/section.template';
     TruncatePipe,
     PageTemplate,
     SectionTemplate,
+    NotificationComponent,
   ],
 })
 export class UiModule {}

@@ -2,5 +2,7 @@
   <ab-categories [categories]="categories$ | async">
   </ab-categories>
   <ab-services></ab-services>
-  <ab-lead (send)="onLeadSend($event)" [showSentContact]="showSentContact$ | async"></ab-lead>
+  <ab-lead (send)="onLeadSend($event)" [isSuccess]="(isOk$ | async)|| false"
+           [isError]="(isError$ | async)|| false">
+  </ab-lead>
 </ab-ui-page>

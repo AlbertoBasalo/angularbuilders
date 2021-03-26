@@ -1,17 +1,16 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ab-ui-message',
   templateUrl: './message.component.html',
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MessageComponent implements OnInit {
+export class MessageComponent {
+  @Input() message = { show: true, class: '', header: '', body: '' };
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onClose() {
+    this.message.show = false;
   }
-
 }

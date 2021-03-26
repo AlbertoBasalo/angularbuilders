@@ -36,8 +36,10 @@
     <input type="submit" value="Ok, get in touch!" [disabled]="form.invalid"
            class="button is-link mt-4" />
   </form>
-  <section *ngIf="showSentContact" class="notification is-success mt-4">
-    <button class="delete" (click)="showSentContact = false"></button> Thanks for your interest. We
-    will get in contact with you ASAP!
-  </section>
+  <ab-ui-notification
+                      [notification]="{ show:isSuccess, class:'is-success' , message: 'Thanks for your interest. We will get in contact with you ASAP!' }">
+  </ab-ui-notification>
+  <ab-ui-notification
+                      [notification]="{ show:isError, class:'is-danger' , message: 'There was an error!. Review your data and rety. If persists we will fix it ASAP!' }">
+  </ab-ui-notification>
 </ab-ui-section>
