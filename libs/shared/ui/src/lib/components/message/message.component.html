@@ -1,1 +1,11 @@
-<p>message works!</p>
+<article *ngIf="message.show" class="message {{message.class}} mt-4">
+  <button class="delete" (click)="onClose()"></button>
+  {{ message.body }}
+  <div class="message-header">
+    <p>{{ message.header }}</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+    {{ message.body }}
+  </div>
+</article>

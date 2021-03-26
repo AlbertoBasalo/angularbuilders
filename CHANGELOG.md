@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/angularbuilders/angularbuilders/compare/v0.0.8...v0.0.9) (2021-03-26)
+
+
+### Features
+
+* notifications and messages ([a68eb77](https://github.com/angularbuilders/angularbuilders/commit/a68eb77e3849f7f70c6c1100b7caf41cd8ac88ca))
+* templates-for-sections-headers-pages - Closes [#14](https://github.com/angularbuilders/angularbuilders/issues/14) ([f1471c1](https://github.com/angularbuilders/angularbuilders/commit/f1471c1d19427335a0a0876131689880f8446f26))
+
 ### [0.0.8](https://github.com/angularbuilders/angularbuilders/compare/v0.0.7...v0.0.8) (2021-03-26)
 
 

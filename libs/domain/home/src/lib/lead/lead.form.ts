@@ -12,8 +12,14 @@ import {
 })
 export class LeadForm implements OnInit {
   form!: FormGroup;
-  @Input() showSentContact: boolean | null = false;
+  @Input() isSuccess = false;
+  @Input() isError = false;
   @Output() send = new EventEmitter<any>();
+  header = {
+    heroClass: 'is-warning',
+    title: 'We can help you',
+    subtitle: 'Contact us.',
+  };
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
