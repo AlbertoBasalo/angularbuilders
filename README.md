@@ -4,7 +4,7 @@ This project was generated using these [Code Scripts](https://github.com/angular
 
 ## 🎯 Goal
 
-A site to share content for Angular developers
+A site for Angular developers
 
 ### 🧰 Tools
 
@@ -14,3 +14,7 @@ A site to share content for Angular developers
 - Universal
 - PWA
 - Heroku
+
+### 🏗 By The Angular Builders
+
+[www.angular.builders](https://www.angular.builders/)

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HomeService } from './home.service';
 
@@ -7,7 +7,7 @@ import { HomeService } from './home.service';
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePage implements OnInit {
+export class HomePage {
   categories$ = this.service.getCategories$();
   isOk$ = new BehaviorSubject<boolean>(false);
   isError$ = new BehaviorSubject<boolean>(false);
@@ -19,15 +19,10 @@ export class HomePage implements OnInit {
 
   constructor(private service: HomeService) {}
 
-  ngOnInit(): void {}
-
   onLeadSend(lead: any) {
-    this.service
-      .postLead$(lead)
-      .pipe()
-      .subscribe({
-        next: () => this.isOk$.next(true),
-        error: () => this.isError$.next(true),
-      });
+    this.service.postLead$(lead).subscribe({
+      next: () => this.isOk$.next(true),
+      error: () => this.isError$.next(true),
+    });
   }
 }

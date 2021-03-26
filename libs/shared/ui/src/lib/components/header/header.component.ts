@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Header } from '../../models/header';
 
 @Component({
@@ -12,9 +7,7 @@ import { Header } from '../../models/header';
   styleUrls: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Input() header: Header = { title: '', subtitle: '', heroClass: '' };
   constructor() {}
-
-  ngOnInit(): void {}
 }
