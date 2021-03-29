@@ -28,7 +28,7 @@
     "domain-home": { "tags": ["domain", "page"] },
     "domain-search": { "tags": ["domain", "page"] },
     "domain-search-box": { "tags": ["domain", "widget"] },
-    "domain-auth": { "tags": ["domain", "page"] },
+    "shared-auth": { "tags": ["shared", "page"] },
     "www": { "tags": ["app"] },
     "www-e2e": { "tags": [], "implicitDependencies": ["www"] },
     "domain-not-found": { "tags": ["domain", "page"] },
