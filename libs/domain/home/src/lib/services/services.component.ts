@@ -11,7 +11,7 @@ export class ServicesComponent implements OnInit {
     heroClass: 'is-info',
     title: 'Services by Angular.Builders',
     subtitle:
-      'Consulting and learning services by Angular seasoned professionals',
+      'Advise, consulting and learning services by Angular seasoned professionals',
   };
   constructor() {}
 

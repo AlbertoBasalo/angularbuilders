@@ -1,10 +1,10 @@
 # Angular.Builders
 
-This project was generated using these [Code Scripts](https://github.com/angularbuilders/code-scripts)
+This project was generated using these [AB-generators]https://github.com/angularbuilders/ab-generators)
 
 ## 🎯 Goal
 
-A site to share content for Angular developers
+A site for Angular developers
 
 ### 🧰 Tools
 
@@ -14,3 +14,26 @@ A site to share content for Angular developers
 - Universal
 - PWA
 - Heroku
+
+### 🏗 By The Angular Builders
+
+[www.angular.builders](https://www.angular.builders/)
+
+# AngularBuilders
+## apps
+### www
+### www-e2e
+## libs
+### domain
+#### home
+#### not-found
+#### search
+#### search-box
+### shared
+#### auth
+#### data
+#### form
+#### global
+#### layout
+#### ui
+## tools
