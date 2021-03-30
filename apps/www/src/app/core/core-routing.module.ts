@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
+import { environment } from '../../environments/environment';
+
+declare let gtag: Function;
 
 const routes: Routes = [
   {
@@ -34,4 +37,14 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class CoreRoutingModule {}
+export class CoreRoutingModule {
+  constructor(router: Router) {
+    router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        gtag('config', environment.ga, {
+          page_path: event.urlAfterRedirects,
+        });
+      }
+    });
+  }
+}
