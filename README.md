@@ -18,3 +18,22 @@ A site for Angular developers
 ### 🏗 By The Angular Builders
 
 [www.angular.builders](https://www.angular.builders/)
+
+# AngularBuilders
+## apps
+### www
+### www-e2e
+## libs
+### domain
+#### home
+#### not-found
+#### search
+#### search-box
+### shared
+#### auth
+#### data
+#### form
+#### global
+#### layout
+#### ui
+## tools
