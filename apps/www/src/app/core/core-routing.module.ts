@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
 import { environment } from '../../environments/environment';
 
@@ -38,13 +39,15 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class CoreRoutingModule {
-  constructor(router: Router) {
-    router.events.subscribe((event: any) => {
-      if (event instanceof NavigationEnd) {
-        gtag('config', environment.ga, {
-          page_path: event.urlAfterRedirects,
-        });
-      }
-    });
+  constructor(@Inject(PLATFORM_ID) platformId: any, router: Router) {
+    if (isPlatformBrowser(platformId)) {
+      router.events.subscribe((event: any) => {
+        if (event instanceof NavigationEnd) {
+          gtag('config', environment.ga, {
+            page_path: event.urlAfterRedirects,
+          });
+        }
+      });
+    }
   }
 }
