@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://api-angular-builders.herokuapp.com/v1',
+  ga: 'UA-143747852-1',
 };
 
 /*
