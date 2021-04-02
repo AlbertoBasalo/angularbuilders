@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/angularbuilders/angularbuilders/compare/v0.0.9...v0.0.10) (2021-04-02)
+
+
+### Features
+
+* basic seo and gtag track ([6644bdd](https://github.com/angularbuilders/angularbuilders/commit/6644bdd84e4f0bf2ce712c2c9f15005bfcd86044))
+* better copys ([5bb722f](https://github.com/angularbuilders/angularbuilders/commit/5bb722f664301cede267dc06472f2389e70b498d))
+* cookies alert ([c57f927](https://github.com/angularbuilders/angularbuilders/commit/c57f92752023e9a214a11e8de32b28c45f68e70e))
+* minor texts ([e773545](https://github.com/angularbuilders/angularbuilders/commit/e773545d3f6770a60dbab3cac8998c0bed5e6709))
+
+
+### Bug Fixes
+
+* footer copy ([b304774](https://github.com/angularbuilders/angularbuilders/commit/b3047747885bd6517fb8423e80dfa2bc20b7e67a))
+* gtag only at the browser ([94f7fe1](https://github.com/angularbuilders/angularbuilders/commit/94f7fe1ea6ca3fae15e4982f0fadd1a7a95e22c5))
+* missing zone import ([fd1ef84](https://github.com/angularbuilders/angularbuilders/commit/fd1ef84677a0a663898a9141b315e044f6a26f5d))
+* remove convertbox cookies message ([191092b](https://github.com/angularbuilders/angularbuilders/commit/191092bd1bfa14be7c94559d6d7a8f280f3601e7))
+* zone version ([397bcaa](https://github.com/angularbuilders/angularbuilders/commit/397bcaad1b94c9708bcc2b0d0b7bdcc29274c924))
+
 ### [0.0.9](https://github.com/angularbuilders/angularbuilders/compare/v0.0.8...v0.0.9) (2021-03-26)
 
 

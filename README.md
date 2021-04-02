@@ -29,34 +29,34 @@ A site for Angular developers
 
 ## 💾 apps
 
-### 💻 www
+  - ### 💻 www
 
-### 💻 www-e2e
+  - ### 💻 www-e2e
 
 ## 📚 libs
 
-### 📂 domain
+  - ### 📂 domain
 
-#### 📗 home
+    - #### 📗 home
 
-#### 📗 not-found
+    - #### 📗 not-found
 
-#### 📗 search
+    - #### 📗 search
 
-#### 📗 search-box
+    - #### 📗 search-box
 
-### 📂 shared
+  - ### 📂 shared
 
-#### 📘 auth
+    - #### 📘 auth
 
-#### 📘 data
+    - #### 📘 data
 
-#### 📘 form
+    - #### 📘 form
 
-#### 📘 global
+    - #### 📘 global
 
-#### 📘 layout
+    - #### 📘 layout
 
-#### 📘 ui
+    - #### 📘 ui
 
 ## 🧰 tools
