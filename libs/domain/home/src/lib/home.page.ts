@@ -14,7 +14,7 @@ export class HomePage {
   header = {
     heroClass: 'is-primary',
     title: 'The home of the Angular Builders',
-    subtitle: 'A place to help you build great Angular applications',
+    subtitle: 'A site to help you build great applications with Angular',
   };
 
   constructor(private service: HomeService) {}
