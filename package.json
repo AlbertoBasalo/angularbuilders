@@ -9,7 +9,7 @@
     "build": "npm run build:ssr",
     "test": "",
     "build:ssr": "ng build --prod && ng run www:server:production",
-    "prerender": "ng run www:prerender",
+    "prerender": "ng run www:prerender"
   },
   "private": true,
   "dependencies": {
