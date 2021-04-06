@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MessageComponent } from './components/message/message.component';
+import { NotificationComponent } from './components/notification/notification.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { TrackDirective } from './directives/track.directive';
 import { TruncatePipe } from './pipes/truncate.pipe';
@@ -12,11 +15,8 @@ import { ModalTemplate } from './templates/modal/modal.template';
 import { PageTemplate } from './templates/page/page.template';
 import { PanelTemplate } from './templates/panel/panel.template';
 import { SectionTemplate } from './templates/section/section.template';
-import { NotificationComponent } from './components/notification/notification.component';
-import { HeaderComponent } from './components/header/header.component';
-
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   declarations: [
     BreadcrumbComponent,
     MenuComponent,

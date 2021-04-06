@@ -14,4 +14,11 @@ export class CategoriesComponent {
     title: 'Resources for Angular developers',
     subtitle: 'Coming soon...',
   };
+  getCardFrom(category: Category) {
+    return {
+      title: category.name,
+      description: category.description,
+      link: '/category/' + category.id,
+    };
+  }
 }

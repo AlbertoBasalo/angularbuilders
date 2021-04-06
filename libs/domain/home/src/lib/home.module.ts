@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CategoriesComponent } from './categories/categories.component';
 import { HomePage } from './home.page';
 import { LeadForm } from './lead/lead.form';
-import { ServicesComponent } from './services/services.component';
+import { PromoComponent } from './promo/promo.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +16,6 @@ import { ServicesComponent } from './services/services.component';
     ]),
     UiModule,
   ],
-  declarations: [HomePage, CategoriesComponent, LeadForm, ServicesComponent],
+  declarations: [HomePage, CategoriesComponent, LeadForm, PromoComponent],
 })
 export class HomeModule {}

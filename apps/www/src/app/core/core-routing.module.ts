@@ -3,7 +3,7 @@ import { Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
 import { environment } from '../../environments/environment';
 
-declare let gtag: Function;
+declare let gtag: (command: string, id: string, event: unknown) => void;
 
 const routes: Routes = [
   {
@@ -15,14 +15,19 @@ const routes: Routes = [
     loadChildren: () => import('@ab/auth').then((module) => module.AuthModule),
   },
   {
-    path: 'search',
+    path: 'category',
     loadChildren: () =>
-      import('@ab/search').then((module) => module.SearchModule),
+      import('@ab/category').then((module) => module.CategoryModule),
   },
   {
     path: 'not-found',
     loadChildren: () =>
       import('@ab/not-found').then((module) => module.NotFoundModule),
+  },
+  {
+    path: 'search',
+    loadChildren: () =>
+      import('@ab/search').then((module) => module.SearchModule),
   },
   {
     path: '**',
@@ -39,9 +44,10 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class CoreRoutingModule {
-  constructor(@Inject(PLATFORM_ID) platformId: any, router: Router) {
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  constructor(@Inject(PLATFORM_ID) platformId: Object, router: Router) {
     if (isPlatformBrowser(platformId)) {
-      router.events.subscribe((event: any) => {
+      router.events.subscribe((event: unknown) => {
         if (event instanceof NavigationEnd) {
           gtag('config', environment.ga, {
             page_path: event.urlAfterRedirects,
