@@ -1,1 +1,5 @@
-<p>category works!</p>
+<ab-ui-page [header]="header">
+  <ab-resources-list *ngIf="resources$ | async as resources" [resources]="resources"
+                     [categoryName]="category.name">
+  </ab-resources-list>
+</ab-ui-page>
