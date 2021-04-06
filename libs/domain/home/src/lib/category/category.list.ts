@@ -1,13 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Category } from '../model/category';
 
 @Component({
-  selector: 'ab-categories',
-  templateUrl: './categories.component.html',
-  styleUrls: [],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'ab-category-list',
+  templateUrl: './category.list.html',
+  styles: [],
 })
-export class CategoriesComponent {
+export class CategoryList {
   @Input() categories: Category[] = [];
   header = {
     heroClass: 'is-danger',

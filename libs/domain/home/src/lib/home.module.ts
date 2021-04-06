@@ -3,7 +3,7 @@ import { UiModule } from '@ab/ui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CategoriesComponent } from './categories/categories.component';
+import { CategoryList } from './category/category.list';
 import { HomePage } from './home.page';
 import { LeadForm } from './lead/lead.form';
 import { PromoComponent } from './promo/promo.component';
@@ -16,6 +16,6 @@ import { PromoComponent } from './promo/promo.component';
     ]),
     UiModule,
   ],
-  declarations: [HomePage, CategoriesComponent, LeadForm, PromoComponent],
+  declarations: [HomePage, LeadForm, PromoComponent, CategoryList],
 })
 export class HomeModule {}

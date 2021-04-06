@@ -1,6 +1,6 @@
 <ab-ui-page [header]="header">
-  <ab-categories *ngIf="categories$ | async as categories" [categories]="categories">
-  </ab-categories>
+  <ab-category-list *ngIf="categories$ | async as categories" [categories]="categories">
+  </ab-category-list>
   <ab-promo></ab-promo>
   <ab-lead (send)="onLeadSend($event)" [isSuccess]="(isOk$ | async)|| false"
            [isError]="(isError$ | async)|| false">

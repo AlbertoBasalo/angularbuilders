@@ -1,19 +1,12 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnChanges,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Resource } from '../model/resource';
 
 @Component({
-  selector: 'ab-resources-list',
-  templateUrl: './resources-list.component.html',
-  styleUrls: [],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'ab-resource-list',
+  templateUrl: './resource.list.html',
+  styles: [],
 })
-export class ResourcesListComponent implements OnChanges {
+export class ResourceList implements OnChanges {
   @Input() categoryName = '';
   @Input() resources: Resource[] = [];
 
