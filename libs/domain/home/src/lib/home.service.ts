@@ -2,6 +2,7 @@ import { ENVIRONMENT, Environment } from '@ab/global';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { Category } from './model/category';
 
 @Injectable({
   providedIn: 'root',
@@ -15,10 +16,10 @@ export class HomeService {
   ) {}
   getCategories$() {
     return this.http
-      .get<any>(this.categoriesUrl)
-      .pipe(map((result) => result['data']));
+      .get<{ data: Category[] }>(this.categoriesUrl)
+      .pipe(map((result) => result.data));
   }
-  postLead$(lead: any) {
+  postLead$(lead: unknown) {
     return this.http.post(this.leadsUrl, lead);
   }
 }

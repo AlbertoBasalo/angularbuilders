@@ -19,7 +19,7 @@ export class HomePage {
 
   constructor(private service: HomeService) {}
 
-  onLeadSend(lead: any) {
+  onLeadSend(lead: unknown) {
     this.service.postLead$(lead).subscribe({
       next: () => this.isOk$.next(true),
       error: () => this.isError$.next(true),

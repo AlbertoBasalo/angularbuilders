@@ -1,9 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Category } from '../model/category';
 
 @Component({
   selector: 'ab-categories',
@@ -11,14 +7,11 @@ import {
   styleUrls: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CategoriesComponent implements OnInit {
-  @Input() categories: any = {};
+export class CategoriesComponent {
+  @Input() categories: Category[] = [];
   header = {
     heroClass: 'is-danger',
     title: 'Resources for Angular developers',
     subtitle: 'Coming soon...',
   };
-  constructor() {}
-
-  ngOnInit(): void {}
 }

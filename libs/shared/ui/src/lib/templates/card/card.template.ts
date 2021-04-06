@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Card } from '../../models/card';
 
 @Component({
@@ -12,9 +7,7 @@ import { Card } from '../../models/card';
   styleUrls: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardTemplate implements OnInit {
+export class CardTemplate {
   @Input() card: Card = { title: '', description: '' };
   constructor() {}
-
-  ngOnInit(): void {}
 }
