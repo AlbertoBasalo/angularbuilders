@@ -28,6 +28,11 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'not-found',
   },
+  {
+    path: 'category',
+    loadChildren: () =>
+      import('@ab/category').then((module) => module.CategoryModule),
+  },
 ];
 
 @NgModule({
