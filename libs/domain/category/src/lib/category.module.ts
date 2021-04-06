@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CategoryPage } from './category.page';
 import { CategoryComponent } from './category/category.component';
-import { ResourcesListComponent } from './resources-list/resources-list.component';
+import { ResourceList } from './resource/resource.list';
 
 @NgModule({
   imports: [
@@ -14,6 +14,6 @@ import { ResourcesListComponent } from './resources-list/resources-list.componen
     ]),
     UiModule,
   ],
-  declarations: [CategoryPage, CategoryComponent, ResourcesListComponent],
+  declarations: [CategoryPage, CategoryComponent, ResourceList],
 })
 export class CategoryModule {}
