@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/angularbuilders/angularbuilders/compare/v0.0.10...v0.0.11) (2021-04-07)
+
+
+### Features
+
+* category page ([9ecdc5a](https://github.com/angularbuilders/angularbuilders/commit/9ecdc5a6fad582b488de8b7ae4ec0240157c6f95))
+* category-page - Closes [#16](https://github.com/angularbuilders/angularbuilders/issues/16) ([ed0eb2e](https://github.com/angularbuilders/angularbuilders/commit/ed0eb2e9846a8b6fd54e9168e679a0729413f0bf))
+* generate category page ([01823b3](https://github.com/angularbuilders/angularbuilders/commit/01823b3c3766b2a96c2775832bf23cc474f40dc0))
+
 ### [0.0.10](https://github.com/angularbuilders/angularbuilders/compare/v0.0.9...v0.0.10) (2021-04-02)
 
 
