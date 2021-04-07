@@ -1,11 +1,8 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  OnInit,
-} from '@angular/core';
+import { Header } from '@ab/ui';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { CategoryService } from './category.service';
 import { Category } from './model/category';
 import { Resource } from './model/resource';
@@ -16,35 +13,39 @@ import { Resource } from './model/resource';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CategoryPage implements OnInit {
-  header = {
+  private header = {
     heroClass: 'is-primary',
-    title: 'The home of the Angular Builders',
+    title: 'Category',
     subtitle: 'loading...',
   };
-  category!: Category;
-  resources$!: Observable<Resource[]>;
+
+  header$ = new BehaviorSubject<Header>(this.header);
+  categoryResources$!: Observable<{
+    category: Category;
+    resources: Resource[];
+  }>;
 
   constructor(
     private route: ActivatedRoute,
-    private service: CategoryService,
-    private cdr: ChangeDetectorRef
+    private service: CategoryService
   ) {}
 
   ngOnInit(): void {
     const categoryId = this.route.snapshot.params.id;
-    this.header.title = categoryId;
-    const subscription = this.service.getCategoryById$(categoryId).subscribe({
-      next: (category) => {
-        this.category = category;
-        this.header = {
+    this.header$.next({ ...this.header, title: categoryId });
+    const category$ = this.service.getCategoryById$(categoryId);
+    const resources$ = this.service.getResourcesByCategoryId$(categoryId);
+    this.categoryResources$ = forkJoin({
+      category: category$,
+      resources: resources$,
+    }).pipe(
+      tap((result) =>
+        this.header$.next({
           ...this.header,
-          title: category.name,
-          subtitle: category.description,
-        };
-        this.cdr.markForCheck();
-        subscription.unsubscribe();
-        this.resources$ = this.service.getResourcesByCategoryId$(categoryId);
-      },
-    });
+          title: result.category.name,
+          subtitle: result.category.description,
+        })
+      )
+    );
   }
 }

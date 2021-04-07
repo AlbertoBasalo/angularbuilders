@@ -1,5 +1,6 @@
-<ab-ui-page [header]="header">
-  <ab-resource-list *ngIf="resources$ | async as resources" [resources]="resources"
-                    [categoryName]="category.name">
+<ab-ui-page *ngIf="header$ | async as header" [header]="header">
+  <ab-resource-list *ngIf="categoryResources$ | async as categoryResources"
+                    [resources]="categoryResources.resources"
+                    [categoryName]="categoryResources.category.name">
   </ab-resource-list>
 </ab-ui-page>

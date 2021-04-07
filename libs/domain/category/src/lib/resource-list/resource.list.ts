@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Resource } from '../model/resource';
 
 @Component({
@@ -6,32 +6,25 @@ import { Resource } from '../model/resource';
   templateUrl: './resource.list.html',
   styles: [],
 })
-export class ResourceList implements OnChanges {
+export class ResourceList {
   @Input() categoryName = '';
   @Input() resources: Resource[] = [];
 
-  header = {
-    heroClass: 'is-danger',
-    title: `Loading...`,
-    subtitle: '...',
+  private header = {
+    heroClass: 'is-warning',
+    title: `...`,
+    subtitle: ' No resources yet ',
   };
-  constructor() {}
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes.categoryName) {
-      this.header = {
-        heroClass: 'is-warning',
-        title: `List of resources for ${this.categoryName}`,
-        subtitle: 'Loading resources...',
-      };
+  getHeader() {
+    const header = { ...this.header };
+    if (this.categoryName) {
+      header.title = `List of resources for ${this.categoryName}`;
     }
-    if (changes.resources) {
-      this.header = {
-        heroClass: 'is-success',
-        title: `List of resources for ${this.categoryName}`,
-        subtitle: `Found ${this.resources.length} resources`,
-      };
+    if (this.resources.length) {
+      header.subtitle = `Found ${this.resources.length} resources`;
     }
+    return header;
   }
   getCardFrom(resource: Resource) {
     return {

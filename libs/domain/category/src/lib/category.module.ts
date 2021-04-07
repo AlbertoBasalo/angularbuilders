@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CategoryPage } from './category.page';
-import { CategoryComponent } from './category/category.component';
 import { ResourceList } from './resource-list/resource.list';
 
 @NgModule({
@@ -14,6 +13,6 @@ import { ResourceList } from './resource-list/resource.list';
     ]),
     UiModule,
   ],
-  declarations: [CategoryPage, CategoryComponent, ResourceList],
+  declarations: [CategoryPage, ResourceList],
 })
 export class CategoryModule {}
