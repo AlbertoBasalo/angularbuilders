@@ -25,21 +25,31 @@ const routes: Routes = [
       import('@ab/not-found').then((module) => module.NotFoundModule),
   },
   {
+    path: 'resource',
+    loadChildren: () =>
+      import('@ab/resource').then((module) => module.ResourceModule),
+  },
+  {
     path: 'search',
     loadChildren: () =>
       import('@ab/search').then((module) => module.SearchModule),
-  },
-  {
-    path: '**',
-    redirectTo: 'not-found',
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {
-      initialNavigation: 'enabled',
-    }),
+    RouterModule.forRoot(
+      [
+        ...routes,
+        {
+          path: '**',
+          redirectTo: 'not-found',
+        },
+      ],
+      {
+        initialNavigation: 'enabled',
+      }
+    ),
   ],
   exports: [RouterModule],
 })
