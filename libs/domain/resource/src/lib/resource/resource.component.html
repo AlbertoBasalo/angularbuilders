@@ -1,0 +1,13 @@
+<ab-ui-box>
+  <div class="block is-size-4"><label class="mr-2">Web Page: </label> <a
+       href="{{resource.url}}"
+       target="_blank">{{resource.url}}</a>
+  </div>
+  <div class="block has-text-primary is-size-5"> 🚧 <i> Coming soon links to github, tutorials and
+      your comments...</i>
+  </div>
+  <div class="block">
+    <a class="button"
+       [routerLink]="['/category', resource.categoryId]">Back to category page</a>
+  </div>
+</ab-ui-box>

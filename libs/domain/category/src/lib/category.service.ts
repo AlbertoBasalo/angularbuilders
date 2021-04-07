@@ -2,15 +2,15 @@ import { ENVIRONMENT, Environment } from '@ab/global';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Category } from './model/category';
-import { Resource } from './model/resource';
+import { Category } from './models/category';
+import { Resource } from './models/resource';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryService {
   private readonly categoriesUrl = `${this.environment.apiUrl}/categories`;
-  private readonly resourcesUrl = `${this.environment.apiUrl}/resources`;
+
   constructor(
     @Inject(ENVIRONMENT) private readonly environment: Environment,
     private http: HttpClient
