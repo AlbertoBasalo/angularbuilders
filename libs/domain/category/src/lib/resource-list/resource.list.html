@@ -1,0 +1,8 @@
+<ab-ui-section [header]="getHeader()">
+  <section class="columns">
+    <ab-ui-card *ngFor="let resource of resources"
+                [card]="getCardFrom(resource)"
+                class="column">
+    </ab-ui-card>
+  </section>
+</ab-ui-section>

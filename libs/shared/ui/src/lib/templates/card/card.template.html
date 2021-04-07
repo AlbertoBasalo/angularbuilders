@@ -1,7 +1,9 @@
 <article class="card mb-4">
   <header class="card-header">
     <p class="card-header-title">
-      {{ card.title }}
+      <a *ngIf="card.link" [routerLink]="[card.link]">{{ card.title }}</a>
+      <a *ngIf="card.href" [href]="card.href">{{ card.title }}</a>
+      <span *ngIf="!card.link && !card.href">{{ card.title }}</span>
     </p>
   </header>
   <main class="card-content">

@@ -3,10 +3,10 @@ import { UiModule } from '@ab/ui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CategoriesComponent } from './categories/categories.component';
+import { CategoryList } from './category-list/category.list';
 import { HomePage } from './home.page';
 import { LeadForm } from './lead/lead.form';
-import { ServicesComponent } from './services/services.component';
+import { PromoComponent } from './promo/promo.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,6 +16,6 @@ import { ServicesComponent } from './services/services.component';
     ]),
     UiModule,
   ],
-  declarations: [HomePage, CategoriesComponent, LeadForm, ServicesComponent],
+  declarations: [HomePage, LeadForm, PromoComponent, CategoryList],
 })
 export class HomeModule {}
