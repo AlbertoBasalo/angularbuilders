@@ -1,0 +1,4 @@
+<ab-ui-page *ngIf="header$ | async as header" [header]="header">
+  <ab-resource *ngIf="resource$ | async as resource"
+               [resource]="resource"></ab-resource>
+</ab-ui-page>

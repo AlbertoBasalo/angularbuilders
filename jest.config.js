@@ -13,5 +13,6 @@ module.exports = {
     '<rootDir>/libs/domain/not-found',
     '<rootDir>/libs/shared/global',
     '<rootDir>/libs/domain/category',
+    '<rootDir>/libs/domain/resource',
   ],
 };

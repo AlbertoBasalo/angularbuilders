@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Category } from '../model/category';
+import { Category } from '../models/category';
 
 @Component({
   selector: 'ab-category-list',

@@ -4,8 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { CategoryService } from './category.service';
-import { Category } from './model/category';
-import { Resource } from './model/resource';
+import { Category } from './models/category';
+import { Resource } from './models/resource';
 
 @Component({
   templateUrl: './category.page.html',
