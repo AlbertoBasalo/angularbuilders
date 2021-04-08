@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/angularbuilders/angularbuilders/compare/v0.0.12...v0.0.13) (2021-04-08)
+
+
+### Features
+
+* Search-box-widget - Closes [#22](https://github.com/angularbuilders/angularbuilders/issues/22) ([15beb1b](https://github.com/angularbuilders/angularbuilders/commit/15beb1b2f52a2b7e80d350de18ca89c1371d43be))
+* Search-Page - Closes [#24](https://github.com/angularbuilders/angularbuilders/issues/24) ([0c0048a](https://github.com/angularbuilders/angularbuilders/commit/0c0048a1c38b6d7c1c0508e06fc98fc6e8b5724c))
+* small hero for sections ([aa92aef](https://github.com/angularbuilders/angularbuilders/commit/aa92aefa8a73f3059319cad861ce09214cbd6da7))
+
+
+### Bug Fixes
+
+* categories subtitle ([b9b4345](https://github.com/angularbuilders/angularbuilders/commit/b9b43452b6f257b0bdcec10674c62c45c37c4e11))
+
 ### [0.0.12](https://github.com/angularbuilders/angularbuilders/compare/v0.0.11...v0.0.12) (2021-04-07)
 
 
