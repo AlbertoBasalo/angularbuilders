@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Header } from '../../models/header';
 
 @Component({
@@ -6,7 +6,10 @@ import { Header } from '../../models/header';
   templateUrl: './page.template.html',
   styles: [],
 })
-export class PageTemplate {
+export class PageTemplate implements OnChanges {
   @Input() header: Header = { title: '', subtitle: '', heroClass: '' };
   constructor() {}
+  ngOnChanges(changes: SimpleChanges): void {
+    this.header.heroClass += ' ';
+  }
 }
