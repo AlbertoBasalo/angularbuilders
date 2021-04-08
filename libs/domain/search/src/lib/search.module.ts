@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ResultList } from './result-list/result.list';
 import { SearchPage } from './search.page';
-import { SearchComponent } from './search/search.component';
 
 @NgModule({
   imports: [
@@ -14,6 +13,6 @@ import { SearchComponent } from './search/search.component';
     ]),
     UiModule,
   ],
-  declarations: [SearchPage, SearchComponent, ResultList],
+  declarations: [SearchPage, ResultList],
 })
 export class SearchModule {}
