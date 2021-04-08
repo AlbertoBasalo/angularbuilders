@@ -11,7 +11,7 @@ export class CategoryList {
   header = {
     heroClass: 'is-danger',
     title: 'Resources for Angular developers',
-    subtitle: 'Coming soon...',
+    subtitle: 'Explore the main categories',
   };
   getCardFrom(category: Category) {
     return {
