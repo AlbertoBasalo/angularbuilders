@@ -1,4 +1,6 @@
-<article class="card mb-4">
+<article class="card mb-4" style="display: flex;
+flex-direction: column;
+height: 100%;">
   <header class="card-header">
     <p class="card-header-title">
       <a *ngIf="card.link" [routerLink]="[card.link]">{{ card.title }}</a>
@@ -15,7 +17,7 @@
       </ng-content>
     </div>
   </main>
-  <footer class="card-footer">
+  <footer class="card-footer" style="margin-top: auto;">
     <ng-content select=".footer-content">
     </ng-content>
   </footer>

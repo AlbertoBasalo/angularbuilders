@@ -1,8 +1,8 @@
 <ab-ui-section [header]="header">
-  <section class="columns">
+  <section class="columns is-multiline">
     <ab-ui-card *ngFor="let category of categories"
                 [card]="getCardFrom(category)"
-                class="column">
+                class="column is-one-quarter-desktop is-half-tablet">
     </ab-ui-card>
   </section>
 </ab-ui-section>

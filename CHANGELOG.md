@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/angularbuilders/angularbuilders/compare/v0.0.14...v0.0.15) (2021-04-08)
+
+
+### Bug Fixes
+
+* equal lenght cards columns responsive ([dad99a0](https://github.com/angularbuilders/angularbuilders/commit/dad99a0be23c2d6587b1225f4a2191c9d1ed7bb6))
+
 ### [0.0.14](https://github.com/angularbuilders/angularbuilders/compare/v0.0.13...v0.0.14) (2021-04-08)
 
 
