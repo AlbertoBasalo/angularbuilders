@@ -1,3 +1,4 @@
+import { TrackerStore } from '@ab/global';
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
@@ -55,13 +56,18 @@ const routes: Routes = [
 })
 export class CoreRoutingModule {
   // eslint-disable-next-line @typescript-eslint/ban-types
-  constructor(@Inject(PLATFORM_ID) platformId: Object, router: Router) {
+  constructor(
+    @Inject(PLATFORM_ID) platformId: Object,
+    router: Router,
+    private store: TrackerStore
+  ) {
     if (isPlatformBrowser(platformId)) {
       router.events.subscribe((event: unknown) => {
         if (event instanceof NavigationEnd) {
           gtag('config', environment.ga, {
             page_path: event.urlAfterRedirects,
           });
+          this.store.trackBusiness('NAVIGATION', event.urlAfterRedirects);
         }
       });
     }
