@@ -1,18 +1,34 @@
-import { Injectable } from '@angular/core';
+import { TrackerStore } from '@ab/global';
 import {
-  HttpRequest,
-  HttpHandler,
+  HttpErrorResponse,
   HttpEvent,
-  HttpInterceptor
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class TrackerInterceptor implements HttpInterceptor {
+  constructor(private store: TrackerStore) {}
 
-  constructor() {}
-
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    return next.handle(request);
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
+    return next.handle(request).pipe(
+      catchError((error: HttpErrorResponse) => {
+        if (error.error instanceof ErrorEvent) {
+          // errorMessage = `Error: ${error.error.message}`;
+          this.store.trackError(error);
+        } else {
+          //errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+          this.store.trackHttpError(error);
+        }
+        return throwError(error);
+      })
+    );
   }
 }
