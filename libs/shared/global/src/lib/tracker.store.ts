@@ -67,7 +67,6 @@ export class TrackerStore {
     const byAction = (state: TrackEntry) => state.action === action;
     return this.store$.getState$().pipe(filter(byAction));
   }
-
   selectAuthErrors$(): Observable<TrackEntry> {
     return this.selectByAction$('AUTH_FAULT');
   }
@@ -85,6 +84,17 @@ export class TrackerStore {
   }
   selectFinishSytem$(): Observable<TrackEntry> {
     return this.selectByAction$('FINISH');
+  }
+  selectNavBusiness$(): Observable<TrackEntry> {
+    return this.selectByAction$('NAV');
+  }
+  selectClickBusiness$(): Observable<TrackEntry> {
+    return this.selectByAction$('CLICK');
+  }
+  selectAnyErrors$(): Observable<TrackEntry> {
+    return this.store$
+      .getState$()
+      .pipe(filter((state: TrackEntry) => state.category === 'ERROR'));
   }
 
   private getErrorActionFromStatus(error: HttpErrorResponse): string {

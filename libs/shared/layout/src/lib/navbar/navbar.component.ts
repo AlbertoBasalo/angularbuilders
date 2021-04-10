@@ -1,4 +1,6 @@
+import { TrackEntry, TrackerStore } from '@ab/global';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ab-navbar',
@@ -7,7 +9,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  errorMessage$: Observable<TrackEntry>;
+
+  constructor(store: TrackerStore) {
+    this.errorMessage$ = store.selectAnyErrors$();
+  }
 
   ngOnInit(): void {}
 }
