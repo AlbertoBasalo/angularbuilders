@@ -9,7 +9,7 @@ export class ErrorHandlerService implements ErrorHandler {
     if (!!error.name && error.name === 'HttpErrorResponse') {
       return;
     } else {
-      this.store.trackError(error);
+      this.store.trackCodeError(error);
     }
   }
 }

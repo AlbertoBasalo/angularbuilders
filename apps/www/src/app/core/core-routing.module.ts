@@ -67,7 +67,7 @@ export class CoreRoutingModule {
           gtag('config', environment.ga, {
             page_path: event.urlAfterRedirects,
           });
-          this.store.trackBusiness('NAVIGATION', event.urlAfterRedirects);
+          this.store.trackNavBusiness(event.urlAfterRedirects);
         }
       });
     }

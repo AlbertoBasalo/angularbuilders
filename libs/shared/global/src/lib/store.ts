@@ -1,6 +1,7 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 import { Action } from './models/action';
+import { Reducer } from './models/reducer';
 /**
  * Holds a private observable state
  *
@@ -10,7 +11,7 @@ import { Action } from './models/action';
  */
 export class Store<T> {
   private _state$: BehaviorSubject<T>;
-  private _actions$: BehaviorSubject<Action<T>>;
+  private _actions$: BehaviorSubject<Action>;
 
   /**
    * Creates a new store
@@ -20,7 +21,10 @@ export class Store<T> {
    */
   constructor(initialState: T) {
     this._state$ = new BehaviorSubject(this.clone(initialState));
-    this._actions$ = new BehaviorSubject(new Action('INIT', initialState));
+    this._actions$ = new BehaviorSubject({
+      type: 'INIT',
+      payload: initialState,
+    });
   }
 
   /**
@@ -49,33 +53,44 @@ export class Store<T> {
    * Useful for monitoring the actions dispatched
    * @returns An observable emitting all the processed actions
    */
-  getActions$(): Observable<Action<T>> {
+  getActions$(): Observable<Action> {
     return this._actions$
       .asObservable()
       .pipe(map((action) => ({ type: action.type, payload: action.payload })));
   }
   /**
-   * The simplest way to assign a new value (obviously not monitores bay any action)
-   * @param state the new value of the state to be stored and emitted
+   * The simplest shortcut to assign a new value
+   * @param payload the new value to be stored and emitted
+   * @remarks The payload will be merged with current state
    */
-  setState(state: T): void {
-    this.dispatch({ type: 'SET_STATE', payload: state });
+  setState(payload: Partial<T>): void {
+    this.dispatch({ type: 'SET_STATE', payload: payload });
+  }
+  /**
+   * The canonical and monitored way of changing the state
+   * @param action an action instance witha tyype and a payload
+   * @remarks The payload must be a partial of T
+   */
+  dispatch(action: Action): void {
+    const currentState = this.getState();
+    const payload = action.payload as Partial<T>;
+    const newState: T = { ...currentState, ...payload };
+    this.next(action, newState);
   }
   /**
    * The canonical and monitored way of changing the state
    * @param action an action instance
-   * @remarks The reducer is optional, in that case the payload will be saved as the new state
+   * @param reducer a pure function that produces a new state based on the action payload
+   * @remarks The actions payload could be anything
    */
-  dispatch(action: Action<T>): void {
+  reduce(action: Action, reducer: Reducer<T>) {
     const currentState = this.getState();
-    const payload = action.payload as T;
-    let newState: T;
-    if (action.reducer) {
-      newState = action.reducer(currentState, payload);
-    } else {
-      newState = { ...currentState, ...payload };
-    }
-    this._state$.next(this.clone(newState));
+    const newState = reducer(currentState, action.payload);
+    this.next(action, newState);
+  }
+
+  private next(action: Action, newState: T) {
+    this._state$.next(newState);
     this._actions$.next(action);
   }
 

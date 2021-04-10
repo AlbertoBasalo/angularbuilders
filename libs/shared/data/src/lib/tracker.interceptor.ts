@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TrackerStore } from '@ab/global';
 import {
   HttpErrorResponse,
@@ -21,10 +22,8 @@ export class TrackerInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
         if (error.error instanceof ErrorEvent) {
-          // errorMessage = `Error: ${error.error.message}`;
-          this.store.trackError(error);
+          this.store.trackCodeError(error);
         } else {
-          //errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
           this.store.trackHttpError(error);
         }
         return throwError(error);

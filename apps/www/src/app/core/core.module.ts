@@ -40,6 +40,6 @@ import { LayoutComponent } from './layout/layout.component';
 export class CoreModule {
   constructor(store: TrackerStore) {
     store.selectActions$().subscribe((action) => console.log(action.payload));
-    store.trackSystem('STARTING', 'www', 0);
+    store.trackSystem('APP_STARTED', JSON.stringify(environment));
   }
 }

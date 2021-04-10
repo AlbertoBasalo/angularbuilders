@@ -9,4 +9,4 @@
  * @returns the new state of the store
  *
  */
-export type Reducer<T> = (state: T, payload: any) => T;
+export type Reducer<T> = (state: T, payload: unknown) => T;
