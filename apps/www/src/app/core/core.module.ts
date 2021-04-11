@@ -1,5 +1,7 @@
 import { DataModule } from '@ab/data';
 import {
+  AnalyticsService,
+  Environment,
   ENVIRONMENT,
   ErrorHandlerService,
   GlobalModule,
@@ -7,9 +9,11 @@ import {
 } from '@ab/global';
 import { LayoutModule } from '@ab/layout';
 import { SearchBoxModule } from '@ab/search-box';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, Inject, NgModule, PLATFORM_ID } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { CoreRoutingModule } from './core-routing.module';
 import { LayoutComponent } from './layout/layout.component';
@@ -38,10 +42,35 @@ import { LayoutComponent } from './layout/layout.component';
   exports: [LayoutModule, LayoutComponent],
 })
 export class CoreModule {
-  constructor(store: TrackerStore) {
+  constructor(
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    @Inject(PLATFORM_ID) platformId: Object,
+    @Inject(ENVIRONMENT) private readonly environment: Environment,
+    router: Router,
+    analytics: AnalyticsService,
+    tracker: TrackerStore
+  ) {
+    if (isPlatformBrowser(platformId)) {
+      analytics.configure(environment.ga);
+      tracker.selectNavBusiness$().subscribe({
+        next: (trackEntry) => analytics.sendNav(trackEntry.label || ''),
+      });
+      tracker.selectClickBusiness$().subscribe({
+        next: (trackEntry) => analytics.sendEvent(trackEntry),
+      });
+      router.events
+        .pipe(filter((event) => event instanceof NavigationEnd))
+        .subscribe({
+          next: (event) =>
+            tracker.trackNavBusiness(
+              (event as NavigationEnd).urlAfterRedirects
+            ),
+        });
+    }
     if (environment.production === false) {
       // ToDo: Redux DevTools
+      tracker.selectActions$().subscribe((action) => console.table(action));
     }
-    store.trackSystem('APP_STARTED', JSON.stringify(environment));
+    tracker.trackSystem('APP_STARTED', JSON.stringify(environment));
   }
 }

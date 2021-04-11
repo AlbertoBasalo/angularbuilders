@@ -1,27 +1,15 @@
-import { Inject, Injectable } from '@angular/core';
-import { ENVIRONMENT } from './global.tokens';
-import { Environment } from './models/environment';
+import { Injectable } from '@angular/core';
 import { TrackEntry } from './models/trackEntry';
-import { TrackerStore } from './tracker.store';
 
 declare let gtag: (command: string, id: string, event: unknown) => void;
 
 @Injectable({ providedIn: 'root' })
 export class AnalyticsService {
-  constructor(
-    @Inject(ENVIRONMENT) private readonly environment: Environment,
-    private readonly tracker: TrackerStore
-  ) {}
+  constructor() {}
 
-  activate() {
-    gtag('config', this.environment.ga, {
+  configure(ga: string) {
+    gtag('config', ga, {
       send_page_view: false,
-    });
-    this.tracker.selectNavBusiness$().subscribe({
-      next: (trackEntry) => this.sendNav(trackEntry.label || ''),
-    });
-    this.tracker.selectClickBusiness$().subscribe({
-      next: (trackEntry) => this.sendEvent(trackEntry),
     });
   }
 
