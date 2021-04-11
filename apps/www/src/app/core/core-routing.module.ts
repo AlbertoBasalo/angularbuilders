@@ -1,10 +1,8 @@
-import { TrackerStore } from '@ab/global';
+import { AnalyticsService, TrackerStore } from '@ab/global';
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
-import { environment } from '../../environments/environment';
-
-declare let gtag: (command: string, id: string, event: unknown) => void;
+import { filter } from 'rxjs/operators';
 
 const routes: Routes = [
   {
@@ -55,21 +53,21 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class CoreRoutingModule {
-  // eslint-disable-next-line @typescript-eslint/ban-types
   constructor(
+    // eslint-disable-next-line @typescript-eslint/ban-types
     @Inject(PLATFORM_ID) platformId: Object,
     router: Router,
-    private store: TrackerStore
+    store: TrackerStore,
+    analytics: AnalyticsService
   ) {
     if (isPlatformBrowser(platformId)) {
-      router.events.subscribe((event: unknown) => {
-        if (event instanceof NavigationEnd) {
-          gtag('config', environment.ga, {
-            page_path: event.urlAfterRedirects,
-          });
-          this.store.trackNavBusiness(event.urlAfterRedirects);
-        }
-      });
+      analytics.activate();
+      router.events
+        .pipe(filter((event) => event instanceof NavigationEnd))
+        .subscribe({
+          next: (event) =>
+            store.trackNavBusiness((event as NavigationEnd).urlAfterRedirects),
+        });
     }
   }
 }
