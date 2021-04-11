@@ -13,7 +13,6 @@ export class NavbarComponent implements OnInit {
   notification$: Observable<Notification>;
 
   constructor(store: TrackerStore) {
-    // ToDo: not working...
     this.notification$ = store.selectAnyErrors$().pipe(
       map((trackEntry) => ({
         class: 'is-danger',
