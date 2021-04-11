@@ -1,7 +1,8 @@
-import { TrackEntry, TrackerStore } from '@ab/global';
+import { TrackerStore } from '@ab/global';
+import { Notification } from '@ab/layout';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'ab-navbar',
   templateUrl: './navbar.component.html',
@@ -9,10 +10,16 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit {
-  errorMessage$: Observable<TrackEntry>;
+  notification$: Observable<Notification>;
 
   constructor(store: TrackerStore) {
-    this.errorMessage$ = store.selectAnyErrors$();
+    // ToDo: not working...
+    this.notification$ = store.selectAnyErrors$().pipe(
+      map((trackEntry) => ({
+        class: 'is-danger',
+        message: trackEntry.action + ' ' + (trackEntry.label || ''),
+      }))
+    );
   }
 
   ngOnInit(): void {}

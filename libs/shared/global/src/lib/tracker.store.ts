@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { distinctUntilChanged, filter } from 'rxjs/operators';
 import { TrackCategories, TrackEntry } from './models/trackEntry';
 import { Store } from './store';
 @Injectable({
@@ -92,9 +92,10 @@ export class TrackerStore {
     return this.selectByAction$('CLICK');
   }
   selectAnyErrors$(): Observable<TrackEntry> {
-    return this.store$
-      .getState$()
-      .pipe(filter((state: TrackEntry) => state.category === 'ERROR'));
+    return this.store$.getState$().pipe(
+      filter((state: TrackEntry) => state.category === 'ERROR'),
+      distinctUntilChanged()
+    );
   }
 
   private getErrorActionFromStatus(error: HttpErrorResponse): string {

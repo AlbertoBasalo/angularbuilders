@@ -8,8 +8,9 @@
     <ng-content select=".navbar-start">
     </ng-content>
     <div class="navbar-end">
-      <span class="mt-2 mr-2 notification is-danger" *ngIf="errorMessage$ |async as errorMessage">
-        💫 Huston ,We have a problem.</span>
+      <ab-notification *ngIf="notification$ |async as notification"
+                       [notification]="notification">
+      </ab-notification>
     </div>
   </div>
 </nav>
