@@ -22,7 +22,7 @@ export class AnalyticsService {
   }
 
   sendEvent(trackEntry: TrackEntry) {
-    gtag('event', trackEntry.action, {
+    gtag('event', trackEntry.event, {
       event_category: trackEntry.category,
       event_label: trackEntry.label,
       value: trackEntry.value,

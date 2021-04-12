@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -12,8 +12,7 @@ import {
 })
 export class LeadForm implements OnInit {
   form!: FormGroup;
-  @Input() isSuccess = false;
-  @Input() isError = false;
+
   @Output() send = new EventEmitter<any>();
   header = {
     heroClass: 'is-warning',

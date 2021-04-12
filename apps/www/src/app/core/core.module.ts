@@ -52,23 +52,24 @@ export class CoreModule {
   ) {
     if (isPlatformBrowser(platformId)) {
       analytics.configure(environment.ga);
-      tracker.selectNavBusiness$().subscribe({
+      tracker.selectByEvent$('NAV').subscribe({
         next: (trackEntry) => analytics.sendNav(trackEntry.label || ''),
       });
-      tracker.selectClickBusiness$().subscribe({
+      tracker.selectByEvent$('CLICK').subscribe({
         next: (trackEntry) => analytics.sendEvent(trackEntry),
       });
       router.events
         .pipe(filter((event) => event instanceof NavigationEnd))
         .subscribe({
           next: (event) =>
-            tracker.trackNavBusiness(
+            tracker.trackBusiness(
+              'NAV',
               (event as NavigationEnd).urlAfterRedirects
             ),
         });
     }
     if (environment.production === false) {
-      // ToDo: Redux DevTools
+      // ToDo: Use Redux DevTools
       tracker.selectActions$().subscribe((action) => console.table(action));
     }
     tracker.trackSystem('APP_STARTED', JSON.stringify(environment));

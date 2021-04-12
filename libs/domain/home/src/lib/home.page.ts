@@ -1,5 +1,5 @@
+import { TrackerStore } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { HomeService } from './home.service';
 
 @Component({
@@ -9,20 +9,23 @@ import { HomeService } from './home.service';
 })
 export class HomePage {
   categories$ = this.service.getCategories$();
-  isOk$ = new BehaviorSubject<boolean>(false);
-  isError$ = new BehaviorSubject<boolean>(false);
+
   header = {
     heroClass: 'is-primary',
     title: 'The home of the Angular Builders',
     subtitle: 'A site to help you build great applications with Angular',
   };
 
-  constructor(private service: HomeService) {}
+  constructor(private service: HomeService, private tracker: TrackerStore) {}
 
   onLeadSend(lead: unknown) {
     this.service.postLead$(lead).subscribe({
-      next: () => this.isOk$.next(true),
-      error: () => this.isError$.next(true),
+      next: () =>
+        this.tracker.trackBusiness(
+          'FORM_SENT',
+          'Thanks for your interest. We will get in contact with you ASAP!'
+        ),
+      error: () => {},
     });
   }
 }

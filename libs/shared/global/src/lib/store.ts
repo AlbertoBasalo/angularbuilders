@@ -2,6 +2,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 import { Action } from './models/action';
 import { Reducer } from './models/reducer';
+
 /**
  * Holds a private observable state
  *
@@ -27,6 +28,14 @@ export class Store<T> {
     });
   }
 
+  /**
+   * The simplest shortcut to assign a new value
+   * @param payload the new value to be stored and emitted
+   * @remarks The payload will be merged with current state
+   */
+  setState(payload: Partial<T>): void {
+    this.dispatch({ type: 'SET_STATE', payload: payload });
+  }
   /**
    * Gets a snapshot of the current state
    * @returns a clone of the state
@@ -58,14 +67,7 @@ export class Store<T> {
       .asObservable()
       .pipe(map((action) => ({ type: action.type, payload: action.payload })));
   }
-  /**
-   * The simplest shortcut to assign a new value
-   * @param payload the new value to be stored and emitted
-   * @remarks The payload will be merged with current state
-   */
-  setState(payload: Partial<T>): void {
-    this.dispatch({ type: 'SET_STATE', payload: payload });
-  }
+
   /**
    * The canonical and monitored way of changing the state
    * @param action an action instance witha tyype and a payload
@@ -78,10 +80,10 @@ export class Store<T> {
     this.next(action, newState);
   }
   /**
-   * The canonical and monitored way of changing the state
-   * @param action an action instance
-   * @param reducer a pure function that produces a new state based on the action payload
-   * @remarks The actions payload could be anything
+   * The way of changing the state applying some logic
+   * @param action an action instance with its type and payload
+   * @param reducer a function that produces a new state based on the action payload
+   * @remarks The actions payload could be anything and the reducer should be pure.
    */
   reduce(action: Action, reducer: Reducer<T>) {
     const currentState = this.getState();
@@ -93,7 +95,6 @@ export class Store<T> {
     this._state$.next(newState);
     this._actions$.next(action);
   }
-
   private clone(source: T) {
     return { ...source };
   }

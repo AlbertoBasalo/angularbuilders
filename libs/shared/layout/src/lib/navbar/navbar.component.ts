@@ -1,7 +1,7 @@
 import { TrackerStore } from '@ab/global';
 import { Notification } from '@ab/layout';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { merge, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 @Component({
   selector: 'ab-navbar',
@@ -13,12 +13,21 @@ export class NavbarComponent implements OnInit {
   notification$: Observable<Notification>;
 
   constructor(store: TrackerStore) {
-    this.notification$ = store.selectAnyErrors$().pipe(
-      map((trackEntry) => ({
+    // ToDo: create notifications by error event kind
+    const error$ = store.selectAnyErrors$().pipe(
+      map(() => ({
         class: 'is-danger',
-        message: trackEntry.action + ' ' + (trackEntry.label || ''),
+        message:
+          'There was an error!. Review your data and retry. If persists we will fix it ASAP!',
       }))
     );
+    const success$ = store.selectByEvent$('FORM_SENT').pipe(
+      map((trackEntry) => ({
+        class: 'is-success',
+        message: trackEntry.label || 'Sent success',
+      }))
+    );
+    this.notification$ = merge(error$, success$);
   }
 
   ngOnInit(): void {}
