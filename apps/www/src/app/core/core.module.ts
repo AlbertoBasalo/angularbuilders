@@ -13,7 +13,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { CoreRoutingModule } from './core-routing.module';
 import { LayoutComponent } from './layout/layout.component';
@@ -59,19 +59,19 @@ export class CoreModule {
         next: (trackEntry) => analytics.sendEvent(trackEntry),
       });
       router.events
-        .pipe(filter((event) => event instanceof NavigationEnd))
+        .pipe(
+          filter((event) => event instanceof NavigationEnd),
+          map((event) => event as NavigationEnd)
+        )
         .subscribe({
-          next: (event) =>
-            tracker.trackBusiness(
-              'NAV',
-              (event as NavigationEnd).urlAfterRedirects
-            ),
+          next: (navigationEndEvent) =>
+            tracker.trackBusiness('NAV', navigationEndEvent.urlAfterRedirects),
         });
+      if (environment.production === false) {
+        // ToDo: Use Redux DevTools
+        tracker.selectActions$().subscribe((action) => console.table(action));
+      }
+      tracker.trackSystem('APP_STARTED', JSON.stringify(environment));
     }
-    if (environment.production === false) {
-      // ToDo: Use Redux DevTools
-      tracker.selectActions$().subscribe((action) => console.table(action));
-    }
-    tracker.trackSystem('APP_STARTED', JSON.stringify(environment));
   }
 }

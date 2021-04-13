@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/angularbuilders/angularbuilders/compare/v0.0.16...v0.0.17) (2021-04-13)
+
+
+### Features
+
+* validate  is human on contact form ([7df540e](https://github.com/angularbuilders/angularbuilders/commit/7df540ea1a397eefeb6549ac72be1871ed9c6952))
+
 ### [0.0.16](https://github.com/angularbuilders/angularbuilders/compare/v0.0.15...v0.0.16) (2021-04-13)
 
 

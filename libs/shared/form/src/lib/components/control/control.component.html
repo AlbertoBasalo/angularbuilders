@@ -1,14 +1,14 @@
 <div class="field mt-4">
   <label [for]="formControlName" class="label">
-    {{ label }}
+    {{ label }} <span *ngIf="hasError()">*</span>
   </label>
   <input [name]="formControlName"
          [type]="type"
-         [type]=""
+         [id]="formControlName"
          [value]="value"
          (input)="onInput($event)"
          [placeholder]="placeholder" class="input" />
   <span *ngIf="hasErrorToShow()">
-    <em> * {{ getErrorMessage() }} </em>
+    <em> {{ getErrorMessage() }} </em>
   </span>
 </div>

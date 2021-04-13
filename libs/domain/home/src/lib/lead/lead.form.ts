@@ -1,3 +1,4 @@
+import { ABValidators } from '@ab/form';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
@@ -31,15 +32,16 @@ export class LeadForm implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       interest: new FormControl('', [Validators.maxLength(50)]),
       region: new FormControl('', [Validators.maxLength(50)]),
-      isHuman: new FormControl('Yes', [Validators.required]),
+      isHuman: new FormControl('Yes', [
+        Validators.required,
+        ABValidators.includes('Yes'),
+      ]),
     });
   }
 
   onSubmit() {
-    if (this.form.value.isHuman) {
-      const lead = { ...this.form.value };
-      delete lead.isHuman;
-      this.send.next(lead);
-    }
+    const lead = { ...this.form.value };
+    delete lead.isHuman;
+    this.send.next(lead);
   }
 }
