@@ -58,7 +58,10 @@ export class TrackerStore {
     this.trackError(errorEvent, errorUrl, error.status);
   }
   trackCodeError(error: Error) {
-    this.trackError('CODE_FAULT', error.message);
+    this.trackError(
+      'CODE_FAULT',
+      error.message + ' @ ' + (error.stack || 'unknown')
+    );
   }
 
   selectByEvent$(event: TrackerEvents) {

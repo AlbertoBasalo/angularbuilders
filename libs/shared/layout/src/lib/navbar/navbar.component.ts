@@ -1,15 +1,15 @@
 import { TrackerStore } from '@ab/global';
-import { Notification } from '@ab/layout';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { merge, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Notification } from '../models/notification';
 @Component({
   selector: 'ab-navbar',
   templateUrl: './navbar.component.html',
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   notification$: Observable<Notification>;
 
   constructor(store: TrackerStore) {
@@ -30,6 +30,4 @@ export class NavbarComponent implements OnInit {
     );
     this.notification$ = merge(error$, success$);
   }
-
-  ngOnInit(): void {}
 }

@@ -70,7 +70,7 @@ export class Store<T> {
 
   /**
    * The canonical and monitored way of changing the state
-   * @param action an action instance witha tyype and a payload
+   * @param action an action instance with a type and a payload
    * @remarks The payload must be a partial of T
    */
   dispatch(action: Action): void {
