@@ -1,27 +1,16 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/">
+    <a class="navbar-item" [routerLink]="['/']">
       <img src="./assets/icons/logo.png" width="28" height="28"> <strong
               class="ml-4 is-size-2">Angular.Builders</strong> </a>
-    <!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-       data-target="navbarItems">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a> -->
   </div>
   <div id="navbarItems" class="navbar-menu is-active">
     <ng-content select=".navbar-start">
     </ng-content>
     <div class="navbar-end">
-      <!-- <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light"> Log in </a>
-        </div>
-      </div> -->
+      <ab-notification *ngIf="notification$ |async as notification"
+                       [notification]="notification">
+      </ab-notification>
     </div>
   </div>
 </nav>

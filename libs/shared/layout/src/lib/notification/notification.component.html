@@ -1,0 +1,3 @@
+<aside *ngIf="show$ | async" class="notification {{notification.class}} is-light mt-4">
+  <button class="delete" (click)="onClose()"></button> M: {{ notification.message }}
+</aside>

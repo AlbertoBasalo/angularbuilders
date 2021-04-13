@@ -17,6 +17,7 @@ export class ResultList {
   };
 
   getHeader() {
+    // ToDo: use @Input set instead of this function call
     const header = { ...this.header };
     if (this.queryTerm) {
       header.title = `List of resources for ${this.queryTerm}`;

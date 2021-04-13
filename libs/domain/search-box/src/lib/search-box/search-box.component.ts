@@ -30,7 +30,7 @@ export class SearchBoxComponent implements AfterViewInit, OnDestroy {
   private inputSubscription!: Subscription;
 
   ngAfterViewInit(): void {
-    this.inputSubscription = fromEvent<any>(
+    this.inputSubscription = fromEvent<{ target: { value: unknown } }>(
       this.searchInput.nativeElement,
       'keyup'
     )
