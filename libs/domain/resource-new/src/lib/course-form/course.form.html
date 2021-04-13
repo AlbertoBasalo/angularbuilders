@@ -1,0 +1,22 @@
+<form [formGroup]="form" autocomplete="off">
+  <ab-form-control
+                   [form]="form"
+                   formControlName="date"
+                   type="date"
+                   label="The starting day">
+  </ab-form-control>
+  <ab-form-control
+                   [form]="form"
+                   formControlName="teacher"
+                   type="text"
+                   label="The instructor name"
+                   placeholder="Jane Doe">
+  </ab-form-control>
+  <ab-form-control
+                   [form]="form"
+                   formControlName="academy"
+                   type="text"
+                   label="The academy or online platform"
+                   placeholder="The best place to learn Angular">
+  </ab-form-control>
+</form>

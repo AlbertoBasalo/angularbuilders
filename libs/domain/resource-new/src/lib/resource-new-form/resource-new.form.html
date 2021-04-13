@@ -37,6 +37,7 @@
                        [label]="'If it is for selling (in US $)'"
                        [placeholder]="'99.9'">
       </ab-form-control>
+      <ab-course-form [hidden]="form.value.categoryId !=='courses'"></ab-course-form>
     </fieldset>
     <input type="submit" value="Add to the catalog!" [disabled]="form.invalid"
            class="button is-link mt-4" />
