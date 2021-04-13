@@ -8,6 +8,8 @@
     <ng-content select=".navbar-start">
     </ng-content>
     <div class="navbar-end">
+      <ng-content select=".navbar-end">
+      </ng-content>
       <ab-notification *ngIf="notification$ |async as notification"
                        [notification]="notification">
       </ab-notification>

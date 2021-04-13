@@ -1,0 +1,44 @@
+<ab-ui-section [header]="header">
+  <form [formGroup]="form" (submit)="onSubmit()" class="box mt-4 mb-4" autocomplete="off">
+    <fieldset class="mb-4">
+      <ab-form-control
+                       [form]="form"
+                       formControlName="name"
+                       type="text"
+                       [label]="'The resource commercial name'"
+                       [placeholder]="'The ngSuperTool'">
+      </ab-form-control>
+      <ab-form-control
+                       [form]="form"
+                       formControlName="categoryId"
+                       type="select"
+                       [options]="categories"
+                       [label]="'A category'"
+                       [placeholder]="''">
+      </ab-form-control>
+      <ab-form-control
+                       [form]="form"
+                       formControlName="description"
+                       type="text"
+                       [label]="'A short description'"
+                       [placeholder]="''">
+      </ab-form-control>
+      <ab-form-control
+                       [form]="form"
+                       type="url"
+                       formControlName="url"
+                       [label]="'The home page'"
+                       [placeholder]="'https://www.ng-super-tool.dev'">
+      </ab-form-control>
+      <ab-form-control
+                       [form]="form"
+                       type="number"
+                       formControlName="price"
+                       [label]="'If it is for selling (in US $)'"
+                       [placeholder]="'99.9'">
+      </ab-form-control>
+    </fieldset>
+    <input type="submit" value="Add to the catalog!" [disabled]="form.invalid"
+           class="button is-link mt-4" />
+  </form>
+</ab-ui-section>
