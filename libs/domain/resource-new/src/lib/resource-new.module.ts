@@ -3,6 +3,7 @@ import { UiModule } from '@ab/ui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CourseForm } from './course-form/course.form';
 import { ResourceNewForm } from './resource-new-form/resource-new.form';
 import { ResourceNewPage } from './resource-new.page';
 
@@ -15,6 +16,6 @@ import { ResourceNewPage } from './resource-new.page';
     ]),
     UiModule,
   ],
-  declarations: [ResourceNewPage, ResourceNewForm],
+  declarations: [ResourceNewPage, ResourceNewForm, CourseForm],
 })
 export class ResourceNewModule {}
