@@ -34,6 +34,7 @@
     "domain-not-found": { "tags": ["domain", "page"] },
     "shared-global": { "tags": ["shared", "core"] },
     "domain-category": { "tags": ["domain", "page"] },
-    "domain-resource": { "tags": ["domain", "page"] }
+    "domain-resource": { "tags": ["domain", "page"] },
+    "domain-resource-new": { "tags": ["domain", "page"] }
   }
 }

@@ -26,7 +26,8 @@
       "@ab/not-found": ["libs/domain/not-found/src/index.ts"],
       "@ab/global": ["libs/shared/global/src/index.ts"],
       "@ab/category": ["libs/domain/category/src/index.ts"],
-      "@ab/resource": ["libs/domain/resource/src/index.ts"]
+      "@ab/resource": ["libs/domain/resource/src/index.ts"],
+      "@ab/resource-new": ["libs/domain/resource-new/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

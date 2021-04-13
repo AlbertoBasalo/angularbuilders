@@ -26,6 +26,11 @@ const routes: Routes = [
       import('@ab/resource').then((module) => module.ResourceModule),
   },
   {
+    path: 'resource-new',
+    loadChildren: () =>
+      import('@ab/resource-new').then((module) => module.ResourceNewModule),
+  },
+  {
     path: 'search',
     loadChildren: () =>
       import('@ab/search').then((module) => module.SearchModule),
