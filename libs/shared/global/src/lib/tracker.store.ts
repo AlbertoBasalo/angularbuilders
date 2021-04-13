@@ -4,8 +4,11 @@ import { Observable } from 'rxjs';
 import { distinctUntilChanged, filter } from 'rxjs/operators';
 import {
   TrackEntry,
+  TrackerBusinessEvents,
   TrackerCategories,
+  TrackerErrorEvents,
   TrackerEvents,
+  TrackerSystemEvents,
 } from './models/trackEntry';
 import { Store } from './store';
 @Injectable({
@@ -39,13 +42,13 @@ export class TrackerStore {
     this.store$.dispatch({ type: 'TRACK_' + category, payload: payload });
   }
 
-  trackError(event: TrackerEvents, label?: string, value?: number) {
+  trackError(event: TrackerErrorEvents, label?: string, value?: number) {
     this.trackEntry('ERROR', event, label, value);
   }
-  trackSystem(event: TrackerEvents, label?: string, value?: number) {
+  trackSystem(event: TrackerSystemEvents, label?: string, value?: number) {
     this.trackEntry('SYSTEM', event, label, value);
   }
-  trackBusiness(event: TrackerEvents, label?: string, value?: number) {
+  trackBusiness(event: TrackerBusinessEvents, label?: string, value?: number) {
     this.trackEntry('BUSINESS', event, label, value);
   }
 
@@ -55,7 +58,7 @@ export class TrackerStore {
     this.trackError(errorEvent, errorUrl, error.status);
   }
   trackCodeError(error: Error) {
-    this.trackError('DEV_FAULT', error.message);
+    this.trackError('CODE_FAULT', error.message);
   }
 
   selectByEvent$(event: TrackerEvents) {
@@ -70,8 +73,10 @@ export class TrackerStore {
     );
   }
 
-  private getErrorEventFromStatus(error: HttpErrorResponse): TrackerEvents {
-    let errorEvent: TrackerEvents = 'CALLER_FAULT';
+  private getErrorEventFromStatus(
+    error: HttpErrorResponse
+  ): TrackerErrorEvents {
+    let errorEvent: TrackerErrorEvents = 'CALLER_FAULT';
     if (error.status >= 500) {
       errorEvent = 'SERVER_FAULT';
     } else if ([401, 403].includes(error.status)) {

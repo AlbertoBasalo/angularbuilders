@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   notification$: Observable<Notification>;
 
   constructor(store: TrackerStore) {
-    // ToDo: create notifications by error event kind
+    // ToDo: create specific notifications by error event kind
     const error$ = store.selectAnyErrors$().pipe(
       map(() => ({
         class: 'is-danger',
@@ -21,10 +21,11 @@ export class NavbarComponent implements OnInit {
           'There was an error!. Review your data and retry. If persists we will fix it ASAP!',
       }))
     );
+    // ToDo: use another store for user notifications
     const success$ = store.selectByEvent$('FORM_SENT').pipe(
       map((trackEntry) => ({
         class: 'is-success',
-        message: trackEntry.label || 'Sent success',
+        message: trackEntry.label || 'Success',
       }))
     );
     this.notification$ = merge(error$, success$);
