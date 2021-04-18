@@ -3,6 +3,10 @@
     <ab-ui-card *ngFor="let category of categories"
                 [card]="getCardFrom(category)"
                 class="column is-one-quarter-desktop is-half-tablet">
+      <div class="card-footer-item">
+        <a [routerLink]="'/category/' + category.id"> <span
+                class="tag is-primary is-medium">{{category.count}}</span> resources </a>
+      </div>
     </ab-ui-card>
   </section>
 </ab-ui-section>

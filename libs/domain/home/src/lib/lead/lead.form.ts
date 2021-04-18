@@ -17,8 +17,9 @@ export class LeadForm implements OnInit {
   @Output() send = new EventEmitter<any>();
   header = {
     heroClass: 'is-warning',
-    title: 'We can help you',
-    subtitle: 'Contact us.',
+    title: 'Contact us',
+    subtitle:
+      'We can help you building your app, and you can help everybody adding resources to this catalog.',
   };
   constructor(private fb: FormBuilder) {}
 

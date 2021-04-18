@@ -18,7 +18,10 @@ height: 100%;">
     </div>
   </main>
   <footer class="card-footer" style="margin-top: auto;">
-    <ng-content select=".footer-content">
+    <div *ngIf="!!card.footer" class="card-footer-item tag is-primary">
+      {{ card.footer }}
+    </div>
+    <ng-content *ngIf="!card.footer" select=".card-footer-item">
     </ng-content>
   </footer>
 </article>
