@@ -58,6 +58,12 @@ export class CoreModule {
       tracker.selectByEvent$('CLICK').subscribe({
         next: (trackEntry) => analytics.sendEvent(trackEntry),
       });
+      tracker.selectByEvent$('APP_STARTED').subscribe({
+        next: (trackEntry) => analytics.sendEvent(trackEntry),
+      });
+      tracker.selectAnyErrors$().subscribe({
+        next: (trackEntry) => analytics.sendEvent(trackEntry),
+      });
       router.events
         .pipe(
           filter((event) => event instanceof NavigationEnd),
