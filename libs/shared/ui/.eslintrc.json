@@ -13,7 +13,7 @@
         "@angular-eslint/no-empty-lifecycle-method']": ["off"],
         "@angular-eslint/directive-selector": [
           "error",
-          { "type": "attribute", "prefix": "ab-ui", "style": "camelCase" }
+          { "type": "attribute", "prefix": "abUui", "style": "camelCase" }
         ],
         "@angular-eslint/component-selector": [
           "error",
