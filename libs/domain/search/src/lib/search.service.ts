@@ -24,6 +24,8 @@ export class SearchService {
     if (cleanQuery.length === 0) return false;
     if (resource.name.toLowerCase().includes(cleanQuery)) return true;
     if (resource.description.toLowerCase().includes(cleanQuery)) return true;
+    if (resource.categoryId.toLowerCase().includes(cleanQuery)) return true;
+    if (resource.url.toLowerCase().includes(cleanQuery)) return true;
     return false;
   }
 }

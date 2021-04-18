@@ -19,6 +19,13 @@ export class HomeService {
       .get<{ data: Category[] }>(this.categoriesUrl)
       .pipe(map((result) => result.data));
   }
+  getResourceCountByCategoryid$(categoryId: string) {
+    return this.http
+      .get<{ data: number }>(
+        `${this.categoriesUrl}/${categoryId}/resources/count`
+      )
+      .pipe(map((result) => result.data));
+  }
   postLead$(lead: unknown) {
     return this.http.post(this.leadsUrl, lead);
   }

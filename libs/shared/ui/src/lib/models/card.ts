@@ -4,4 +4,5 @@ export interface Card {
   // ToDo: better control of link property
   link?: string;
   href?: string;
+  footer?: string;
 }
