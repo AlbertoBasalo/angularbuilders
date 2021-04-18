@@ -1,0 +1,5 @@
+<ab-resource-new-form
+                      *ngIf="categories$ | async as categories"
+                      [categories]="categories"
+                      (send)="onSend($event)">
+</ab-resource-new-form>

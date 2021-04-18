@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Category } from './models/category';
+import { Resource } from './models/resource';
 
 @Injectable({
   providedIn: 'root',
 })
-export class HomeService {
+export class ResourceNewService {
   private readonly categoriesUrl = `${this.environment.apiUrl}/categories`;
-  private readonly leadsUrl = `${this.environment.apiUrl}/leads`;
+  private readonly resourcesUrl = `${this.environment.apiUrl}/resources`;
   constructor(
     @Inject(ENVIRONMENT) private readonly environment: Environment,
     private http: HttpClient
@@ -19,14 +20,9 @@ export class HomeService {
       .get<{ data: Category[] }>(this.categoriesUrl)
       .pipe(map((result) => result.data));
   }
-  getResourceCountByCategoryid$(categoryId: string) {
+  postNewResource$(newResource: Resource) {
     return this.http
-      .get<{ data: number }>(
-        `${this.categoriesUrl}/${categoryId}/resources/count`
-      )
+      .post<{ data: Resource }>(`${this.resourcesUrl}/`, newResource)
       .pipe(map((result) => result.data));
-  }
-  postLead$(lead: unknown) {
-    return this.http.post(this.leadsUrl, lead);
   }
 }

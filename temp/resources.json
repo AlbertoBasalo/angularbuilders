@@ -1,0 +1,145 @@
+[
+  {
+    "name": "ngx-electronify",
+    "description": "Angular CLI builder that runs your application in the desktop using Electron",
+    "url": "https://github.com/bampakoa/ngx-electronify#readme",
+    "id": "ngx-electronify",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "ngx-foldable",
+    "description": "ngx-foldable is a set of components and services to help you build dual-screen experiences for foldable or dual-screen devices, such as the Surface Duo",
+    "url": "https://sinedied.github.io/ngx-foldable/",
+    "id": "ngx-foldable",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Angular Lib for OpenID Connect & OAuth2",
+    "description": "OpenID Code Flow with PKCE, Code Flow with refresh tokens, OpenID Connect Implicit Flow",
+    "url": "https://www.npmjs.com/package/angular-auth-oidc-client",
+    "id": "angular-auth-oidc-client",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Web APIs for Angular",
+    "description": "High quality lightweight wrappers for native Web APIs for idiomatic use with Angular",
+    "url": "https://ng-web-apis.github.io/",
+    "id": "ng-web-apis",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "NGRX Reactive State for Angular",
+    "description": "Reactive state management with isolated side effects powered by Schematics",
+    "url": "https://ngrx.io/",
+    "id": "ngrx",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Augury",
+    "description": "A Chrome and Firefox Dev Tools extension for debugging Angular applications.",
+    "url": "https://augury.rangle.io/",
+    "id": "augury",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Spectator",
+    "description": "A Powerful Tool to Simplify Your Angular Tests",
+    "url": "https://ngneat.github.io/spectator/",
+    "id": "spectator",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Auto Spies",
+    "description": "Easy and type safe way to write spies for tests, for both sync and async (promises, Observables) returning methods.",
+    "url": "https://github.com/hirezio/auto-spies",
+    "id": "auto-spies",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Angular Testing Library",
+    "description": "Angular Testing Library builds on top of DOM Testing Library by adding APIs for working with Angular components.",
+    "url": "https://testing-library.com/docs/angular-testing-library/intro/",
+    "id": "angular-testing-library",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Prime NG",
+    "description": "UI Component Library featuring elegant, high-performance, accessible and fully customizable UI Components.",
+    "url": "https://testing-library.com/docs/angular-testing-library/intro/",
+    "id": "prime-ng",
+    "categoryId": "ui-components",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Ng zorro, ant design",
+    "description": "An enterprise-class Angular UI component library based on Ant Design, all components are open source and free to use under MIT license.",
+    "url": "https://ng.ant.design/docs/introduce/en",
+    "id": "ng-zorro",
+    "categoryId": "ui-components",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Scully",
+    "description": "Static Angular sites, build, test and deploy Jamstack apps extremely fast.",
+    "url": "https://scully.io/",
+    "id": "scully",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+
+
+
+  {
+    "name": "Angular Essentials",
+    "description": "Essential VS code extensions for Angular developers.",
+    "url": "https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials",
+    "id": "angular-essentials",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "NX Angular Console",
+    "description": "VS Code Extension to spend less time looking up command line arguments and more time shipping incredible products.",
+    "url": "https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console",
+    "id": "angular-console",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Angular2 switcher",
+    "description": "VS Code Extension to easily navigate to `typescript`|`template`|`style` in angular2 project.",
+    "url": "https://marketplace.visualstudio.com/items?itemName=infinity1207.angular2-switcher",
+    "id": "angular2-switcher",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Learning Angular",
+    "description": "This book will demystify Angular as a framework, as well as provide clear instructions and examples on how to get started with writing scalable Angular applications. By Aristeidis Bampakos ",
+    "url": "https://www.packtpub.com/product/learning-angular-third-edition/9781839210662",
+    "id": "learning-angular",
+    "categoryId": "books",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Angular for Enterprise-Ready Web Applications",
+    "description": "Start mastering Angular programming fundamentals to design and develop line-of-business app By Doguhan Uluca",
+    "url": "https://www.packtpub.com/product/learning-angular-third-edition/9781839210662",
+    "id": "angular-for-enterprise-ready-web-applications",
+    "categoryId": "books",
+    "ownerId": "albertobasalo"
+  }
+
+
+
+]
+

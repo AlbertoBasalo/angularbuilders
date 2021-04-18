@@ -14,5 +14,6 @@ module.exports = {
     '<rootDir>/libs/shared/global',
     '<rootDir>/libs/domain/category',
     '<rootDir>/libs/domain/resource',
+    '<rootDir>/libs/domain/resource-new',
   ],
 };

@@ -29,11 +29,17 @@ export class ControlComponent implements ControlValueAccessor {
   @Input() label = '';
   @Input() placeholder = '';
   @Input() type = 'text';
+  @Input() options = [{ id: '0', name: 'select one' }];
 
   value: unknown;
   onChange: any;
   onTouch: any;
   onInput(event: any) {
+    this.value = event.target.value;
+    this.onTouch();
+    this.onChange(this.value);
+  }
+  onSelectChange(event: any) {
     this.value = event.target.value;
     this.onTouch();
     this.onChange(this.value);

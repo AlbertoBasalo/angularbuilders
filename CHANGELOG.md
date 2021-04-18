@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.18](https://github.com/angularbuilders/angularbuilders/compare/v0.0.17...v0.0.18) (2021-04-18)
+
+
+### Features
+
+* contact form to add resources ([84b848c](https://github.com/angularbuilders/angularbuilders/commit/84b848c05e454ddff6e4de26283574f8234f54b6))
+* course-sub-form - Closes [#32](https://github.com/angularbuilders/angularbuilders/issues/32) ([340fd9b](https://github.com/angularbuilders/angularbuilders/commit/340fd9b12e1695e684244a5dd00d78770bb45a24))
+* generate resource-new page ([46483fb](https://github.com/angularbuilders/angularbuilders/commit/46483fb3efb067f60ef03994fb81255fb20d9ecc))
+* resource-counter-on-home-page - Closes [#34](https://github.com/angularbuilders/angularbuilders/issues/34) ([7bcec64](https://github.com/angularbuilders/angularbuilders/commit/7bcec647f348bf8b92b2ec5a5f4cb4fedf9a44d3))
+* resource-new-page - Closes [#30](https://github.com/angularbuilders/angularbuilders/issues/30) ([9bdee40](https://github.com/angularbuilders/angularbuilders/commit/9bdee403e7b0b7059c5c83755c6548227335c486))
+
 ### [0.0.17](https://github.com/angularbuilders/angularbuilders/compare/v0.0.16...v0.0.17) (2021-04-13)
 
 
