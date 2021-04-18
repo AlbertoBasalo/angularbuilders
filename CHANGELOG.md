@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.19](https://github.com/angularbuilders/angularbuilders/compare/v0.0.18...v0.0.19) (2021-04-18)
+
+
+### Features
+
+* analyutics and no add new button ([a6bfe09](https://github.com/angularbuilders/angularbuilders/commit/a6bfe090d2771c7289839a94301024c5cff0ebce))
+
 ### [0.0.18](https://github.com/angularbuilders/angularbuilders/compare/v0.0.17...v0.0.18) (2021-04-18)
 
 
