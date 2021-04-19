@@ -137,6 +137,15 @@
     "id": "angular-for-enterprise-ready-web-applications",
     "categoryId": "books",
     "ownerId": "albertobasalo"
+  },
+
+  {
+    "name": "Apollo Angular",
+    "description": "Easy to use, production ready, customisable GraphQL Client for Angular Framework",
+    "url": "https://apollo-angular.com/",
+    "id": "apollo-angular",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
   }
 
 
