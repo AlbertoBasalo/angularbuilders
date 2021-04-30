@@ -43,6 +43,21 @@ export function app(): express.Express {
     });
   });
 
+  server.use(
+    (
+      err: Error,
+      req: express.Request,
+      res: express.Response,
+      next: express.NextFunction
+    ) => {
+      if (res.headersSent) {
+        return next(err);
+      }
+      console.warn(`${req.url} throws ${err.stack || 'No stack'}`);
+      console.error(err);
+    }
+  );
+
   return server;
 }
 

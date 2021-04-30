@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    data: { title: 'Angular.Builders' },
     loadChildren: () => import('@ab/home').then((module) => module.HomeModule),
   },
   {
@@ -12,16 +13,19 @@ const routes: Routes = [
   },
   {
     path: 'category',
+    data: { title: 'One Category' },
     loadChildren: () =>
       import('@ab/category').then((module) => module.CategoryModule),
   },
   {
     path: 'not-found',
+    data: { title: 'Page not found' },
     loadChildren: () =>
       import('@ab/not-found').then((module) => module.NotFoundModule),
   },
   {
     path: 'resource',
+    data: { title: 'One Resource' },
     loadChildren: () =>
       import('@ab/resource').then((module) => module.ResourceModule),
   },
@@ -32,6 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'search',
+    data: { title: 'Search results' },
     loadChildren: () =>
       import('@ab/search').then((module) => module.SearchModule),
   },
