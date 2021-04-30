@@ -12,7 +12,8 @@ import { SearchBoxModule } from '@ab/search-box';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, Inject, NgModule, PLATFORM_ID } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { CoreRoutingModule } from './core-routing.module';
@@ -48,7 +49,9 @@ export class CoreModule {
     @Inject(ENVIRONMENT) private readonly environment: Environment,
     router: Router,
     analytics: AnalyticsService,
-    tracker: TrackerStore
+    tracker: TrackerStore,
+    activatedRoute: ActivatedRoute,
+    titleService: Title
   ) {
     if (isPlatformBrowser(platformId)) {
       analytics.configure(environment.ga);
@@ -70,8 +73,9 @@ export class CoreModule {
           map((event) => event as NavigationEnd)
         )
         .subscribe({
-          next: (navigationEndEvent) =>
-            tracker.trackBusiness('NAV', navigationEndEvent.urlAfterRedirects),
+          next: (navigationEndEvent) => {
+            tracker.trackBusiness('NAV', navigationEndEvent.urlAfterRedirects);
+          },
         });
       if (environment.production === false) {
         // ToDo: Use Redux DevTools
@@ -79,5 +83,15 @@ export class CoreModule {
       }
       tracker.trackSystem('APP_STARTED', JSON.stringify(environment));
     }
+    router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        map((event) => event as NavigationEnd)
+      )
+      .subscribe({
+        next: () => {
+          titleService.setTitle(activatedRoute.firstChild?.snapshot.data.title);
+        },
+      });
   }
 }
