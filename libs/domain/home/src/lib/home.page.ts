@@ -1,9 +1,7 @@
 import { TrackerStore } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { forkJoin } from 'rxjs/internal/observable/forkJoin';
-import { map } from 'rxjs/internal/operators/map';
-import { switchMap } from 'rxjs/internal/operators/switchMap';
+import { forkJoin, Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 import { HomeService } from './home.service';
 import { Category } from './models/category';
 
