@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
-import {
-  BrowserModule,
-  BrowserTransferStateModule,
-} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { environment } from '../environments/environment';
@@ -13,7 +10,6 @@ import { CoreModule } from './core/core.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    BrowserTransferStateModule,
     TransferHttpCacheModule,
     CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
