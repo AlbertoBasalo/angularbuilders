@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.23](https://github.com/angularbuilders/angularbuilders/compare/v0.0.22...v0.0.23) (2021-05-04)
+
+
+### Features
+
+* server transfer cache ([8d6cbf7](https://github.com/angularbuilders/angularbuilders/commit/8d6cbf73deff0fe6a74f2a0e021ae4c9d186eeee))
+
+
+### Bug Fixes
+
+* searchbox size ([ec4cff4](https://github.com/angularbuilders/angularbuilders/commit/ec4cff46ee6dd8c59aa1f8203ae0b480e06f116e))
+
 ### [0.0.22](https://github.com/angularbuilders/angularbuilders/compare/v0.0.21...v0.0.22) (2021-05-04)
 
 
