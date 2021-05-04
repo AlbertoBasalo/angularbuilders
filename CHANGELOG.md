@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.22](https://github.com/angularbuilders/angularbuilders/compare/v0.0.21...v0.0.22) (2021-05-04)
+
+
+### Features
+
+* server transfer state ([28c7ced](https://github.com/angularbuilders/angularbuilders/commit/28c7ced433f8575339f900bbc5937524af6790c0))
+
 ### [0.0.21](https://github.com/angularbuilders/angularbuilders/compare/v0.0.20...v0.0.21) (2021-04-30)
 
 
