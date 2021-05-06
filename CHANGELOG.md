@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.24](https://github.com/angularbuilders/angularbuilders/compare/v0.0.23...v0.0.24) (2021-05-06)
+
+
+### Features
+
+* get-github-info-from-api - Closes [#36](https://github.com/angularbuilders/angularbuilders/issues/36) ([cefcbdf](https://github.com/angularbuilders/angularbuilders/commit/cefcbdf3c5974cad6b7c036d7c254bd3488bccaf))
+
 ### [0.0.23](https://github.com/angularbuilders/angularbuilders/compare/v0.0.22...v0.0.23) (2021-05-04)
 
 
