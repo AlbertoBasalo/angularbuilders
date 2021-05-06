@@ -4,7 +4,8 @@ height: 100%;">
   <header class="card-header">
     <p class="card-header-title">
       <a *ngIf="card.link" [routerLink]="[card.link]" [abUiTrack]="card.title">{{ card.title }}</a>
-      <a *ngIf="card.href" [href]="card.href" [abUiTrack]="card.title">{{ card.title }}</a>
+      <a *ngIf="card.href" [href]="card.href" target="_blank"
+         [abUiTrack]="card.title">{{ card.title }}</a>
       <span *ngIf="!card.link && !card.href">{{ card.title }}</span>
     </p>
   </header>

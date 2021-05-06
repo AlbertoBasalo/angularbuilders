@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { GhRepo } from './models/gh-repo';
 import { Resource } from './models/resource';
 import { ResourceService } from './resource.service';
 @Component({
@@ -19,7 +20,7 @@ export class ResourcePage implements OnInit {
 
   header$ = new BehaviorSubject<Header>(this.header);
   resource$!: Observable<Resource>;
-
+  ghRepo$!: Observable<GhRepo>;
   constructor(
     private route: ActivatedRoute,
     private service: ResourceService
@@ -29,13 +30,16 @@ export class ResourcePage implements OnInit {
     const resourceId = this.route.snapshot.params.id;
     this.header$.next({ ...this.header, title: resourceId });
     this.resource$ = this.service.getResourceById$(resourceId).pipe(
-      tap((resource) =>
+      tap((resource) => {
         this.header$.next({
           ...this.header,
           title: resource.name,
           subtitle: resource.description,
-        })
-      )
+        });
+        if (resource.url.startsWith('https://github.com/')) {
+          this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);
+        }
+      })
     );
   }
 }
