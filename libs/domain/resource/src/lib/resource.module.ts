@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ResourcePage } from './resource.page';
 import { ResourceComponent } from './resource/resource.component';
+import { GithubComponent } from './github/github.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { ResourceComponent } from './resource/resource.component';
     ]),
     UiModule,
   ],
-  declarations: [ResourcePage, ResourceComponent],
+  declarations: [ResourcePage, ResourceComponent, GithubComponent],
 })
 export class ResourceModule {}

@@ -1,0 +1,8 @@
+<div class="box content">
+  <ab-ui-card
+              [card]="getCardFrom(ghRepo)">
+    <main class="content"> Updated at <span class="tag is-dark">{{ghRepo.updated_at}}</span>
+      followed by <span class="tag is-dark">{{ghRepo.subscribers_count}}</span> with <span
+            class="tag is-dark">{{ghRepo.stargazers_count}}</span> stars </main>
+  </ab-ui-card>
+</div>
