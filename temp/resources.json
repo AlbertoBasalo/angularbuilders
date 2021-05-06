@@ -96,8 +96,6 @@
     "ownerId": "albertobasalo"
   },
 
-
-
   {
     "name": "Angular Essentials",
     "description": "Essential VS code extensions for Angular developers.",
@@ -154,12 +152,43 @@
     "id": "ngsetstate",
     "categoryId": "libraries",
     "ownerId": "albertobasalo"
+  },
+
+  {
+    "name": "ng-observe",
+    "description": "Angular reactivity streamlined...",
+    "url": "https://github.com/ngbox/ng-observe",
+    "id": "ng-observe",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
+  },
+
+  {
+    "name": "Lumberjack",
+    "description": "Chop and cut Angular logs like a professional lumberjack.",
+    "url": "https://github.com/ngworker/lumberjack",
+    "id": "Lumberjack",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
+  },
+
+  {
+    "name": "mini-rx-store",
+    "description": "Chop and cut Angular logs like a professional lumberjack.",
+    "url": "https://github.com/spierala/mini-rx-store",
+    "id": "mini-rx-store",
+    "categoryId": "libraries",
+    "ownerId": "albertobasalo"
+  },
+
+  {
+    "name": "Pro Angular 9",
+    "description": "Build Powerful and Dynamic Web Apps.",
+    "url": "https://www.apress.com/gp/book/9781484259979",
+    "id": "pro-angular-9",
+    "categoryId": "books",
+    "ownerId": "albertobasalo"
   }
 
-  // 21/04/21
-
-  https://github.com/ngbox/ng-observe
-
-  Pro Angular 9: Build Powerful and Dynamic Web Apps
+  // 6/5/2021
 ]
-
