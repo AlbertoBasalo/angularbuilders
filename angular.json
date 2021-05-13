@@ -374,7 +374,6 @@
             "main": "apps/www/src/main.ts",
             "polyfills": "apps/www/src/polyfills.ts",
             "tsConfig": "apps/www/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/www/src/favicon.ico",
               "apps/www/src/assets",
@@ -384,7 +383,13 @@
               "apps/www/src/styles.css",
               "node_modules/bulma/css/bulma.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -457,7 +462,9 @@
           "options": {
             "outputPath": "dist/www/server",
             "main": "apps/www/server.ts",
-            "tsConfig": "apps/www/tsconfig.server.json"
+            "tsConfig": "apps/www/tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false
           },
           "configurations": {
             "production": {
