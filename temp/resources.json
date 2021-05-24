@@ -191,4 +191,73 @@
   }
 
   // 6/5/2021
+
+  {
+    "name": "Angular DevTools",
+    "description": "Angular DevTools extends Chrome DevTools adding Angular specific debugging and profiling capabilities.",
+    "url": "https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh",
+    "id": "angular-devtools",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  }
+,
+  {
+    "name": "Module Federation Plugin",
+    "description": "Seamlessly using Webpack Module Federation with the Angular CLI.",
+    "url": "https://github.com/angular-architects/module-federation-plugin",
+    "id": "module-federation-plugin",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  },
+  {
+    "name": "Angular ESLint",
+    "description": "Tooling which enables ESLint to lint Angular projects.",
+    "url": "https://github.com/angular-eslint/angular-eslint",
+    "id": "angular-eslint",
+    "categoryId": "tools",
+    "ownerId": "albertobasalo"
+  }
+,
+  {
+    "name": "RxAngular",
+    "description": "RxAngular offers a comprehensive toolset for handling fully reactive Angular applications with the main focus on runtime performance and template rendering.",
+    "url": "https://github.com/rx-angular/rx-angular",
+    "id": "rx-angular",
+    "categoryId": "library",
+    "ownerId": "albertobasalo"
+  }
+
+,
+    {
+      "name": "Save to Google Pay",
+      "description": "The Save to Google Pay button makes it easy embed the Save to Google Pay functionality into your websites.",
+      "url": "https://github.com/google-pay/save-to-google-pay-button",
+      "id": "save-to-google-pay-button",
+      "categoryId": "ui-components",
+      "ownerId": "albertobasalo"
+    },
+    {
+      "name": "Google Pay Button",
+      "description": "The Google Pay API enables fast, simple checkout on your website. This provides convenient access to hundreds of millions of cards that are saved to Google Accounts worldwide.",
+      "url": "https://github.com/google-pay/google-pay-button",
+      "id": "google-pay-button",
+      "categoryId": "library",
+      "ownerId": "albertobasalo"
+    }
+
+    // 20/5/2021
+
+
+    {
+      "name": "Polymorpheus",
+      "description": "Polymorpheus is a tiny library for polymorphic templates in Angular..",
+      "url": "https://github.com/TinkoffCreditSystems/ng-polymorpheus",
+      "id": "polymorpheus",
+      "categoryId": "library",
+      "ownerId": "albertobasalo"
+    }
+
+    // 24/5/2021
+
+    https://devlibrary.withgoogle.com/products/angular
 ]
