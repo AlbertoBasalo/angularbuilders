@@ -259,5 +259,29 @@
 
     // 24/5/2021
 
-    https://devlibrary.withgoogle.com/products/angular
+    // https://devlibrary.withgoogle.com/products/angular
+    {
+      "name": "ng-morph",
+      "description": "Code mutations in schematics were never easier than now.",
+      "url": "https://github.com/TinkoffCreditSystems/ng-morph",
+      "id": "ng-morph",
+      "categoryId": "tools",
+      "ownerId": "albertobasalo"
+    },
+    {
+      "name": "compodoc",
+      "description": "📔 The missing documentation tool for your Angular, Nest & Stencil application.",
+      "url": "https://github.com/compodoc/compodoc",
+      "id": "compodoc",
+      "categoryId": "tools",
+      "ownerId": "albertobasalo"
+    },
+    {
+      "name": "Componizer",
+      "description": "Componizer is a tool to help you refactor your Angular components. Just select your html and choose Componize from the right click menu (aka Context menu) to see some magic.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=bilelmsekni.componizer",
+      "id": "componizer",
+      "categoryId": "tools",
+      "ownerId": "albertobasalo"
+    }
 ]
