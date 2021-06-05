@@ -223,7 +223,7 @@
     "description": "RxAngular offers a comprehensive toolset for handling fully reactive Angular applications with the main focus on runtime performance and template rendering.",
     "url": "https://github.com/rx-angular/rx-angular",
     "id": "rx-angular",
-    "categoryId": "library",
+    "categoryId": "libraries",
     "ownerId": "albertobasalo"
   }
 
@@ -241,7 +241,7 @@
       "description": "The Google Pay API enables fast, simple checkout on your website. This provides convenient access to hundreds of millions of cards that are saved to Google Accounts worldwide.",
       "url": "https://github.com/google-pay/google-pay-button",
       "id": "google-pay-button",
-      "categoryId": "library",
+      "categoryId": "libraries",
       "ownerId": "albertobasalo"
     }
 
@@ -253,7 +253,7 @@
       "description": "Polymorpheus is a tiny library for polymorphic templates in Angular..",
       "url": "https://github.com/TinkoffCreditSystems/ng-polymorpheus",
       "id": "polymorpheus",
-      "categoryId": "library",
+      "categoryId": "libraries",
       "ownerId": "albertobasalo"
     }
 
@@ -282,6 +282,40 @@
       "url": "https://marketplace.visualstudio.com/items?itemName=bilelmsekni.componizer",
       "id": "componizer",
       "categoryId": "tools",
+      "ownerId": "albertobasalo"
+    },
+
+    {
+      "name": "JSCutlery Test Utils",
+      "description": "Tools that make testing cheaper with Cypress and Angular.",
+      "url": "https://github.com/jscutlery/test-utils",
+      "id": "jscutlery-test-utils",
+      "categoryId": "tools",
+      "ownerId": "albertobasalo"
+    },
+
+    {
+      "name": "Convoyr",
+      "description": "Modular HTTP extensions for Angular with Inteterceptors for auth, cache and retry calls.",
+      "url": "https://github.com/jscutlery/convoyr",
+      "id": "convoyr",
+      "categoryId": "library",
+      "ownerId": "albertobasalo"
+    },
+
+    {
+      "name": "Angular Cli GhPages",
+      "description": "🚀 Deploy your 🅰️Angular app to GitHub pages directly from the Angular CLI! Available on NPM.",
+      "url": "https://github.com/angular-schule/angular-cli-ghpages",
+      "id": "angular-cli-ghpages",
+      "categoryId": "tools",
+      "ownerId": "albertobasalo"
+    }, {
+      "name": "Observable-Store",
+      "description": "Observable Store provides a simple way to manage state in Angular, React, Vue.js and other front-end applications",
+      "url": "https://github.com/DanWahlin/Observable-Store",
+      "id": "observable-store",
+      "categoryId": "libraries",
       "ownerId": "albertobasalo"
     }
 ]
