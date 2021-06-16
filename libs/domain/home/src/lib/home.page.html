@@ -1,7 +1,4 @@
 <ab-ui-page [header]="header">
   <ab-category-list *ngIf="categories$ | async as categories" [categories]="categories">
   </ab-category-list>
-  <ab-promo></ab-promo>
-  <ab-lead (send)="onLeadSend($event)">
-  </ab-lead>
 </ab-ui-page>

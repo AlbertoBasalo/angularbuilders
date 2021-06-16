@@ -9,7 +9,6 @@ import { Category } from './models/category';
 })
 export class HomeService {
   private readonly categoriesUrl = `${this.environment.apiUrl}/categories`;
-  private readonly leadsUrl = `${this.environment.apiUrl}/leads`;
   constructor(
     @Inject(ENVIRONMENT) private readonly environment: Environment,
     private http: HttpClient
@@ -25,8 +24,5 @@ export class HomeService {
         `${this.categoriesUrl}/${categoryId}/resources/count`
       )
       .pipe(map((result) => result.data));
-  }
-  postLead$(lead: unknown) {
-    return this.http.post(this.leadsUrl, lead);
   }
 }

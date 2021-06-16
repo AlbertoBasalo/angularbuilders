@@ -1,17 +1,25 @@
 import { ABValidators } from '@ab/form';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+} from '@angular/core';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
+
 @Component({
-  selector: 'ab-lead',
-  templateUrl: './lead.form.html',
-  styleUrls: [],
+  selector: 'ab-contact',
+  templateUrl: './contact.component.html',
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LeadForm implements OnInit {
+export class ContactComponent implements OnInit {
   form!: FormGroup;
 
   @Output() send = new EventEmitter<any>();
