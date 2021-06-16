@@ -28,7 +28,8 @@
       "@ab/category": ["libs/domain/category/src/index.ts"],
       "@ab/resource": ["libs/domain/resource/src/index.ts"],
       "@ab/resource-new": ["libs/domain/resource-new/src/index.ts"],
-      "@ab/about": ["libs/domain/about/src/index.ts"]
+      "@ab/about": ["libs/domain/about/src/index.ts"],
+      "@ab/contact": ["libs/domain/contact/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,3 @@
-import { TrackerStore } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { forkJoin, Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
@@ -19,7 +18,7 @@ export class HomePage {
     subtitle: 'A site to help you build great applications with Angular',
   };
 
-  constructor(private service: HomeService, private tracker: TrackerStore) {
+  constructor(private service: HomeService) {
     this.categories$ = service
       .getCategories$()
       .pipe(
@@ -45,17 +44,6 @@ export class HomePage {
     return categories.map((category: Category, index: number) => {
       const count = counters[index];
       return { ...category, count: count };
-    });
-  }
-
-  onLeadSend(lead: unknown) {
-    this.service.postLead$(lead).subscribe({
-      next: () =>
-        this.tracker.trackBusiness(
-          'FORM_SENT',
-          'Thanks for your interest. We will get in contact with you ASAP!'
-        ),
-      error: () => {},
     });
   }
 }

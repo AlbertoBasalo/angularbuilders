@@ -74,6 +74,9 @@
     },
     "domain-about": {
       "tags": ["domain", "page"]
+    },
+    "domain-contact": {
+      "tags": ["domain", "page"]
     }
   }
 }
