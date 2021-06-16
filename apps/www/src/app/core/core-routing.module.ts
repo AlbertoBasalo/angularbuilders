@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () => import('@ab/home').then((module) => module.HomeModule),
   },
   {
+    path: 'about',
+    loadChildren: () =>
+      import('@ab/about').then((module) => module.AboutModule),
+  },
+  {
     path: 'auth',
     loadChildren: () => import('@ab/auth').then((module) => module.AuthModule),
   },
@@ -50,11 +55,6 @@ const routes: Routes = [
         {
           path: '**',
           redirectTo: 'not-found',
-        },
-        {
-          path: 'about',
-          loadChildren: () =>
-            import('@ab/about').then((module) => module.AboutModule),
         },
       ],
       {
