@@ -23,6 +23,11 @@ const routes: Routes = [
       import('@ab/category').then((module) => module.CategoryModule),
   },
   {
+    path: 'contact',
+    loadChildren: () =>
+      import('@ab/contact').then((module) => module.ContactModule),
+  },
+  {
     path: 'not-found',
     data: { title: 'Page not found' },
     loadChildren: () =>
@@ -55,11 +60,6 @@ const routes: Routes = [
         {
           path: '**',
           redirectTo: 'not-found',
-        },
-        {
-          path: 'contact',
-          loadChildren: () =>
-            import('@ab/contact').then((module) => module.ContactModule),
         },
       ],
       {

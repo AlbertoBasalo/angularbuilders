@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class AboutPage {
   header = {
-    heroClass: 'is-info',
+    heroClass: 'is-primary',
     title: 'This site is maintained by Angular.Builders',
     subtitle:
       'Advise, consulting and learning services by Angular seasoned professionals',
