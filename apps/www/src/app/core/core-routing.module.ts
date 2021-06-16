@@ -56,6 +56,11 @@ const routes: Routes = [
           path: '**',
           redirectTo: 'not-found',
         },
+        {
+          path: 'contact',
+          loadChildren: () =>
+            import('@ab/contact').then((module) => module.ContactModule),
+        },
       ],
       {
         initialNavigation: 'enabled',
