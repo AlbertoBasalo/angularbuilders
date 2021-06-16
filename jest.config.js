@@ -15,5 +15,6 @@ module.exports = {
     '<rootDir>/libs/domain/category',
     '<rootDir>/libs/domain/resource',
     '<rootDir>/libs/domain/resource-new',
+    '<rootDir>/libs/domain/about',
   ],
 };
