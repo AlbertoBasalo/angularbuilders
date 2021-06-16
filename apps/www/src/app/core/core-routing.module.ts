@@ -51,6 +51,11 @@ const routes: Routes = [
           path: '**',
           redirectTo: 'not-found',
         },
+        {
+          path: 'about',
+          loadChildren: () =>
+            import('@ab/about').then((module) => module.AboutModule),
+        },
       ],
       {
         initialNavigation: 'enabled',
