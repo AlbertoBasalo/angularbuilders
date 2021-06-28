@@ -1,4 +1,4 @@
-import { DataModule } from '@ab/data';
+import { AdapterInterceptor, DataModule } from '@ab/data';
 import {
   AnalyticsService,
   Environment,
@@ -10,7 +10,7 @@ import {
 import { LayoutModule } from '@ab/layout';
 import { SearchBoxModule } from '@ab/search-box';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandler, Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
@@ -29,6 +29,11 @@ import { LayoutComponent } from './layout/layout.component';
     {
       provide: ErrorHandler,
       useClass: ErrorHandlerService,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AdapterInterceptor,
+      multi: true,
     },
   ],
   imports: [

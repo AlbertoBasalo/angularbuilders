@@ -16,17 +16,12 @@ export class CategoryService {
     private http: HttpClient
   ) {}
   getCategoryById$(categoryId: string) {
-    return this.http
-      .get<{ data: Category }>(`${this.categoriesUrl}/${categoryId}`)
-      .pipe(map((result) => result.data));
+    return this.http.get<Category>(`${this.categoriesUrl}/${categoryId}`);
   }
   getResourcesByCategoryId$(categoryId: string) {
     return this.http
-      .get<{ data: Resource[] }>(
-        `${this.categoriesUrl}/${categoryId}/resources`
-      )
+      .get<Resource[]>(`${this.categoriesUrl}/${categoryId}/resources`)
       .pipe(
-        map((result) => result.data),
         map((resources) =>
           resources.sort((ca, cb) =>
             ca.name.trim().localeCompare(cb.name.trim())

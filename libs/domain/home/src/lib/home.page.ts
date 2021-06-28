@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { forkJoin, Observable } from 'rxjs';
+import { forkJoin } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { HomeService } from './home.service';
 import { Category } from './models/category';
@@ -10,7 +10,7 @@ import { Category } from './models/category';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePage {
-  categories$ = this.service.getCategories$().pipe();
+  categories$ = this.service.getCategories$();
 
   header = {
     heroClass: 'is-primary',
@@ -21,30 +21,26 @@ export class HomePage {
   constructor(private service: HomeService) {
     this.categories$ = service
       .getCategories$()
-      .pipe(
-        switchMap((categoriesAPI) =>
-          this.getCategoriesWithCounter$(categoriesAPI)
-        )
-      );
+      .pipe(switchMap((categoriesAPI) => this.getCategoriesWithCounter$(categoriesAPI)));
   }
 
   getCategoriesWithCounter$(categories: Category[]) {
-    return this.getCounters$(categories).pipe(
+    return this.getCountersForEachCategory$(categories).pipe(
       map((counters) => this.fillCategoriesWithCounters(categories, counters)),
-      map((categories) => categories.sort((ca, cb) => cb.count - ca.count))
+      map((filledCategories) => filledCategories.sort((ca, cb) => cb.count - ca.count))
     );
   }
 
-  getCounters$(categories: Category[]) {
-    const counters$: Observable<number>[] = categories.map((category) =>
+  getCountersForEachCategory$(categories: Category[]) {
+    const countersForEachCategory = categories.map((category) =>
       this.service.getResourceCountByCategoryid$(category.id || '')
     );
-    return forkJoin(counters$);
+    return forkJoin(countersForEachCategory);
   }
   fillCategoriesWithCounters(categories: Category[], counters: number[]) {
-    return categories.map((category: Category, index: number) => {
-      const count = counters[index];
-      return { ...category, count: count };
-    });
+    return categories.map((category: Category, index: number) => ({
+      ...category,
+      count: counters[index],
+    }));
   }
 }
