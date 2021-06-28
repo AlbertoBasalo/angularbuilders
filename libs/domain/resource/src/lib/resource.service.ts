@@ -1,8 +1,8 @@
+import { Resource } from '@ab/data';
 import { ENVIRONMENT, Environment } from '@ab/global';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { GhRepo } from './models/gh-repo';
-import { Resource } from './models/resource';
 
 @Injectable({
   providedIn: 'root',

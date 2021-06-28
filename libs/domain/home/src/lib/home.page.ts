@@ -1,8 +1,8 @@
+import { Category } from '@ab/data';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { HomeService } from './home.service';
-import { Category } from './models/category';
 
 @Component({
   templateUrl: './home.page.html',
@@ -27,7 +27,9 @@ export class HomePage {
   getCategoriesWithCounter$(categories: Category[]) {
     return this.getCountersForEachCategory$(categories).pipe(
       map((counters) => this.fillCategoriesWithCounters(categories, counters)),
-      map((filledCategories) => filledCategories.sort((ca, cb) => cb.count - ca.count))
+      map((categories) =>
+        categories.sort((ca, cb) => (cb.resourcesCount || 0) - (ca.resourcesCount || 0))
+      )
     );
   }
 
@@ -37,10 +39,10 @@ export class HomePage {
     );
     return forkJoin(countersForEachCategory);
   }
-  fillCategoriesWithCounters(categories: Category[], counters: number[]) {
+  fillCategoriesWithCounters(categories: Category[], counters: number[]): Category[] {
     return categories.map((category: Category, index: number) => ({
       ...category,
-      count: counters[index],
+      resourcesCount: counters[index],
     }));
   }
 }

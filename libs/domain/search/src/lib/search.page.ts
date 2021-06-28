@@ -1,8 +1,8 @@
+import { Resource } from '@ab/data';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
-import { Resource } from './models/resource';
 import { SearchService } from './search.service';
 
 @Component({

@@ -1,11 +1,10 @@
+import { Category, Resource } from '@ab/data';
 import { Header } from '@ab/ui';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { CategoryService } from './category.service';
-import { Category } from './models/category';
-import { Resource } from './models/resource';
 
 @Component({
   templateUrl: './category.page.html',
@@ -25,10 +24,7 @@ export class CategoryPage implements OnInit {
     resources: Resource[];
   }>;
 
-  constructor(
-    private route: ActivatedRoute,
-    private service: CategoryService
-  ) {}
+  constructor(private route: ActivatedRoute, private service: CategoryService) {}
 
   ngOnInit(): void {
     const categoryId = this.route.snapshot.params.id;

@@ -1,9 +1,8 @@
+import { Category, Resource } from '@ab/data';
 import { ENVIRONMENT, Environment } from '@ab/global';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { Category } from './models/category';
-import { Resource } from './models/resource';
 
 @Injectable({
   providedIn: 'root',
@@ -22,11 +21,7 @@ export class CategoryService {
     return this.http
       .get<Resource[]>(`${this.categoriesUrl}/${categoryId}/resources`)
       .pipe(
-        map((resources) =>
-          resources.sort((ca, cb) =>
-            ca.name.trim().localeCompare(cb.name.trim())
-          )
-        )
+        map((resources) => resources.sort((ca, cb) => ca.name.trim().localeCompare(cb.name.trim())))
       );
   }
 }

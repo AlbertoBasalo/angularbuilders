@@ -1,7 +1,7 @@
+import { Category } from '@ab/data';
 import { ENVIRONMENT, Environment } from '@ab/global';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Category } from './models/category';
 
 @Injectable({
   providedIn: 'root',
@@ -16,8 +16,6 @@ export class HomeService {
     return this.http.get<Category[]>(this.categoriesUrl);
   }
   getResourceCountByCategoryid$(categoryId: string) {
-    return this.http.get<number>(
-      `${this.categoriesUrl}/${categoryId}/resources/count`
-    );
+    return this.http.get<number>(`${this.categoriesUrl}/${categoryId}/resources/count`);
   }
 }
