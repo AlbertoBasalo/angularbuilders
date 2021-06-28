@@ -26,19 +26,25 @@
     }
   },
   "projects": {
-    "shared-data": {
-      "tags": ["shared", "core"]
+    "domain-about": {
+      "tags": ["domain", "page"]
     },
-    "shared-ui": {
-      "tags": ["shared", "ui"]
+    "domain-category": {
+      "tags": ["domain", "page"]
     },
-    "shared-form": {
-      "tags": ["shared", "ui"]
-    },
-    "shared-layout": {
-      "tags": ["shared", "ui"]
+    "domain-contact": {
+      "tags": ["domain", "page"]
     },
     "domain-home": {
+      "tags": ["domain", "page"]
+    },
+    "domain-not-found": {
+      "tags": ["domain", "page"]
+    },
+    "domain-resource": {
+      "tags": ["domain", "page"]
+    },
+    "domain-resource-new": {
       "tags": ["domain", "page"]
     },
     "domain-search": {
@@ -50,33 +56,27 @@
     "shared-auth": {
       "tags": ["shared", "page"]
     },
+    "shared-data": {
+      "tags": ["shared", "core"]
+    },
+    "shared-form": {
+      "tags": ["shared", "ui"]
+    },
+    "shared-global": {
+      "tags": ["shared", "core"]
+    },
+    "shared-layout": {
+      "tags": ["shared", "ui"]
+    },
+    "shared-ui": {
+      "tags": ["shared", "ui"]
+    },
     "www": {
       "tags": ["app"]
     },
     "www-e2e": {
       "tags": [],
       "implicitDependencies": ["www"]
-    },
-    "domain-not-found": {
-      "tags": ["domain", "page"]
-    },
-    "shared-global": {
-      "tags": ["shared", "core"]
-    },
-    "domain-category": {
-      "tags": ["domain", "page"]
-    },
-    "domain-resource": {
-      "tags": ["domain", "page"]
-    },
-    "domain-resource-new": {
-      "tags": ["domain", "page"]
-    },
-    "domain-about": {
-      "tags": ["domain", "page"]
-    },
-    "domain-contact": {
-      "tags": ["domain", "page"]
     }
   }
 }

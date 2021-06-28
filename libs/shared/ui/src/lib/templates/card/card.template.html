@@ -1,16 +1,17 @@
-<article class="card mb-4" style="display: flex;
-flex-direction: column;
-height: 100%;">
+<article class="card mb-4">
   <header class="card-header">
-    <p class="card-header-title">
-      <a *ngIf="card.link" [routerLink]="[card.link]" [abUiTrack]="card.title">{{ card.title }}</a>
+    <div *ngIf="card.title" class="card-header-title is-size-4">
+      <a *ngIf="card.link" [routerLink]="[card.link]"
+         [abUiTrack]="card.title">{{ card.title | slice:0:20 }}...</a>
       <a *ngIf="card.href" [href]="card.href" target="_blank"
-         [abUiTrack]="card.title">{{ card.title }}</a>
-      <span *ngIf="!card.link && !card.href">{{ card.title }}</span>
-    </p>
+         [abUiTrack]="card.title">{{ card.title | slice:0:20 }}...</a>
+      <span *ngIf="!card.link && !card.href">{{ card.title | slice:0:20 }}...</span>
+    </div>
+    <ng-content *ngIf="!card.title" select=".card-header-item">
+    </ng-content>
   </header>
   <main class="card-content">
-    <div *ngIf="!!card.description" class="content">
+    <div *ngIf="card.description" class="content">
       {{ card.description }}
     </div>
     <div *ngIf="!card.description" class="content">
@@ -18,11 +19,11 @@ height: 100%;">
       </ng-content>
     </div>
   </main>
-  <footer class="card-footer" style="margin-top: auto;">
+  <footer class="card-footer pt-5">
     <div *ngIf="!!card.footer" class="card-footer-item tag is-primary">
       {{ card.footer }}
     </div>
-    <ng-content *ngIf="!card.footer" select=".card-footer-item">
+    <ng-content *ngIf="!card.footer" select=".card-footer-item" class="">
     </ng-content>
   </footer>
 </article>

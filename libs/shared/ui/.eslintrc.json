@@ -8,16 +8,23 @@
         "plugin:@nrwl/nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "parserOptions": { "project": ["libs/shared/ui/tsconfig.*?.json"] },
       "rules": {
         "@angular-eslint/no-empty-lifecycle-method']": ["off"],
         "@angular-eslint/directive-selector": [
           "error",
-          { "type": "attribute", "prefix": "abUui", "style": "camelCase" }
+          {
+            "type": "attribute",
+            "prefix": "abUui",
+            "style": "camelCase"
+          }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          { "type": "element", "prefix": "ab-ui", "style": "kebab-case" }
+          {
+            "type": "element",
+            "prefix": "ab-ui",
+            "style": "kebab-case"
+          }
         ]
       }
     },
