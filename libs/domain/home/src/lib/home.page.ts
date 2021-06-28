@@ -30,7 +30,8 @@ export class HomePage {
 
   getCategoriesWithCounter$(categories: Category[]) {
     return this.getCounters$(categories).pipe(
-      map((counters) => this.fillCategoriesWithCounters(categories, counters))
+      map((counters) => this.fillCategoriesWithCounters(categories, counters)),
+      map((categories) => categories.sort((ca, cb) => cb.count - ca.count))
     );
   }
 

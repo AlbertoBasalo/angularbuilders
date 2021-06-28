@@ -25,6 +25,13 @@ export class CategoryService {
       .get<{ data: Resource[] }>(
         `${this.categoriesUrl}/${categoryId}/resources`
       )
-      .pipe(map((result) => result.data));
+      .pipe(
+        map((result) => result.data),
+        map((resources) =>
+          resources.sort((ca, cb) =>
+            ca.name.trim().localeCompare(cb.name.trim())
+          )
+        )
+      );
   }
 }

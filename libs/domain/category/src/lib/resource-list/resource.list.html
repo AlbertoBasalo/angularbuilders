@@ -3,6 +3,10 @@
     <ab-ui-card *ngFor="let resource of resources"
                 [card]="getCardFrom(resource)"
                 class="column is-one-quarter-desktop is-half-tablet">
+      <div class="card-footer-item mb-0">
+        <a [href]="resource.url" target="_blank"> <span
+                class="tag is-link  is-light is-large">{{resource.url | slice:8:27}}... </span> </a>
+      </div>
     </ab-ui-card>
   </section>
 </ab-ui-section>
