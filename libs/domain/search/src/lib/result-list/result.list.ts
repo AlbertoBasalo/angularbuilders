@@ -1,5 +1,5 @@
+import { Resource } from '@ab/data';
 import { Component, Input } from '@angular/core';
-import { Resource } from '../models/resource';
 
 @Component({
   selector: 'ab-result-list',

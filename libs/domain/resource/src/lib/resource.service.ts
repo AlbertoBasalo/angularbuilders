@@ -1,9 +1,8 @@
+import { Resource } from '@ab/data';
 import { ENVIRONMENT, Environment } from '@ab/global';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
 import { GhRepo } from './models/gh-repo';
-import { Resource } from './models/resource';
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +14,7 @@ export class ResourceService {
     private http: HttpClient
   ) {}
   getResourceById$(resourceId: string) {
-    return this.http
-      .get<{ data: Resource }>(`${this.resourcesUrl}/${resourceId}`)
-      .pipe(map((result) => result.data));
+    return this.http.get<Resource>(`${this.resourcesUrl}/${resourceId}`);
   }
   getGitHubRepoByRepoUrl(repoUrl: string) {
     // https://github.com/ReactiveX/rxjs [org]/[repo]

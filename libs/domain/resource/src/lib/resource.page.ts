@@ -1,10 +1,10 @@
+import { Resource } from '@ab/data';
 import { Header } from '@ab/ui';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { GhRepo } from './models/gh-repo';
-import { Resource } from './models/resource';
 import { ResourceService } from './resource.service';
 @Component({
   templateUrl: './resource.page.html',
@@ -21,10 +21,7 @@ export class ResourcePage implements OnInit {
   header$ = new BehaviorSubject<Header>(this.header);
   resource$!: Observable<Resource>;
   ghRepo$!: Observable<GhRepo>;
-  constructor(
-    private route: ActivatedRoute,
-    private service: ResourceService
-  ) {}
+  constructor(private route: ActivatedRoute, private service: ResourceService) {}
 
   ngOnInit(): void {
     const resourceId = this.route.snapshot.params.id;
