@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.30](https://github.com/angularbuilders/angularbuilders/compare/v0.0.29...v0.0.30) (2021-06-28)
+
+
+### Features
+
+* search results cards like categories cards ([15f43d6](https://github.com/angularbuilders/angularbuilders/commit/15f43d658a5b956b22f12550d1dd9fcf3ddffa6d))
+
 ### [0.0.29](https://github.com/angularbuilders/angularbuilders/compare/v0.0.28...v0.0.29) (2021-06-28)
 
 
