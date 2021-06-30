@@ -1,14 +1,9 @@
 <ab-ui-section [header]="getHeader()">
   <section class="columns is-multiline">
-    <ab-ui-card
-                *ngFor="let resource of resources"
-                [card]="getCardFrom(resource)"
-                class="column is-one-quarter-desktop is-half-tablet">
-      <div class="card-footer-item mb-0">
-        <a [href]="resource.url" target="_blank"> <span
-                class="tag is-link  is-light is-large">{{resource.url | slice:19:40}}... </span>
-        </a>
-      </div>
-    </ab-ui-card>
+    <ab-ui-resource
+                    *ngFor="let resource of resources"
+                    [resource]="resource"
+                    class="column is-one-quarter-desktop is-half-tablet">
+    </ab-ui-resource>
   </section>
 </ab-ui-section>

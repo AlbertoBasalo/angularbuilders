@@ -27,11 +27,4 @@ export class ResultList {
     }
     return header;
   }
-  getCardFrom(resource: Resource) {
-    return {
-      title: resource.name,
-      description: resource.description,
-      link: '/resource/' + resource.id,
-    };
-  }
 }

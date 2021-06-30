@@ -16,10 +16,7 @@ type apiResult = { data: any };
 export class AdapterInterceptor implements HttpInterceptor {
   constructor(@Inject(ENVIRONMENT) private readonly environment: Environment) {}
 
-  intercept(
-    request: HttpRequest<unknown>,
-    next: HttpHandler
-  ): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       filter((event) => event instanceof HttpResponse),
       map((eventResponse) => eventResponse as HttpResponse<any>),

@@ -15,6 +15,7 @@ import { ModalTemplate } from './templates/modal/modal.template';
 import { PageTemplate } from './templates/page/page.template';
 import { PanelTemplate } from './templates/panel/panel.template';
 import { SectionTemplate } from './templates/section/section.template';
+import { ResourceComponent } from './domain/resource/resource.component';
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [
@@ -32,6 +33,7 @@ import { SectionTemplate } from './templates/section/section.template';
     SectionTemplate,
     NotificationComponent,
     HeaderComponent,
+    ResourceComponent,
   ],
   exports: [
     BreadcrumbComponent,
@@ -48,6 +50,7 @@ import { SectionTemplate } from './templates/section/section.template';
     SectionTemplate,
     NotificationComponent,
     HeaderComponent,
+    ResourceComponent,
   ],
 })
 export class UiModule {}
