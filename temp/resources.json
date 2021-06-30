@@ -318,4 +318,13 @@
       "categoryId": "libraries",
       "ownerId": "albertobasalo"
     }
+    //
+    {
+      "name": "Angular Micro Frontend",
+      "description": "A fairly simple micro frontend component for Angular.",
+      "url": "https://github.com/jtneal/ng-micro-frontend",
+      "id": "angular-micro-frontend",
+      "categoryId": "tools",
+      "ownerId": "albertobasalo"
+    }
 ]
