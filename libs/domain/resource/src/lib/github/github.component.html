@@ -1,8 +1,22 @@
 <div class="box content">
-  <ab-ui-card
-              [card]="getCardFrom(ghRepo)">
-    <main class="content"> Updated at <span class="tag is-dark">{{ghRepo.updated_at}}</span>
-      followed by <span class="tag is-dark">{{ghRepo.subscribers_count}}</span> with <span
-            class="tag is-dark">{{ghRepo.stargazers_count}}</span> stars </main>
-  </ab-ui-card>
+  <header class="is-size-4">
+    <span>Repository page:</span>
+    <a [href]="ghRepo.html_url" target="_blank"
+       [abUiTrack]="ghRepo.full_name"> {{ ghRepo.html_url  }}</a>
+  </header>
+  <main class="content is-size-5 mt-3">
+    <div class=" mt-3">Last updated on <label
+             class="tag is-primary is-light is-large">{{ghRepo.updated_at | date:'yyyy-MMM-dd'}}</label>
+    </div>
+    <div class=" mt-3">Followed by <label
+             class="tag is-primary is-light is-large">{{ghRepo.subscribers_count}}</label> users
+    </div>
+    <div class=" mt-3">Rated with <label
+             class="tag is-primary is-light is-large">{{ghRepo.stargazers_count}}</label> stars
+    </div>
+    <div class=" mt-3">Developed with <label
+             class="tag is-primary is-light is-large">{{ghRepo.language}}</label> </div>
+    <div class=" mt-3" *ngIf="ghRepo.homepage">Homepage <a [href]="ghRepo.homepage" target="_blank"
+         [abUiTrack]="ghRepo.name"> {{ ghRepo.homepage  }}</a> </div>
+  </main>
 </div>
