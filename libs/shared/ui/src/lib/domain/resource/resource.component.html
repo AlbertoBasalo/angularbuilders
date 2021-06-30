@@ -1,0 +1,8 @@
+<ab-ui-card [card]="getCard()">
+  <div class="card-footer-item mb-0">
+    <a [href]="resource.url" target="_blank"> <span
+            class="tag is-link  is-light is-large">{{resource.url | truncate:27:false:'https://github.com/'}}
+      </span>
+    </a>
+  </div>
+</ab-ui-card>
