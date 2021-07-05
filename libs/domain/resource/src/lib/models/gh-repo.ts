@@ -8,4 +8,5 @@ export interface GhRepo {
   subscribers_count: number;
   homepage: string;
   language: string;
+  owner: {login:string, html_url: string;avatar_url:string}
 }

@@ -10,10 +10,9 @@ import { GhRepo } from '../models/gh-repo';
 export class GithubComponent {
   @Input() ghRepo!: GhRepo;
   constructor() {}
-  getCardFrom(repo: GhRepo) {
+  getCard() {
     return {
-      title: '👨‍💻 ' + (repo.homepage || repo.description),
-      href: repo.homepage || repo.html_url,
+      title: this.ghRepo.owner.login + '/' + this.ghRepo.name,
     };
   }
 }
