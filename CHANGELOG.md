@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.36](https://github.com/angularbuilders/angularbuilders/compare/v0.0.35...v0.0.36) (2021-07-05)
+
+
+### Features
+
+* resource-page-with-cards - Closes [#46](https://github.com/angularbuilders/angularbuilders/issues/46) ([d42279f](https://github.com/angularbuilders/angularbuilders/commit/d42279ffe2b87eefb357b221127c67d966100f90))
+
 ### [0.0.35](https://github.com/angularbuilders/angularbuilders/compare/v0.0.34...v0.0.35) (2021-06-30)
 
 
