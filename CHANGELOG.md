@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.37](https://github.com/angularbuilders/angularbuilders/compare/v0.0.36...v0.0.37) (2021-07-06)
+
+
+### Features
+
+* Detail-view-for-non-github-resources - Closes [#47](https://github.com/angularbuilders/angularbuilders/issues/47) ([ddb151b](https://github.com/angularbuilders/angularbuilders/commit/ddb151bc3fdc0b4e97bc4549dd169e83caebfcf8))
+
 ### [0.0.36](https://github.com/angularbuilders/angularbuilders/compare/v0.0.35...v0.0.36) (2021-07-05)
 
 

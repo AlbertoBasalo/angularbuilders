@@ -1,5 +1,6 @@
 <ab-ui-page *ngIf="header$ | async as header" [header]="header">
   <ab-github *ngIf="ghRepo$ | async as ghRepo" [ghRepo]="ghRepo"></ab-github>
+  <ab-no-code *ngIf="noCode$ | async as noCode" [noCode]="noCode"></ab-no-code>
   <ab-resource *ngIf="resource$ | async as resource"
                [resource]="resource"></ab-resource>
 </ab-ui-page>

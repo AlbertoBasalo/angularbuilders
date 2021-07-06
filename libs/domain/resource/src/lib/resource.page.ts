@@ -2,7 +2,7 @@ import { Resource } from '@ab/data';
 import { Header } from '@ab/ui';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { GhRepo } from './models/gh-repo';
 import { ResourceService } from './resource.service';
@@ -21,6 +21,7 @@ export class ResourcePage implements OnInit {
   header$ = new BehaviorSubject<Header>(this.header);
   resource$!: Observable<Resource>;
   ghRepo$!: Observable<GhRepo>;
+  noCode$!: Observable<Resource>;
   constructor(private route: ActivatedRoute, private service: ResourceService) {}
 
   ngOnInit(): void {
@@ -35,6 +36,8 @@ export class ResourcePage implements OnInit {
         });
         if (resource.url.startsWith('https://github.com/')) {
           this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);
+        } else {
+          this.noCode$ = of(resource);
         }
       })
     );
