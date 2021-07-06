@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/angularbuilders/angularbuilders/compare/v0.1.2...v0.1.3) (2021-07-06)
+
+
+### Bug Fixes
+
+* refine results from npm ([db30714](https://github.com/angularbuilders/angularbuilders/commit/db30714d9a9c55e508e8d6df4f197c4575e9e8ab))
+
 ### [0.1.2](https://github.com/angularbuilders/angularbuilders/compare/v0.1.1...v0.1.2) (2021-07-06)
 
 

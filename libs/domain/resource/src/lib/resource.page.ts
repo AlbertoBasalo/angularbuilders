@@ -49,7 +49,7 @@ export class ResourcePage implements OnInit {
         });
         if (resource.url.startsWith('https://github.com/')) {
           this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);
-          this.npmRegistry$ = this.service.getNpmRegisitryByName(resource.name);
+          this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
         } else {
           this.noCode$ = of(resource);
         }
