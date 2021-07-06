@@ -12,8 +12,7 @@ import { SearchBoxModule } from '@ab/search-box';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorHandler, Inject, NgModule, PLATFORM_ID } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { CoreRoutingModule } from './core-routing.module';
@@ -51,12 +50,10 @@ export class CoreModule {
   constructor(
     // eslint-disable-next-line @typescript-eslint/ban-types
     @Inject(PLATFORM_ID) platformId: Object,
-    @Inject(ENVIRONMENT) private readonly environment: Environment,
+    @Inject(ENVIRONMENT) environment: Environment,
     router: Router,
     analytics: AnalyticsService,
-    tracker: TrackerStore,
-    activatedRoute: ActivatedRoute,
-    titleService: Title
+    tracker: TrackerStore
   ) {
     if (isPlatformBrowser(platformId)) {
       analytics.configure(environment.ga);
@@ -88,15 +85,5 @@ export class CoreModule {
       }
       tracker.trackSystem('APP_STARTED', JSON.stringify(environment));
     }
-    router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        map((event) => event as NavigationEnd)
-      )
-      .subscribe({
-        next: () => {
-          titleService.setTitle(activatedRoute.firstChild?.snapshot.data.title);
-        },
-      });
   }
 }

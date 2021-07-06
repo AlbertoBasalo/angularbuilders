@@ -1,4 +1,4 @@
-import { TrackerStore } from '@ab/global';
+import { SeoService, TrackerStore } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ContactService } from './contact.service';
 
@@ -8,7 +8,15 @@ import { ContactService } from './contact.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactPage {
-  constructor(private service: ContactService, private tracker: TrackerStore) {}
+  constructor(private service: ContactService, private tracker: TrackerStore, seo: SeoService) {
+    seo.updateSeoTags({
+      title: 'Get in contact',
+      description:
+        'We can help you building your app, and you can help everybody adding resources to this catalog.',
+      image: '',
+      url: '',
+    });
+  }
 
   onLeadSend(lead: unknown) {
     this.service.postLead$(lead).subscribe({

@@ -1,4 +1,5 @@
 import { Category } from '@ab/data';
+import { SeoService } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
@@ -18,7 +19,13 @@ export class HomePage {
     subtitle: 'A site to help you build great applications with Angular',
   };
 
-  constructor(private service: HomeService) {
+  constructor(private service: HomeService, seo: SeoService) {
+    seo.updateSeoTags({
+      title: 'Angular.Builders',
+      description: 'A resource catalog to help you build great applications with Angular.',
+      image: '',
+      url: '',
+    });
     this.categories$ = service
       .getCategories$()
       .pipe(switchMap((categoriesAPI) => this.getCategoriesWithCounter$(categoriesAPI)));

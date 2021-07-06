@@ -1,4 +1,5 @@
 import { Resource } from '@ab/data';
+import { SeoService } from '@ab/global';
 import { Header } from '@ab/ui';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -22,7 +23,11 @@ export class ResourcePage implements OnInit {
   resource$!: Observable<Resource>;
   ghRepo$!: Observable<GhRepo>;
   noCode$!: Observable<Resource>;
-  constructor(private route: ActivatedRoute, private service: ResourceService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private service: ResourceService,
+    private seo: SeoService
+  ) {}
 
   ngOnInit(): void {
     const resourceId = this.route.snapshot.params.id;
@@ -33,6 +38,12 @@ export class ResourcePage implements OnInit {
           ...this.header,
           title: resource.name,
           subtitle: resource.description,
+        });
+        this.seo.updateSeoTags({
+          title: resource.name,
+          description: resource.description,
+          image: '',
+          url: '',
         });
         if (resource.url.startsWith('https://github.com/')) {
           this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);

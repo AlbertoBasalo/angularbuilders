@@ -1,16 +1,17 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-
+import { SeoService } from '@ab/global';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   templateUrl: './not-found.page.html',
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NotFoundPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class NotFoundPage {
+  constructor(seo: SeoService) {
+    seo.updateSeoTags({
+      title: 'Not Found Page',
+      description: '404',
+      image: '',
+      url: '',
+    });
   }
-
 }
