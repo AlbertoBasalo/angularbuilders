@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ResourcePage } from './resource.page';
 import { ResourceComponent } from './resource/resource.component';
 import { GithubComponent } from './github/github.component';
+import { NoCodeComponent } from './no-code/no-code.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { GithubComponent } from './github/github.component';
     ]),
     UiModule,
   ],
-  declarations: [ResourcePage, ResourceComponent, GithubComponent],
+  declarations: [ResourcePage, ResourceComponent, GithubComponent, NoCodeComponent],
 })
 export class ResourceModule {}
