@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/angularbuilders/angularbuilders/compare/v0.1.1...v0.1.2) (2021-07-06)
+
+
+### Features
+
+* show npm registry info on resource page ([e5629ae](https://github.com/angularbuilders/angularbuilders/commit/e5629aebc7c45f475478cd7cb79b9b4d989bcc24))
+
 ### [0.1.1](https://github.com/angularbuilders/angularbuilders/compare/v0.1.0...v0.1.1) (2021-07-06)
 
 

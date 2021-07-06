@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { GhRepo } from './models/gh-repo';
+import { NpmRegistry } from './models/npm-registry';
 import { ResourceService } from './resource.service';
 @Component({
   templateUrl: './resource.page.html',
@@ -22,6 +23,7 @@ export class ResourcePage implements OnInit {
   header$ = new BehaviorSubject<Header>(this.header);
   resource$!: Observable<Resource>;
   ghRepo$!: Observable<GhRepo>;
+  npmRegistry$!: Observable<NpmRegistry>;
   noCode$!: Observable<Resource>;
   constructor(
     private route: ActivatedRoute,
@@ -47,6 +49,7 @@ export class ResourcePage implements OnInit {
         });
         if (resource.url.startsWith('https://github.com/')) {
           this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);
+          this.npmRegistry$ = this.service.getNpmRegisitryByName(resource.name);
         } else {
           this.noCode$ = of(resource);
         }

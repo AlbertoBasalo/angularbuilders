@@ -1,0 +1,29 @@
+<ab-ui-card>
+  <div class="card-header-item is-size-4 m-4 ">
+    <p class="subtitle is-5"> NPM registry </p>
+    <p class="title is-4">
+      <a [href]="npmRegistry.package.links.npm" target="_blank"> {{ npmRegistry.package.name}} @
+        {{ npmRegistry.package.version }}
+      </a>
+    </p>
+  </div>
+  <div class="content is-size-5 mt-3">
+    <div class=" mt-3">Last published on <label
+             class="tag is-primary is-light is-large">{{npmRegistry.package.date| date:'yyyy-MMM-dd'}}</label>
+    </div>
+    <div class=" mt-3">Score <label
+             class="tag is-primary is-light is-large">{{npmRegistry.score.final * 100 | number:'1.0-0'}}</label>
+      / 100 </div>
+    <div *ngIf="npmRegistry.package.author" class=" mt-3">Author <label
+             class="tag is-primary is-light is-large">{{npmRegistry.package.author.name}}</label>
+    </div>
+    <div *ngIf="npmRegistry.package.publisher" class=" mt-3">Publisher <label
+             class="tag is-primary is-light is-large">{{npmRegistry.package.publisher.username}}</label>
+    </div>
+  </div>
+  <div *ngIf="npmRegistry.package.keywords" class="card-footer-item mb-0">
+    <span
+          class="tag is-link  is-light is-large">{{ npmRegistry.package.keywords }}
+    </span>
+  </div>
+</ab-ui-card>

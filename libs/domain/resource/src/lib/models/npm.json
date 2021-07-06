@@ -1,0 +1,40 @@
+{
+  "objects": [
+    {
+      "package": {
+        "name": "angular",
+        "scope": "unscoped",
+        "version": "1.8.2",
+        "description": "HTML enhanced for web apps",
+        "keywords": ["angular", "framework", "browser", "client-side"],
+        "date": "2020-10-21T11:58:36.879Z",
+        "links": {
+          "npm": "https://www.npmjs.com/package/angular",
+          "homepage": "http://angularjs.org"
+        },
+        "author": {
+          "name": "Angular Core Team",
+          "email": "angular-core+npm@google.com",
+          "username": "angularcore"
+        },
+        "publisher": { "username": "petebacondarwin", "email": "pete-npm@bacondarwin.com" },
+        "maintainers": [
+          { "username": "angularcore", "email": "angular-core+npm@google.com" },
+          { "username": "angular", "email": "devops+npm@angular.io" },
+          { "username": "petebacondarwin", "email": "pete-npm@bacondarwin.com" }
+        ]
+      },
+      "score": {
+        "final": 0.46781335133575686,
+        "detail": {
+          "quality": 0.6067272476883864,
+          "popularity": 0.5632187779663641,
+          "maintenance": 0.2533388706886102
+        }
+      },
+      "searchScore": 100000.484
+    }
+  ],
+  "total": 53430,
+  "time": "Tue Jul 06 2021 16:39:22 GMT+0000 (Coordinated Universal Time)"
+}
