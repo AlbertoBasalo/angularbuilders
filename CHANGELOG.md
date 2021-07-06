@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/angularbuilders/angularbuilders/compare/v0.0.37...v0.1.0) (2021-07-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* no universal TransferHttpCacheModule
+
+### Bug Fixes
+
+* no universal TransferHttpCacheModule ([386eab9](https://github.com/angularbuilders/angularbuilders/commit/386eab9734c350268136928d66d8ef814f733ea3))
+
 ### [0.0.37](https://github.com/angularbuilders/angularbuilders/compare/v0.0.36...v0.0.37) (2021-07-06)
 
 
