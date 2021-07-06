@@ -1,4 +1,5 @@
 import { Category, Resource } from '@ab/data';
+import { SeoService } from '@ab/global';
 import { Header } from '@ab/ui';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -24,7 +25,11 @@ export class CategoryPage implements OnInit {
     resources: Resource[];
   }>;
 
-  constructor(private route: ActivatedRoute, private service: CategoryService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private service: CategoryService,
+    private seo: SeoService
+  ) {}
 
   ngOnInit(): void {
     const categoryId = this.route.snapshot.params.id;
@@ -35,13 +40,19 @@ export class CategoryPage implements OnInit {
       category: category$,
       resources: resources$,
     }).pipe(
-      tap((result) =>
+      tap((result) => {
         this.header$.next({
           ...this.header,
           title: result.category.name,
           subtitle: result.category.description,
-        })
-      )
+        });
+        this.seo.updateSeoTags({
+          title: result.category.name,
+          description: result.category.description,
+          image: '',
+          url: '',
+        });
+      })
     );
   }
 }
