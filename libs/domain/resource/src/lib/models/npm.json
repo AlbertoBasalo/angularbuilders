@@ -2,39 +2,218 @@
   "objects": [
     {
       "package": {
-        "name": "angular",
+        "name": "observable-store",
         "scope": "unscoped",
-        "version": "1.8.2",
-        "description": "HTML enhanced for web apps",
-        "keywords": ["angular", "framework", "browser", "client-side"],
-        "date": "2020-10-21T11:58:36.879Z",
-        "links": {
-          "npm": "https://www.npmjs.com/package/angular",
-          "homepage": "http://angularjs.org"
-        },
+        "version": "0.0.5",
+        "description": "An observable data store with dirty checking and computed properties",
+        "keywords": ["data", "store", "datastore", "observable", "dirty", "checking", "computed"],
+        "date": "2015-04-08T03:53:36.290Z",
+        "links": { "npm": "https://www.npmjs.com/package/observable-store" },
         "author": {
-          "name": "Angular Core Team",
-          "email": "angular-core+npm@google.com",
-          "username": "angularcore"
+          "name": "Olivier Scherrer",
+          "email": "pode.fr@gmail.com",
+          "username": "podefr"
         },
-        "publisher": { "username": "petebacondarwin", "email": "pete-npm@bacondarwin.com" },
+        "publisher": { "username": "podefr", "email": "pode.fr@gmail.com" },
+        "maintainers": [{ "username": "podefr", "email": "pode.fr@gmail.com" }]
+      },
+      "flags": { "unstable": true },
+      "score": {
+        "final": 0.11135370156644742,
+        "detail": {
+          "quality": 0.339743934563335,
+          "popularity": 0.02694434627841976,
+          "maintenance": 0
+        }
+      },
+      "searchScore": 100000.1
+    },
+    {
+      "package": {
+        "name": "@datorama/akita",
+        "scope": "datorama",
+        "version": "6.2.0",
+        "description": "A Reactive State Management Tailored-Made for JS Applications",
+        "keywords": [
+          "angular",
+          "state management",
+          "react",
+          "vue",
+          "typescript",
+          "javascript",
+          "rxjs",
+          "angular store",
+          "store",
+          "observable data stores",
+          "redux",
+          "reactive"
+        ],
+        "date": "2021-06-07T06:17:06.710Z",
+        "links": {
+          "npm": "https://www.npmjs.com/package/%40datorama%2Fakita",
+          "homepage": "https://github.com/datorama/akita#readme",
+          "repository": "https://github.com/datorama/akita",
+          "bugs": "https://github.com/datorama/akita/issues"
+        },
+        "author": { "name": "Netanel Basal" },
+        "publisher": { "username": "netbasal", "email": "netanel7799@gmail.com" },
         "maintainers": [
-          { "username": "angularcore", "email": "angular-core+npm@google.com" },
-          { "username": "angular", "email": "devops+npm@angular.io" },
-          { "username": "petebacondarwin", "email": "pete-npm@bacondarwin.com" }
+          { "username": "vlad.porton", "email": "vporton@salesforce.com" },
+          { "username": "kaufguy", "email": "kaufmang3@gmail.com" },
+          { "username": "nina.mordakhay", "email": "nmordakhay@salesforce.com" },
+          { "username": "abh86", "email": "amitbar@gmail.com" },
+          { "username": "keinans", "email": "crazypixel@gmail.com" },
+          { "username": "gurdotan", "email": "gurdotan@gmail.com" },
+          { "username": "org86", "email": "or.gimel@gmail.com" },
+          { "username": "epessach", "email": "epessach@salesforce.com" },
+          { "username": "iglikman", "email": "iglikman@salesforce.com" },
+          { "username": "ashakked", "email": "ashakked@salesforce.com" },
+          { "username": "lron", "email": "lron@salesforce.com" },
+          { "username": "samerkinaan", "email": "skinaan@salesforce.com" },
+          { "username": "amitb", "email": "amit.barat@salesforce.com" },
+          { "username": "nhaimov", "email": "nhaimov@salesforce.com" },
+          { "username": "eliran.aharoni", "email": "eaharoni@salesforce.com" },
+          { "username": "isinai", "email": "isinai@salesforce.com" },
+          { "username": "tidhar.peer", "email": "tpeer@salesforce.com" },
+          { "username": "ritox", "email": "gili842@gmail.com" },
+          { "username": "ofirb25", "email": "ofzir11@gmail.com" },
+          { "username": "yousef.baba", "email": "yousef.baba@salesforce.com" },
+          { "username": "netbasal", "email": "netanel7799@gmail.com" }
         ]
       },
       "score": {
-        "final": 0.46781335133575686,
+        "final": 0.4183555323776012,
         "detail": {
-          "quality": 0.6067272476883864,
-          "popularity": 0.5632187779663641,
-          "maintenance": 0.2533388706886102
+          "quality": 0.8501757504225664,
+          "popularity": 0.13324611595475616,
+          "maintenance": 0.3333333333333333
         }
       },
-      "searchScore": 100000.484
+      "searchScore": 0.00028392315
+    },
+    {
+      "package": {
+        "name": "@codewithdan/observable-store",
+        "scope": "codewithdan",
+        "version": "2.2.11",
+        "description": "Observable Store provides a simple way to store and retrieve state in Angular, React, Vue.js and other front-end applications.",
+        "keywords": [
+          "store",
+          "state management",
+          "Angular store",
+          "React store",
+          "Vue.js store",
+          "state store",
+          "JavaScript store",
+          "Front-end store"
+        ],
+        "date": "2020-05-21T07:08:03.686Z",
+        "links": {
+          "npm": "https://www.npmjs.com/package/%40codewithdan%2Fobservable-store",
+          "homepage": "https://github.com/danwahlin/observable-store#readme",
+          "repository": "https://github.com/danwahlin/observable-store",
+          "bugs": "https://github.com/danwahlin/observable-store/issues"
+        },
+        "author": { "name": "Dan Wahlin" },
+        "publisher": { "username": "danwahlin", "email": "dwahlin@hotmail.com" },
+        "maintainers": [{ "username": "danwahlin", "email": "dwahlin@hotmail.com" }]
+      },
+      "score": {
+        "final": 0.3691393878771408,
+        "detail": {
+          "quality": 0.9007391823611192,
+          "popularity": 0.03776577722840666,
+          "maintenance": 0.2448560318253221
+        }
+      },
+      "searchScore": 0.00013516234
+    },
+    {
+      "package": {
+        "name": "@veams/rx-store",
+        "scope": "veams",
+        "version": "1.1.3",
+        "description": "The missing RxJS wrapper for Redux to provide a simple but powerful state management module.",
+        "keywords": [
+          "veams",
+          "redux",
+          "rxjs",
+          "store",
+          "connect",
+          "subscribe",
+          "observable",
+          "state management"
+        ],
+        "date": "2021-02-25T21:50:03.926Z",
+        "links": {
+          "npm": "https://www.npmjs.com/package/%40veams%2Frx-store",
+          "homepage": "https://github.com/veams/rx-store#readme",
+          "repository": "https://github.com/veams/rx-store",
+          "bugs": "https://github.com/veams/rx-store/issues"
+        },
+        "author": {
+          "name": "Sebastian Fitzner",
+          "email": "sebastian@veams.org",
+          "username": "sebastian-fitzner"
+        },
+        "publisher": { "username": "sebastian-fitzner", "email": "sebastian@veams.org" },
+        "maintainers": [
+          { "username": "sebastian-fitzner", "email": "sebastian@veams.org" },
+          { "username": "andy-gutsche", "email": "andy@veams.org" }
+        ]
+      },
+      "score": {
+        "final": 0.36072628599401524,
+        "detail": {
+          "quality": 0.809992352724388,
+          "popularity": 0.006066029987921228,
+          "maintenance": 0.3303013419455041
+        }
+      },
+      "searchScore": 0.000026572712
+    },
+    {
+      "package": {
+        "name": "@ynnck/akita",
+        "scope": "ynnck",
+        "version": "5.3.3",
+        "description": "A Reactive State Management Tailored-Made for JS Applications",
+        "keywords": [
+          "angular",
+          "state management",
+          "react",
+          "vue",
+          "typescript",
+          "javascript",
+          "rxjs",
+          "angular store",
+          "store",
+          "observable data stores",
+          "redux",
+          "reactive"
+        ],
+        "date": "2021-01-14T10:44:41.555Z",
+        "links": {
+          "npm": "https://www.npmjs.com/package/%40ynnck%2Fakita",
+          "homepage": "https://github.com/datorama/akita#readme",
+          "repository": "https://github.com/datorama/akita",
+          "bugs": "https://github.com/datorama/akita/issues"
+        },
+        "author": { "name": "Netanel Basal" },
+        "publisher": { "username": "ynnck", "email": "code@yannickboetzkes.com" },
+        "maintainers": [{ "username": "ynnck", "email": "code@yannickboetzkes.com" }]
+      },
+      "score": {
+        "final": 0.36924133147961613,
+        "detail": {
+          "quality": 0.8376193855311391,
+          "popularity": 0.0037723780214078515,
+          "maintenance": 0.3332433814650905
+        }
+      },
+      "searchScore": 0.000025369072
     }
   ],
-  "total": 53430,
-  "time": "Tue Jul 06 2021 16:39:22 GMT+0000 (Coordinated Universal Time)"
+  "total": 188,
+  "time": "Tue Jul 06 2021 17:35:53 GMT+0000 (Coordinated Universal Time)"
 }

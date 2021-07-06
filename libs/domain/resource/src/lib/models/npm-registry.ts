@@ -4,7 +4,7 @@ export interface NpmRegistry {
     version: string;
     date: Date;
     keywords: string[];
-    links: { npm: string };
+    links: { npm: string; repository: string };
     author: { name: string };
     publisher: { username: string };
   };
