@@ -6,6 +6,7 @@ import { ResourcePage } from './resource.page';
 import { ResourceComponent } from './resource/resource.component';
 import { GithubComponent } from './github/github.component';
 import { NoCodeComponent } from './no-code/no-code.component';
+import { NpmComponent } from './npm/npm.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { NoCodeComponent } from './no-code/no-code.component';
     ]),
     UiModule,
   ],
-  declarations: [ResourcePage, ResourceComponent, GithubComponent, NoCodeComponent],
+  declarations: [ResourcePage, ResourceComponent, GithubComponent, NoCodeComponent, NpmComponent],
 })
 export class ResourceModule {}
