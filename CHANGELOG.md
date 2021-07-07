@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/angularbuilders/angularbuilders/compare/v0.1.3...v0.1.4) (2021-07-07)
+
+
+### Features
+
+* improve display design ([d5de45f](https://github.com/angularbuilders/angularbuilders/commit/d5de45f643fcbc95c0883b38d17adf13e32928f7))
+
 ### [0.1.3](https://github.com/angularbuilders/angularbuilders/compare/v0.1.2...v0.1.3) (2021-07-06)
 
 
