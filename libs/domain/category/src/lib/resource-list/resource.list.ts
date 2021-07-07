@@ -12,17 +12,16 @@ export class ResourceList {
 
   private header = {
     heroClass: 'is-warning',
-    title: `...`,
-    subtitle: ' No resources yet ',
+    title: `Loading`,
+    subtitle: '  ',
   };
 
   getHeader() {
     const header = { ...this.header };
-    if (this.categoryName) {
-      header.title = `List of resources for ${this.categoryName}`;
-    }
     if (this.resources.length) {
-      header.subtitle = `Found ${this.resources.length} resources`;
+      header.title = `Found ${this.resources.length} ${this.categoryName}`;
+    } else {
+      header.title = `No ${this.categoryName} yet`;
     }
     return header;
   }

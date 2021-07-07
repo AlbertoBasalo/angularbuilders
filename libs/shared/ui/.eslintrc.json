@@ -14,7 +14,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "abUui",
+            "prefix": "abUi",
             "style": "camelCase"
           }
         ],
