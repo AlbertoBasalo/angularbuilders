@@ -29,13 +29,14 @@ export class ResourceService {
     const apiUrl = `https://registry.npmjs.org/-/v1/search?text=${name}&size=10`;
     return this.http.get<{ objects: NpmRegistry[] }>(apiUrl).pipe(
       map((response) => response.objects),
-      map((objects) => {
-        return (
-          objects.find(
-            (object) => object.package.links.repository?.toLowerCase() === repoUrl.toLowerCase()
-          ) || objects[0]
-        );
-      })
+      map((objects) => this.findBestRegistry(objects, repoUrl))
     );
+  }
+  private findBestRegistry(registries: NpmRegistry[], repoUrl: string) {
+    const defaultBestRegistry = registries[0];
+    const bestRegistry = registries.find(
+      (registry) => registry.package.links.repository?.toLowerCase() === repoUrl.toLowerCase()
+    );
+    return bestRegistry || defaultBestRegistry;
   }
 }

@@ -1,9 +1,10 @@
 <ab-ui-card>
-  <div class="card-header-item is-size-4 m-4 "> Visit home page for more information: </div>
-  <div class="content is-size-5 mt-3">
-    <a [href]="noCode.url" target="_blank"> <span
-            class="tag is-link  is-light is-large">{{noCode.url }}
-      </span>
-    </a>
-  </div>
+  <header class="card-header-item is-size-4 m-4">
+    <p class="subtitle is-5">Visit home page for more information:</p>
+    <p class="title is-4">
+      <a [href]="noCode.url" target="_blank" [abUiTrack]="noCode.url">
+        {{ noCode.url }}
+      </a>
+    </p>
+  </header>
 </ab-ui-card>

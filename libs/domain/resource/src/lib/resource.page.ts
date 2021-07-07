@@ -34,26 +34,31 @@ export class ResourcePage implements OnInit {
   ngOnInit(): void {
     const resourceId = this.route.snapshot.params.id;
     this.header$.next({ ...this.header, title: resourceId });
-    this.resource$ = this.service.getResourceById$(resourceId).pipe(
-      tap((resource) => {
-        this.header$.next({
-          ...this.header,
-          title: resource.name,
-          subtitle: resource.description,
-        });
-        this.seo.updateSeoTags({
-          title: resource.name,
-          description: resource.description,
-          image: '',
-          url: '',
-        });
-        if (resource.url.startsWith('https://github.com/')) {
-          this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);
-          this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
-        } else {
-          this.noCode$ = of(resource);
-        }
-      })
-    );
+    this.resource$ = this.service
+      .getResourceById$(resourceId)
+      .pipe(tap((resource) => this.getDataForResource(resource)));
+  }
+  private getDataForResource(resource: Resource) {
+    this.header$.next({
+      ...this.header,
+      title: resource.name,
+      subtitle: resource.description,
+    });
+    if (resource.url.startsWith('https://github.com/')) {
+      this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);
+      this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
+    } else {
+      this.noCode$ = of(resource);
+    }
+    this.updateSeoTags(resource);
+  }
+
+  private updateSeoTags(resource: Resource) {
+    this.seo.updateSeoTags({
+      title: resource.name,
+      description: resource.description,
+      image: '',
+      url: '',
+    });
   }
 }
