@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/angularbuilders/angularbuilders/compare/v0.1.4...v0.1.5) (2021-07-08)
+
+
+### Features
+
+* seo image and url ([9ad36a7](https://github.com/angularbuilders/angularbuilders/commit/9ad36a75b07c54bb0e55a142c7f57ff5fcf032a6))
+
 ### [0.1.4](https://github.com/angularbuilders/angularbuilders/compare/v0.1.3...v0.1.4) (2021-07-07)
 
 

@@ -2,6 +2,14 @@ import { ABValidators } from '@ab/form';
 import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
+interface Lead {
+  name: string;
+  email: string;
+  interest: string;
+  region: string;
+  isHuman?: boolean;
+}
+
 @Component({
   selector: 'ab-contact',
   templateUrl: './contact.component.html',
@@ -11,7 +19,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class ContactComponent implements OnInit {
   form!: FormGroup;
 
-  @Output() send = new EventEmitter<any>();
+  @Output() send = new EventEmitter<Lead>();
   header = {
     heroClass: 'is-primary',
     title: 'Contact us',

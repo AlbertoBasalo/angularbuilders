@@ -45,19 +45,20 @@ export class ResourcePage implements OnInit {
       subtitle: resource.description,
     });
     if (resource.url.startsWith('https://github.com/')) {
-      this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url);
+      this.ghRepo$ = this.service
+        .getGitHubRepoByRepoUrl(resource.url)
+        .pipe(tap((ghRepo) => this.updateSeoTags(resource, ghRepo)));
       this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
     } else {
       this.noCode$ = of(resource);
     }
-    this.updateSeoTags(resource);
   }
 
-  private updateSeoTags(resource: Resource) {
+  private updateSeoTags(resource: Resource, ghRepo: GhRepo) {
     this.seo.updateSeoTags({
       title: resource.name,
       description: resource.description,
-      image: '',
+      image: ghRepo.owner.avatar_url || '',
       url: '',
     });
   }
