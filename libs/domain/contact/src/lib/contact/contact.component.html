@@ -2,49 +2,21 @@
   <main class="section">
     <form [formGroup]="form" (submit)="onSubmit()" class="box">
       <fieldset class="mb-4">
-        <ab-form-control
-          [form]="form"
-          formControlName="name"
-          [label]="'Your name, please'"
-          [placeholder]="'John Doe'"
-        >
+        <ab-form-control [form]="form" formControlName="name" [label]="'Your name, please'" [placeholder]="'John Doe'">
         </ab-form-control>
-        <ab-form-control
-          [form]="form"
-          formControlName="email"
-          type="email"
-          [label]="'Your email address'"
-          [placeholder]="'john.doe@acme.com'"
-        >
+        <ab-form-control [form]="form" formControlName="email" type="email" [label]="'Your email address'"
+          [placeholder]="'john.doe@acme.com'">
         </ab-form-control>
-        <ab-form-control
-          [form]="form"
-          formControlName="interest"
-          [label]="'What do you need or wanto to do?'"
-          [placeholder]="'consulting, courses, add resources...'"
-        >
+        <ab-form-control [form]="form" formControlName="interest" [label]="'What do you need or want to do?'"
+          [placeholder]="'consulting, courses, add resources...'">
         </ab-form-control>
-        <ab-form-control
-          [form]="form"
-          formControlName="region"
-          label="Where are you?"
-          [placeholder]="'The internet'"
-        >
+        <ab-form-control [form]="form" formControlName="region" label="Where are you?" [placeholder]="'The internet'">
         </ab-form-control>
-        <ab-form-control
-          [form]="form"
-          formControlName="isHuman"
-          [label]="'Say yes if you are a human'"
-          [placeholder]="'Yes I´m not a robot'"
-        >
+        <ab-form-control [form]="form" formControlName="isHuman" [label]="'Say yes if you are a human'"
+          [placeholder]="'Yes I´m not a robot'">
         </ab-form-control>
       </fieldset>
-      <input
-        type="submit"
-        value="Ok, get in touch!"
-        [disabled]="form.invalid"
-        class="button is-link is-large mt-4"
-      />
+      <input type="submit" value="Ok, get in touch!" [disabled]="form.invalid" class="button is-link is-large mt-4" />
     </form>
   </main>
 </ab-ui-page>
