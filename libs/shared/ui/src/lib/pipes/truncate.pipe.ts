@@ -10,7 +10,7 @@ export class TruncatePipe implements PipeTransform {
     const fromEnd = args[1];
     const toRemove = args[2] as string;
     if (toRemove) {
-      source = value.replace(toRemove, '👨‍💻');
+      source = value.replace(toRemove, '');
     }
     if (source.length <= length) {
       return source;
