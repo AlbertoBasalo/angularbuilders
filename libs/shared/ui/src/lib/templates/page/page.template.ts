@@ -10,6 +10,7 @@ export class PageTemplate implements OnChanges {
   @Input() header: Header = { title: '', subtitle: '', heroClass: '' };
   constructor() {}
   ngOnChanges(changes: SimpleChanges): void {
+    if (!changes) return;
     this.header.heroClass += ' ';
   }
 }
