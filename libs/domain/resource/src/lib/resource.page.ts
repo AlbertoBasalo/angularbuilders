@@ -23,7 +23,7 @@ export class ResourcePage implements OnInit {
   header$ = new BehaviorSubject<Header>(this.header);
   resource$!: Observable<Resource>;
   ghRepo$!: Observable<GhRepo>;
-  npmRegistry$!: Observable<NpmRegistry>;
+  npmRegistry$!: Observable<NpmRegistry | undefined>;
   noCode$!: Observable<Resource>;
   constructor(
     private route: ActivatedRoute,

@@ -33,10 +33,9 @@ export class ResourceService {
     );
   }
   private findBestRegistry(registries: NpmRegistry[], repoUrl: string) {
-    const defaultBestRegistry = registries[0];
     const bestRegistry = registries.find(
       (registry) => registry.package.links.repository?.toLowerCase() === repoUrl.toLowerCase()
     );
-    return bestRegistry || defaultBestRegistry;
+    return bestRegistry;
   }
 }

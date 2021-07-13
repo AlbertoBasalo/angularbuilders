@@ -7,7 +7,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MessageComponent } from './components/message/message.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { TagComponent } from './components/tag/tag.component';
 import { TrackDirective } from './directives/track.directive';
+import { ResourceComponent } from './domain/resource/resource.component';
+import { AgedPipe } from './pipes/aged.pipe';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { BoxTemplate } from './templates/box/box.template';
 import { CardTemplate } from './templates/card/card.template';
@@ -15,7 +18,8 @@ import { ModalTemplate } from './templates/modal/modal.template';
 import { PageTemplate } from './templates/page/page.template';
 import { PanelTemplate } from './templates/panel/panel.template';
 import { SectionTemplate } from './templates/section/section.template';
-import { ResourceComponent } from './domain/resource/resource.component';
+import { RatedPipe } from './pipes/rated.pipe';
+
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [
@@ -34,6 +38,9 @@ import { ResourceComponent } from './domain/resource/resource.component';
     NotificationComponent,
     HeaderComponent,
     ResourceComponent,
+    TagComponent,
+    AgedPipe,
+    RatedPipe,
   ],
   exports: [
     BreadcrumbComponent,
@@ -51,6 +58,9 @@ import { ResourceComponent } from './domain/resource/resource.component';
     NotificationComponent,
     HeaderComponent,
     ResourceComponent,
+    TagComponent,
+    AgedPipe,
+    RatedPipe,
   ],
 })
 export class UiModule {}

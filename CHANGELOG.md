@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/angularbuilders/angularbuilders/compare/v0.1.7...v0.1.8) (2021-07-13)
+
+
+### Features
+
+* tag component Closes [#49](https://github.com/angularbuilders/angularbuilders/issues/49) ([d5f5fc0](https://github.com/angularbuilders/angularbuilders/commit/d5f5fc09bdc89765d4e3b8c2647bc70afffd1d5c))
+
 ### [0.1.7](https://github.com/angularbuilders/angularbuilders/compare/v0.1.6...v0.1.7) (2021-07-13)
 
 
