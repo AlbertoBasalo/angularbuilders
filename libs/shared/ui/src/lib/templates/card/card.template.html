@@ -1,10 +1,11 @@
 <article class="card mb-4">
   <header class="card-header">
     <div *ngIf="card.title" class="card-header-title is-size-4">
-      <a *ngIf="card.link" [routerLink]="[card.link]"
-         [abUiTrack]="card.title">{{ card.title | truncate:20 }}</a>
-      <a *ngIf="card.href" [href]="card.href" target="_blank"
-         [abUiTrack]="card.title">{{ card.title | truncate:20 }}</a>
+      <a *ngIf="card.link" [routerLink]="[card.link]" [abUiTrack]="card.title" [title]="card.title">{{ card.title |
+        truncate:20 }}</a>
+      <a *ngIf="card.href" [href]="card.href" target="_blank" [abUiTrack]="card.title" [title]="card.title">{{
+        card.title | truncate:20
+        }}</a>
       <span *ngIf="!card.link && !card.href">{{ card.title | truncate:20 }}</span>
     </div>
     <ng-content *ngIf="!card.title" select=".card-header-item">
