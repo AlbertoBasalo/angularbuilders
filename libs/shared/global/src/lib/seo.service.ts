@@ -21,7 +21,7 @@ export class SeoService {
   updateSeoTags(seoData: SeoData) {
     this.updateTitle(seoData.title);
     this.updateTag('description', seoData.description);
-    this.updateTag('url', seoData.url || window.location.href);
+    this.updateTag('url', seoData.url !== '' ? seoData.url : window.location.href);
     this.updateTag('image', seoData.image);
   }
 

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/angularbuilders/angularbuilders/compare/v0.1.10...v0.1.11) (2021-07-14)
+
+
+### Bug Fixes
+
+* minor seo changes, ssr still not works ([d9749eb](https://github.com/angularbuilders/angularbuilders/commit/d9749ebf43af90dbc9a76a6e5b9417f2a07e7785))
+
 ### [0.1.10](https://github.com/angularbuilders/angularbuilders/compare/v0.1.9...v0.1.10) (2021-07-14)
 
 
