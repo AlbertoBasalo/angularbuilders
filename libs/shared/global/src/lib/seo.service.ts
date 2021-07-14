@@ -33,7 +33,7 @@ export class SeoService {
   }
 
   private updateTag(tag: string, content: string) {
-    if (!content) return;
+    // if (!content) return;
     this.meta.updateTag({ name: tag, content: content });
     this.meta.updateTag({ name: 'twitter:' + tag, content: content });
     this.meta.updateTag({ property: 'og:' + tag, content: content });

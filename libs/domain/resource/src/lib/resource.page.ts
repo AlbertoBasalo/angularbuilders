@@ -50,15 +50,15 @@ export class ResourcePage implements OnInit {
         .pipe(tap((ghRepo) => this.updateSeoTags(resource, ghRepo)));
       this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
     } else {
-      this.noCode$ = of(resource);
+      this.noCode$ = of(resource).pipe(tap((resource) => this.updateSeoTags(resource)));
     }
   }
 
-  private updateSeoTags(resource: Resource, ghRepo: GhRepo) {
+  private updateSeoTags(resource: Resource, ghRepo?: GhRepo) {
     this.seo.updateSeoTags({
       title: resource.name,
       description: resource.description,
-      image: ghRepo.owner.avatar_url || '',
+      image: ghRepo?.owner.avatar_url || '',
       url: '',
     });
   }
