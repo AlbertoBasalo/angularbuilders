@@ -39,27 +39,29 @@ export class ResourcePage implements OnInit {
       .pipe(tap((resource) => this.getDataForResource(resource)));
   }
   private getDataForResource(resource: Resource) {
-    this.header$.next({
-      ...this.header,
-      title: resource.name,
-      subtitle: resource.description,
-    });
     if (resource.url.startsWith('https://github.com/')) {
-      this.ghRepo$ = this.service
-        .getGitHubRepoByRepoUrl(resource.url)
-        .pipe(tap((ghRepo) => this.updateSeoTags(resource, ghRepo)));
-      this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
+      this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url).pipe(
+        tap((ghRepo) => this.updateSeoTags(resource, ghRepo)),
+        tap(() => {
+          this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
+        })
+      );
     } else {
       this.noCode$ = of(resource).pipe(tap((resource) => this.updateSeoTags(resource)));
     }
   }
 
   private updateSeoTags(resource: Resource, ghRepo?: GhRepo) {
+    this.header$.next({
+      ...this.header,
+      title: resource.name,
+      subtitle: resource.description,
+    });
     this.seo.updateSeoTags({
       title: resource.name,
       description: resource.description,
       image: ghRepo?.owner.avatar_url || '',
-      url: '',
+      url: 'https://angular.builders/resource/' + this.route.snapshot.url[0],
     });
   }
 }
