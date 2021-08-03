@@ -36,6 +36,6 @@ export class ResourceService {
     const bestRegistry = registries.find(
       (registry) => registry.package.links.repository?.toLowerCase() === repoUrl.toLowerCase()
     );
-    return bestRegistry;
+    return bestRegistry || registries[0];
   }
 }

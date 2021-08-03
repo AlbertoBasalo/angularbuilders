@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/angularbuilders/angularbuilders/compare/v0.1.13...v0.1.14) (2021-08-03)
+
+
+### Features
+
+* show first npm result by default ([d9fc550](https://github.com/angularbuilders/angularbuilders/commit/d9fc550b5a9078e830a71fbba267c8108313e556))
+
 ### [0.1.13](https://github.com/angularbuilders/angularbuilders/compare/v0.1.12...v0.1.13) (2021-07-14)
 
 
