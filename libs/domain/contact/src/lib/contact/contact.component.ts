@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
 
   @Output() send = new EventEmitter<Lead>();
   header = {
-    heroClass: 'is-primary',
+    heroClass: 'is-info',
     title: 'Alberto Basalo contact page',
     subtitle:
       'I can help you building your app, and you can help everybody adding resources to this catalog.',

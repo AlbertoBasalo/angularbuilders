@@ -14,7 +14,7 @@ export class HomePage {
   categories$ = this.service.getCategories$();
 
   header = {
-    heroClass: 'is-primary',
+    heroClass: 'is-info',
     title: 'The home of the Angular Builders',
     subtitle: 'A site to help you build great applications with Angular',
   };

@@ -14,7 +14,7 @@ import { CategoryService } from './category.service';
 })
 export class CategoryPage implements OnInit {
   private header = {
-    heroClass: 'is-primary',
+    heroClass: 'is-info',
     title: 'Category',
     subtitle: 'loading...',
   };

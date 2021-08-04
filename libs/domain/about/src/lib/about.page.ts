@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class AboutPage {
   header = {
-    heroClass: 'is-primary',
+    heroClass: 'is-info',
     title: 'This site is maintained by Alberto Basalo',
     subtitle: 'Advise, consulting and learning services by an Angular seasoned professional',
   };
