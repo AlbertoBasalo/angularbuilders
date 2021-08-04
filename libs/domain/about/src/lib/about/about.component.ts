@@ -1,17 +1,15 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Header } from '@ab/ui';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ab-about',
   templateUrl: './about.component.html',
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent implements OnInit {
+  @Input() header!: Header;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
