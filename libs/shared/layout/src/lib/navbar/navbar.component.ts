@@ -1,4 +1,4 @@
-import { TrackerStore } from '@ab/global';
+import { TrackEntry, TrackerStore } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { merge, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -13,21 +13,28 @@ export class NavbarComponent {
   notification$: Observable<Notification>;
 
   constructor(store: TrackerStore) {
-    // ToDo: create specific notifications by error event kind
-    const error$ = store.selectAnyErrors$().pipe(
-      map(() => ({
-        class: 'is-danger',
-        message:
-          'There was an error!. Review your data and retry. If persists we will fix it ASAP!',
-      }))
-    );
-    // ToDo: use another store for user notifications
-    const success$ = store.selectByEvent$('FORM_SENT').pipe(
-      map((trackEntry) => ({
+    const error$ = store
+      .selectAnyErrors$()
+      .pipe(map((trackEntry: TrackEntry) => this.getNotificationForError(trackEntry)));
+    const success$ = store.selectAnyBusiness$().pipe(
+      map((trackEntry: TrackEntry) => ({
         class: 'is-success',
         message: trackEntry.label || 'Success',
       }))
     );
     this.notification$ = merge(error$, success$);
+  }
+
+  private getNotificationForError(trackEntry: TrackEntry): Notification {
+    if (trackEntry.event === 'CALLER_FAULT') {
+      return {
+        class: 'is-warning',
+        message: 'Ops, Review your data and retry',
+      };
+    }
+    return {
+      class: 'is-danger',
+      message: 'Sorry there was an error. We will fix it ASAP!',
+    };
   }
 }
