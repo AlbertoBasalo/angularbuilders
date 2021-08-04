@@ -1,10 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  OnInit,
-} from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 
 @Component({
@@ -23,10 +18,20 @@ export class SearchBoxWidget implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.setInitialTermFromQueryParams();
+  }
+
+  onSearch(searchTerm: string): void {
+    if (this.current === searchTerm) return;
+    this.current = searchTerm;
+    this.navigate(searchTerm);
+  }
+
+  private setInitialTermFromQueryParams(): void {
     this.route.queryParamMap
       .pipe(
-        map((params) => params.get('q') || ''),
-        filter((q) => this.initial !== q && this.current !== q)
+        map((params: ParamMap) => params.get('q') || ''),
+        filter((q: string) => this.initial !== q && this.current !== q)
       )
       .subscribe((q) => {
         this.initial = q;
@@ -34,11 +39,8 @@ export class SearchBoxWidget implements OnInit {
       });
   }
 
-  onSearch(searchTerm: string): void {
-    // ToDo: use an observable with from event
-    if (this.current === searchTerm) return;
-    this.current = searchTerm;
-    if (searchTerm.length >= 2) {
+  private navigate(searchTerm: string) {
+    if (this.current.length >= 2) {
       this.router.navigate(['search'], {
         queryParams: { q: searchTerm },
         queryParamsHandling: 'merge',

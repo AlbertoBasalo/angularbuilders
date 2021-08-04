@@ -1,3 +1,7 @@
-<input class="input is-medium  m-4" type="text"
+<input #searchInput
+       class="input is-medium  m-4"
+       type="text"
        placeholder="🔎 Type to find resources"
-       #searchInput autocomplete="off" aria-label="Search">
+       (keyup)="onInputKeyUp()"
+       autocomplete="off"
+       aria-label="Search">
