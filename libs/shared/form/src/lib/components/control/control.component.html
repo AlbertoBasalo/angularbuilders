@@ -3,27 +3,16 @@
     {{ label }} <span *ngIf="hasError()">*</span>
   </label>
   <div [ngSwitch]="type">
-    <div *ngSwitchCase="'select'" class="select">
-      <select [name]="formControlName"
-              [id]="formControlName" [value]="value" #selector
-              (change)="onSelectChange($event)">
-        <option *ngFor="let option of options"
-                [value]="option.id" #selector>
-          {{ option.name }}
-        </option>
-      </select>
-    </div>
-    <div *ngSwitchDefault>
-      <input [name]="formControlName"
-             [type]="type"
-             [id]="formControlName"
-             [value]="value"
-             (input)="onInput($event)"
-             [placeholder]="placeholder"
-             class="input" autocomplete="off" />
-    </div>
+    <select *ngSwitchCase="'select'" class="select" [name]="formControlName" [id]="formControlName" [value]="value"
+      #selector (change)="onSelectChange($event)">
+      <option *ngFor="let option of options" [value]="option.id" #selector>
+        {{ option.name }}
+      </option>
+    </select>
+    <input *ngSwitchDefault [name]="formControlName" [type]="type" [id]="formControlName" [value]="value"
+      (input)="onInput($event)" [placeholder]="placeholder" class="input" autocomplete="off" />
   </div>
-  <span *ngIf="hasErrorToShow()">
-    <em> {{ getErrorMessage() }} </em>
-  </span>
+  <em *ngIf="hasErrorToShow()">
+    {{ getErrorMessage() }}
+  </em>
 </div>
