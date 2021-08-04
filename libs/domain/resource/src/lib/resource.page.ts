@@ -15,7 +15,7 @@ import { ResourceService } from './resource.service';
 })
 export class ResourcePage implements OnInit {
   private header = {
-    heroClass: 'is-primary',
+    heroClass: 'is-info',
     title: 'Category',
     subtitle: 'loading...',
   };
@@ -40,18 +40,22 @@ export class ResourcePage implements OnInit {
   }
   private getDataForResource(resource: Resource) {
     if (resource.url.startsWith('https://github.com/')) {
-      this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url).pipe(
-        tap((ghRepo) => this.updateSeoTags(resource, ghRepo)),
-        tap(() => {
-          this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
-        })
-      );
+      this.codeResource(resource);
     } else {
-      this.noCode$ = of(resource).pipe(tap((resource) => this.updateSeoTags(resource)));
+      this.noCode$ = of(resource).pipe(tap((resource) => this.updateHeaderSeo(resource)));
     }
   }
 
-  private updateSeoTags(resource: Resource, ghRepo?: GhRepo) {
+  private codeResource(resource: Resource) {
+    this.ghRepo$ = this.service.getGitHubRepoByRepoUrl(resource.url).pipe(
+      tap((ghRepo) => this.updateHeaderSeo(resource, ghRepo)),
+      tap(() => {
+        this.npmRegistry$ = this.service.getNpmRegistryByName(resource.name, resource.url);
+      })
+    );
+  }
+
+  private updateHeaderSeo(resource: Resource, ghRepo?: GhRepo) {
     this.header$.next({
       ...this.header,
       title: resource.name,
