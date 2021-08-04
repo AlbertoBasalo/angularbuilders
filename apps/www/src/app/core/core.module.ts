@@ -56,34 +56,44 @@ export class CoreModule {
     tracker: TrackerStore
   ) {
     if (isPlatformBrowser(platformId)) {
-      analytics.configure(environment.ga);
-      tracker.selectByEvent$('NAV').subscribe({
-        next: (trackEntry) => analytics.sendNav(trackEntry.label || ''),
-      });
-      tracker.selectByEvent$('CLICK').subscribe({
-        next: (trackEntry) => analytics.sendEvent(trackEntry),
-      });
-      tracker.selectByEvent$('APP_STARTED').subscribe({
-        next: (trackEntry) => analytics.sendEvent(trackEntry),
-      });
-      tracker.selectAnyErrors$().subscribe({
-        next: (trackEntry) => analytics.sendEvent(trackEntry),
-      });
-      router.events
-        .pipe(
-          filter((event) => event instanceof NavigationEnd),
-          map((event) => event as NavigationEnd)
-        )
-        .subscribe({
-          next: (navigationEndEvent) => {
-            tracker.trackBusiness('NAV', navigationEndEvent.urlAfterRedirects);
-          },
-        });
-      if (environment.production === false) {
+      if (environment.production) {
+        this.trackBrowserProductionEvents(analytics, environment, tracker, router);
+      } else {
         // ToDo: Use Redux DevTools
         tracker.selectActions$().subscribe((action) => console.table(action));
       }
-      tracker.trackSystem('APP_STARTED', JSON.stringify(environment));
     }
+  }
+
+  private trackBrowserProductionEvents(
+    analytics: AnalyticsService,
+    environment: Environment,
+    tracker: TrackerStore,
+    router: Router
+  ) {
+    analytics.configure(environment.ga);
+    tracker.selectByEvent$('NAV').subscribe({
+      next: (trackEntry) => analytics.sendNav(trackEntry.label || ''),
+    });
+    tracker.selectByEvent$('CLICK').subscribe({
+      next: (trackEntry) => analytics.sendEvent(trackEntry),
+    });
+    tracker.selectByEvent$('APP_STARTED').subscribe({
+      next: (trackEntry) => analytics.sendEvent(trackEntry),
+    });
+    tracker.selectAnyErrors$().subscribe({
+      next: (trackEntry) => analytics.sendEvent(trackEntry),
+    });
+    router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        map((event) => event as NavigationEnd)
+      )
+      .subscribe({
+        next: (navigationEndEvent) => {
+          tracker.trackBusiness('NAV', navigationEndEvent.urlAfterRedirects);
+        },
+      });
+    tracker.trackSystem('APP_STARTED', JSON.stringify(environment));
   }
 }
