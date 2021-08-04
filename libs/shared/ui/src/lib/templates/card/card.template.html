@@ -21,10 +21,10 @@
     </div>
   </main>
   <footer class="card-footer pt-5">
-    <div *ngIf="!!card.footer" class="card-footer-item tag is-primary">
+    <div *ngIf="card.footer" class="card-footer-item tag is-primary">
       {{ card.footer }}
     </div>
-    <ng-content *ngIf="!card.footer" select=".card-footer-item" class="">
+    <ng-content *ngIf="!card.footer" select=".card-footer-item">
     </ng-content>
   </footer>
 </article>

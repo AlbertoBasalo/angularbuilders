@@ -1,3 +1,7 @@
-<ab-result-list *ngIf="resources$ | async as resources" [resources]="resources"
-                [queryTerm]="queryTerm">
-</ab-result-list>
+<ab-ui-page *ngIf="header$ | async as header"
+            [header]="header">
+
+  <ab-result-list *ngIf="resources$ | async as resources"
+                  [resources]="resources">
+  </ab-result-list>
+</ab-ui-page>

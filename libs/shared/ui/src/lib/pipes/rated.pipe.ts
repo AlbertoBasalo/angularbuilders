@@ -5,12 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class RatedPipe implements PipeTransform {
   transform(value: number, ...args: unknown[]): string {
-    if (value < 50) {
-      return 'is-danger';
-    } else if (value < 80) {
-      return 'is-warning';
-    } else {
-      return 'is-success';
-    }
+    return getClass(value);
   }
+}
+
+function getClass(rate: number): string {
+  const classes = [
+    { name: 'is-success', value: 80 },
+    { name: 'is-warning', value: 30 },
+    { name: 'is-danger', value: 0 },
+  ];
+  return classes.find((c) => rate >= c.value)?.name || 'is-danger';
 }
