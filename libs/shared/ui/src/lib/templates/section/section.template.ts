@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Header } from '../../models/header';
 
 @Component({
@@ -6,10 +6,7 @@ import { Header } from '../../models/header';
   templateUrl: './section.template.html',
   styles: [],
 })
-export class SectionTemplate implements OnChanges {
+export class SectionTemplate {
   @Input() header: Header = { title: '', subtitle: '', heroClass: '' };
   constructor() {}
-  ngOnChanges(changes: SimpleChanges): void {
-    this.header.heroClass += ' is-small';
-  }
 }

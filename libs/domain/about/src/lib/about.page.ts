@@ -8,14 +8,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class AboutPage {
   header = {
-    heroClass: 'is-primary',
-    title: 'This site is maintained by Angular.Builders',
-    subtitle: 'Advise, consulting and learning services by Angular seasoned professionals',
+    heroClass: 'is-info',
+    title: 'This site is maintained by Alberto Basalo',
+    subtitle: 'Advise, consulting and learning services by an Angular seasoned professional',
   };
   constructor(seo: SeoService) {
     seo.updateSeoTags({
       title: 'About Angular.Builders',
-      description: 'Advise, consulting and learning services by Angular seasoned professionals',
+      description:
+        'Advise, consulting and learning services by Alberto Basalo, an Angular seasoned professional',
       image: '',
       url: '',
     });

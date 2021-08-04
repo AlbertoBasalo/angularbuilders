@@ -4,7 +4,7 @@ This project was generated using these [AB-generators]https://github.com/angular
 
 ## 🎯 Goal
 
-A site for Angular developers
+A site to store resources for Angular developers
 
 ### 🧰 Tools
 
@@ -20,7 +20,6 @@ A site for Angular developers
 - SEO
 - Analytics
 
-
 ### 🏗 By The Angular Builders
 
 [www.angular.builders](https://www.angular.builders/)
@@ -29,34 +28,44 @@ A site for Angular developers
 
 ## 💾 apps
 
-  - ### 💻 www
+- ### 💻 www
 
-  - ### 💻 www-e2e
+- ### 💻 www-e2e
 
 ## 📚 libs
 
-  - ### 📂 domain
+- ### 📂 domain
 
-    - #### 📗 home
+  - #### 📗 about
 
-    - #### 📗 not-found
+  - #### 📗 category
 
-    - #### 📗 search
+  - #### 📗 contact
 
-    - #### 📗 search-box
+  - #### 📗 home
 
-  - ### 📂 shared
+  - #### 📗 not-found
 
-    - #### 📘 auth
+  - #### 📗 resource
 
-    - #### 📘 data
+  - #### 📗 resource-new
 
-    - #### 📘 form
+  - #### 📗 search
 
-    - #### 📘 global
+  - #### 📗 search-box
 
-    - #### 📘 layout
+- ### 📂 shared
 
-    - #### 📘 ui
+  - #### 📘 auth
+
+  - #### 📘 data
+
+  - #### 📘 form
+
+  - #### 📘 global
+
+  - #### 📘 layout
+
+  - #### 📘 ui
 
 ## 🧰 tools

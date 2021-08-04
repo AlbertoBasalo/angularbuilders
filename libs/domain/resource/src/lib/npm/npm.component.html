@@ -2,9 +2,11 @@
   <header class="card-header-item is-size-4 m-4">
     <div class="media">
       <div class="media-left">
-        <svg class="image is-48x48" viewBox="0 0 780 250" alt="npm registry">
+        <svg class="image is-48x48"
+             viewBox="0 0 780 250"
+             alt="npm registry">
           <path fill="#231F20"
-            d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z">
+                d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z">
           </path>
         </svg>
       </div>
@@ -13,8 +15,9 @@
           {{ npmRegistry.package.version }}
         </p>
         <p class="title is-4">
-          <a [href]="npmRegistry.package.links.npm" target="_blank" [abUiTrack]="npmRegistry.package.links.npm">{{
-            npmRegistry.package.name }}
+          <a [href]="npmRegistry.package.links.npm"
+             target="_blank"
+             [abUiTrack]="npmRegistry.package.links.npm">{{ npmRegistry.package.name }}
           </a>
         </p>
       </div>
@@ -22,21 +25,25 @@
   </header>
   <main class="content is-size-5 mt-3">
     <ab-ui-tag
-      [tag]="{ caption:'Last published on', value: npmRegistry.package.date | date: 'yyyy-MMM-dd',statusClass:npmRegistry.package.date  | aged    }">
+               [tag]="{ caption:'Last published on', value: npmRegistry.package.date | date: 'yyyy-MMM-dd',statusClass:npmRegistry.package.date  | aged    }">
     </ab-ui-tag>
     <ab-ui-tag
-      [tag]="{ caption:'Score', value: npmRegistry.score.final * 100 | number: '1.0-0',statusClass:npmRegistry.score.final * 100  | rated , units : '%'  }">
+               [tag]="{ caption:'Score', value: npmRegistry.score.final * 100 | number: '1.0-0',statusClass:npmRegistry.score.final * 100  | rated , units : '%'  }">
     </ab-ui-tag>
-    <ab-ui-tag *ngIf="npmRegistry.package.author" [tag]="{ caption:'Author', value: npmRegistry.package.author.name  }">
+    <ab-ui-tag *ngIf="npmRegistry.package.author"
+               [tag]="{ caption:'Author', value: npmRegistry.package.author.name  }">
     </ab-ui-tag>
-    <div *ngIf="npmRegistry.package.publisher" class="mt-3">
+    <div *ngIf="npmRegistry.package.publisher"
+         class="mt-3">
       <ab-ui-tag [tag]="{ caption:'Publisher', value:npmRegistry.package.publisher.username  }">
       </ab-ui-tag>
     </div>
   </main>
-  <footer *ngIf="npmRegistry.package.keywords" class="card-footer-item mb-0 tags">
-    <span *ngFor="let keyword of npmRegistry.package.keywords" class="tag is-info is-light is-large">{{ keyword |
-      truncate: 50 }}
-    </span>
+  <footer *ngIf="npmRegistry.package.keywords"
+          class="card-footer-item mb-0 tags">
+    <small *ngFor="let keyword of npmRegistry.package.keywords"
+           class="tag is-info is-light is-large">
+      <i>{{ keyword | truncate: 50 }}</i>
+    </small>
   </footer>
 </ab-ui-card>

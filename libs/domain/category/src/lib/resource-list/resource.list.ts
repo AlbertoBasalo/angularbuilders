@@ -11,7 +11,7 @@ export class ResourceList {
   @Input() resources: Resource[] = [];
 
   private header = {
-    heroClass: 'is-warning',
+    heroClass: 'is-success',
     title: `Loading`,
     subtitle: '  ',
   };
@@ -21,6 +21,7 @@ export class ResourceList {
     if (this.resources.length) {
       header.title = `Found ${this.resources.length} ${this.categoryName}`;
     } else {
+      header.heroClass = 'is-warning';
       header.title = `No ${this.categoryName} yet`;
     }
     return header;

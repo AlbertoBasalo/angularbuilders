@@ -12,7 +12,7 @@ export class ContactPage {
     seo.updateSeoTags({
       title: 'Get in contact',
       description:
-        'We can help you building your app, and you can help everybody adding resources to this catalog.',
+        'I can help you building your app, and you can help everybody adding resources to this catalog.',
       image: '',
       url: '',
     });
@@ -23,7 +23,7 @@ export class ContactPage {
       next: () =>
         this.tracker.trackBusiness(
           'FORM_SENT',
-          'Thanks for your interest. We will get in contact with you ASAP!'
+          'Thanks for your interest. I will get in contact with you ASAP!'
         ),
       error: () => {},
     });

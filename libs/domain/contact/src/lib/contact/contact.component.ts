@@ -21,10 +21,10 @@ export class ContactComponent implements OnInit {
 
   @Output() send = new EventEmitter<Lead>();
   header = {
-    heroClass: 'is-primary',
-    title: 'Contact us',
+    heroClass: 'is-info',
+    title: 'Alberto Basalo contact page',
     subtitle:
-      'We can help you building your app, and you can help everybody adding resources to this catalog.',
+      'I can help you building your app, and you can help everybody adding resources to this catalog.',
   };
   constructor(private fb: FormBuilder) {}
 
