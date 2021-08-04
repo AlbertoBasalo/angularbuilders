@@ -10,12 +10,18 @@ import { Tag } from '../../models/tag';
 export class TagComponent implements OnChanges {
   private defaultTag = { caption: '', statusClass: 'is-info', value: '', units: '' };
   @Input() tag: Partial<Tag> = { ...this.defaultTag };
+
   constructor() {}
+
   ngOnChanges(changes: SimpleChanges) {
     if (changes.tag) {
       this.tag = { ...this.defaultTag, ...changes.tag.currentValue };
     } else {
-      this.tag = this.defaultTag;
+      this.setDefaultTag();
     }
+  }
+
+  private setDefaultTag() {
+    this.tag = { ...this.defaultTag };
   }
 }

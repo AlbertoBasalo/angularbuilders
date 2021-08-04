@@ -1,7 +1,7 @@
 import { TrackEntry, TrackerStore } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { merge, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 import { Notification } from '../models/notification';
 @Component({
   selector: 'ab-navbar',
@@ -17,6 +17,7 @@ export class NavbarComponent {
       .selectAnyErrors$()
       .pipe(map((trackEntry: TrackEntry) => this.getNotificationForError(trackEntry)));
     const success$ = store.selectAnyBusiness$().pipe(
+      filter((trackEntry: TrackEntry) => ['NAV', 'CLICK'].includes(trackEntry.event) === false),
       map((trackEntry: TrackEntry) => ({
         class: 'is-success',
         message: trackEntry.label || 'Success',

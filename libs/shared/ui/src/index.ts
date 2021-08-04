@@ -2,7 +2,6 @@ export * from './lib/components/breadcrumb/breadcrumb.component';
 export * from './lib/components/header/header.component';
 export * from './lib/components/menu/menu.component';
 export * from './lib/components/message/message.component';
-export * from './lib/components/notification/notification.component';
 export * from './lib/components/tabs/tabs.component';
 export * from './lib/components/tag/tag.component';
 export * from './lib/directives/track.directive';
