@@ -18,6 +18,9 @@ export class ResourceService {
   getResourceById$(resourceId: string) {
     return this.http.get<Resource>(`${this.resourcesUrl}/${resourceId}`);
   }
+  updateResource$(resource: Resource) {
+    return this.http.put<Resource>(`${this.resourcesUrl}/${resource.id}`, resource);
+  }
   getGitHubRepoByRepoUrl(repoUrl: string) {
     // https://github.com/ReactiveX/rxjs [org]/[repo]
     // https://api.github.com/repos/ReactiveX/rxjs

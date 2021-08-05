@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type"
+        content="text/html;">
+  <base href="/">
+  <title>@jscutlery/semver</title>
+
+  <meta name="title"
+        content="@jscutlery/semver">
+  <meta name="description"
+        content="Nx plugin to automate semantic versioning and CHANGELOG generation.">
+  <meta name="keywords"
+        content="Angular, resources, libraries, components, tutorials, books, courses">
+  <meta name="robots"
+        content="index, follow">
+  <meta name="language"
+        content="English">
+  <meta name="revisit-after"
+        content="1 days">
+  <meta name="author"
+        content="Alberto Basalo">
+
+  <meta property="og:type"
+        content="website">
+  <meta property="og:title"
+        content="@jscutlery/semver">
+  <meta property="og:description"
+        content="Nx plugin to automate semantic versioning and CHANGELOG generation.">
+  <meta property="og:url"
+        content="https://angular.builders/resource/jscutlerysemver">
+  <meta property="og:image"
+        content="https://avatars.githubusercontent.com/u/55789006?v=4">
+
+  <meta name="twitter:card"
+        content="summary">
+  <meta name="twitter:site"
+        content="@albertobasalo">
+  <meta name="twitter:creator"
+        content="@albertobasalo">
+  <meta name="twitter:title"
+        content="@jscutlery/semver">
+  <meta name="twitter:description"
+        content="Nx plugin to automate semantic versioning and CHANGELOG generation.">
+  <meta name="twitter:url"
+        content="https://angular.builders/resource/jscutlerysemver">
+  <meta name="twitter:image"
+        content="https://avatars.githubusercontent.com/u/55789006?v=4">
+
+  <script async=""
+          src="https://www.googletagmanager.com/gtag/js?id=UA-143747852-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+  </script>
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <link rel="icon"
+        type="image/x-icon"
+        href="favicon.ico">
+  <link rel="manifest"
+        href="manifest.webmanifest">
+  <meta name="theme-color"
+        content="#1976d2">
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: inherit;
+    }
+
+    html {
+      background-color: #fff;
+      font-size: 16px;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      min-width: 300px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      text-rendering: optimizeLegibility;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      color: #4a4a4a;
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    body.has-navbar-fixed-top {
+      padding-top: 3.25rem;
+    }
+  </style>
+  <link rel="stylesheet"
+        href="styles.6d5c8e53bad466c8777b.css"
+        media="print"
+        onload="this.media='all'"><noscript>
+    <link rel="stylesheet"
+          href="styles.6d5c8e53bad466c8777b.css">
+  </noscript>
+  <style ng-transition="serverApp"></style>
+  <meta name="image"
+        content="https://avatars.githubusercontent.com/u/55789006?v=4">
+  <meta name="url"
+        content="https://angular.builders/resource/jscutlerysemver">
+  <style ng-transition="serverApp">
+    article[_ngcontent-sc30] {
+      display: flex;
+      flex-direction: column;
+      height: 100%
+    }
+  </style>
+</head>
+
+<body class="has-navbar-fixed-top">
+  <ab-root _nghost-sc22=""
+           ng-version="12.1.0">
+    <ab-layout _ngcontent-sc22=""
+               _nghost-sc21="">
+      <ab-navbar _ngcontent-sc21="">
+        <nav role="navigation"
+             aria-label="main navigation"
+             class="navbar is-fixed-top has-shadow">
+          <div class="navbar-brand"><a class="navbar-item"
+               href="/"><img src="./assets/icons/logo.png"
+                   width="28"
+                   height="28"><strong class="ml-4 is-size-2 is-size-3-touch">Angular.Builders</strong></a></div>
+          <div id="navbarItems"
+               class="navbar-menu">
+            <div class="mr-6">
+              <ab-search-box-widget _ngcontent-sc21=""
+                                    class="navbar-start">
+                <ab-search-box><input type="text"
+                         placeholder="🔎 Type to find resources"
+                         autocomplete="off"
+                         aria-label="Search"
+                         class="input is-medium m-4"></ab-search-box>
+              </ab-search-box-widget>
+            </div>
+            <div class="navbar-end">
+              <div _ngcontent-sc21=""
+                   class="navbar-end"><a _ngcontent-sc21=""
+                   routerlink="about"
+                   class="navbar-item"
+                   href="/about">About AB</a><a _ngcontent-sc21=""
+                   routerlink="contact"
+                   class="navbar-item"
+                   href="/contact">Contact</a></div>
+            </div>
+          </div>
+        </nav>
+      </ab-navbar>
+      <router-outlet _ngcontent-sc21=""></router-outlet>
+      <ng-component>
+        <ab-ui-page>
+          <main>
+            <ab-ui-header>
+              <header class="hero is-info mb-4 mt-4">
+                <div class="hero-body">
+                  <p class="title"> @jscutlery/semver </p>
+                  <p class="subtitle"> Nx plugin to automate semantic versioning and CHANGELOG generation. </p>
+                </div>
+              </header>
+            </ab-ui-header>
+            <main class="section">
+              <ab-github>
+                <ab-ui-card _nghost-sc30="">
+                  <article _ngcontent-sc30=""
+                           class="card mb-4">
+                    <header _ngcontent-sc30=""
+                            class="card-header">
+                      <header class="card-header-item is-size-4 m-4">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-48x48"><img
+                                   src="https://avatars.githubusercontent.com/u/55789006?v=4"
+                                   alt="jscutlery"></figure>
+                          </div>
+                          <div class="media-content">
+                            <p class="subtitle is-6"><a href="https://github.com/jscutlery">jscutlery/</a></p>
+                            <p class="title is-4"><a target="_blank"
+                                 href="https://github.com/jscutlery/semver">semver </a></p>
+                          </div>
+                        </div>
+                      </header>
+                    </header>
+                    <main _ngcontent-sc30=""
+                          class="card-content">
+                      <div _ngcontent-sc30=""
+                           class="content">
+                        <main class="content is-size-5 mt-3">
+                          <ab-ui-tag>
+                            <div class="mt-3"> Last updated on <label
+                                     class="is-large is-light is-success tag">2021-Aug-03</label>
+                            </div>
+                          </ab-ui-tag>
+                          <ab-ui-tag>
+                            <div class="mt-3"> Followed by <label class="is-info is-large is-light tag">4</label> users
+                            </div>
+                          </ab-ui-tag>
+                          <ab-ui-tag>
+                            <div class="mt-3"> Rated with <label class="is-info is-large is-light tag">151</label> stars
+                            </div>
+                          </ab-ui-tag>
+                          <ab-ui-tag>
+                            <div class="mt-3"> Developed with <label
+                                     class="is-info is-large is-light tag">TypeScript</label>
+                            </div>
+                          </ab-ui-tag>
+                        </main>
+                      </div>
+                    </main>
+                    <footer _ngcontent-sc30=""
+                            class="card-footer pt-5"></footer>
+                  </article>
+                </ab-ui-card>
+              </ab-github>
+              <ab-npm>
+                <ab-ui-card _nghost-sc30="">
+                  <article _ngcontent-sc30=""
+                           class="card mb-4">
+                    <header _ngcontent-sc30=""
+                            class="card-header">
+                      <header class="card-header-item is-size-4 m-4">
+                        <div class="media">
+                          <div class="media-left"><svg viewBox="0 0 780 250"
+                                 alt="npm registry"
+                                 class="image is-48x48">
+                              <path fill="#231F20"
+                                    d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z">
+                              </path>
+                            </svg></div>
+                          <div class="media-content">
+                            <p class="subtitle is-6"> 2.4.0 </p>
+                            <p class="title is-4"><a target="_blank"
+                                 href="https://www.npmjs.com/package/%40jscutlery%2Fsemver">@jscutlery/semver </a></p>
+                          </div>
+                        </div>
+                      </header>
+                    </header>
+                    <main _ngcontent-sc30=""
+                          class="card-content">
+                      <div _ngcontent-sc30=""
+                           class="content">
+                        <main class="content is-size-5 mt-3">
+                          <ab-ui-tag>
+                            <div class="mt-3"> Last published on <label
+                                     class="is-large is-light is-success tag">2021-Jul-07</label>
+                            </div>
+                          </ab-ui-tag>
+                          <ab-ui-tag>
+                            <div class="mt-3"> Score <label class="is-large is-light is-warning tag">36</label> %
+                            </div>
+                          </ab-ui-tag>
+                          <div class="mt-3">
+                            <ab-ui-tag>
+                              <div class="mt-3"> Publisher <label class="is-info is-large is-light tag">koalaa</label>
+                              </div>
+                            </ab-ui-tag>
+                          </div>
+                        </main>
+                      </div>
+                    </main>
+                    <footer _ngcontent-sc30=""
+                            class="card-footer pt-5"></footer>
+                  </article>
+                </ab-ui-card>
+              </ab-npm>
+              <ab-resource>
+                <ab-ui-box>
+                  <section class="box mt-4 mb-4">
+                    <main>
+                      <div class="block has-text-primary is-size-5"> 🚧 <i> Coming soon links to examples, tutorials and
+                          your comments...</i></div>
+                      <div class="block"><a class="button is-medium is-link"
+                           href="/category/tools">💨 Back to tools </a></div>
+                    </main>
+                  </section>
+                </ab-ui-box>
+              </ab-resource>
+            </main>
+          </main>
+        </ab-ui-page>
+      </ng-component>
+      <ab-footer _ngcontent-sc21="">
+        <footer class="footer content has-text-centered">
+          <p><a href="https://github.com/angularbuilders"
+               target="_blank"><strong>Angular.Builders</strong></a> by <a href="https://twitter.com/albertobasalo"
+               target="_blank">Alberto Basalo</a>. </p><small> The <a
+               href="https://github.com/angularbuilders/angularbuilders"
+               target="_blank">👨‍💻 source code</a> is licensed <a
+               href="https://opensource.org/licenses/mit-license.php"
+               target="_blank">MIT</a>. The website content is licensed <a
+               href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY NC SA 4.0</a>. </small>
+        </footer>
+      </ab-footer>
+    </ab-layout>
+  </ab-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <script src="runtime-es2015.99d8a8b52f1d0fd18606.js"
+          type="module"></script>
+  <script src="runtime-es5.99d8a8b52f1d0fd18606.js"
+          nomodule=""
+          defer=""></script>
+  <script src="polyfills-es5.24800a1217d6e10a420b.js"
+          nomodule=""
+          defer=""></script>
+  <script src="polyfills-es2015.0cd64c48b8ae79ede0e9.js"
+          type="module"></script>
+  <script src="main-es2015.15a615791049652766f2.js"
+          type="module"></script>
+  <script src="main-es5.15a615791049652766f2.js"
+          nomodule=""
+          defer=""></script>
+  <script id="serverApp-state"
+          type="application/json">{}</script>
+</body>
+
+</html>

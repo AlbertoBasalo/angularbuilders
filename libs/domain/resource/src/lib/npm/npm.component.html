@@ -28,7 +28,7 @@
                [tag]="{ caption:'Last published on', value: npmRegistry.package.date | date: 'yyyy-MMM-dd',statusClass:npmRegistry.package.date  | aged    }">
     </ab-ui-tag>
     <ab-ui-tag
-               [tag]="{ caption:'Score', value: npmRegistry.score.final * 100 | number: '1.0-0',statusClass:npmRegistry.score.final * 100  | rated , units : '%'  }">
+               [tag]="{ caption:'Quality', value: npmRegistry.score.detail.quality * 100 | number: '1.0-0',statusClass:npmRegistry.score.detail.quality * 100  | rated , units : '%'  }">
     </ab-ui-tag>
     <ab-ui-tag *ngIf="npmRegistry.package.author"
                [tag]="{ caption:'Author', value: npmRegistry.package.author.name  }">

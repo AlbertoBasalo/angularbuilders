@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.17](https://github.com/angularbuilders/angularbuilders/compare/v0.1.16...v0.1.17) (2021-08-05)
+
+
+### Features
+
+* track events only in production ([c6c6c61](https://github.com/angularbuilders/angularbuilders/commit/c6c6c61ef1240afb1de64110429f5181bc772503))
+* update resources closes [#52](https://github.com/angularbuilders/angularbuilders/issues/52) ([bd3f430](https://github.com/angularbuilders/angularbuilders/commit/bd3f430128ca2bc0f5100cc9ed92eb05f8ebc70d))
+
 ### [0.1.16](https://github.com/angularbuilders/angularbuilders/compare/v0.1.15...v0.1.16) (2021-08-04)
 
 ### [0.1.15](https://github.com/angularbuilders/angularbuilders/compare/v0.1.14...v0.1.15) (2021-08-03)
