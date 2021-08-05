@@ -1,6 +1,7 @@
 export interface NpmRegistry {
   package: {
     name: string;
+    description: string;
     version: string;
     date: Date;
     keywords: string[];
@@ -8,5 +9,5 @@ export interface NpmRegistry {
     author: { name: string };
     publisher: { username: string };
   };
-  score: { final: number };
+  score: { final: number; detail: { quality: number } };
 }

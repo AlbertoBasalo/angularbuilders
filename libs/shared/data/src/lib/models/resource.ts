@@ -4,4 +4,6 @@ export interface Resource {
   description: string;
   url: string;
   categoryId?: string;
+  gitHub: unknown;
+  npm: unknown;
 }

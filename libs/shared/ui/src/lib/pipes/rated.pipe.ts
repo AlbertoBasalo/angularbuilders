@@ -11,7 +11,7 @@ export class RatedPipe implements PipeTransform {
 
 function getClass(rate: number): string {
   const classes = [
-    { name: 'is-success', value: 80 },
+    { name: 'is-success', value: 50 },
     { name: 'is-warning', value: 30 },
     { name: 'is-danger', value: 0 },
   ];
