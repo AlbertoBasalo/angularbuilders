@@ -30,9 +30,13 @@ export class ResourceService {
     if (isPlatformBrowser(this.platformId) && resource.url.startsWith('https://github.com/')) {
       return this.getGitHubRepoByRepoUrl$(resource.url).pipe(
         map((ghRepo) => this.toResourceWithGH(resource, ghRepo)),
-        switchMap((resource) => this.getNpmRegistryByName$(resource)),
+        switchMap((resourceWithGH) => this.getNpmRegistryByName$(resourceWithGH)),
         map((npm) => this.toResourceWithNpm(resource, npm)),
-        tap((resource) => this.updateResource$(resource).subscribe())
+        tap((resourceWithGH_NPM) => {
+          if (JSON.stringify(resource) != JSON.stringify(resourceWithGH_NPM)) {
+            this.updateResource$(resourceWithGH_NPM).subscribe();
+          }
+        })
       );
     } else {
       return of(resource);

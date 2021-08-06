@@ -1,4 +1,4 @@
-import { GhRepo, Resource } from '@ab/data';
+import { Resource } from '@ab/data';
 import { SeoService } from '@ab/global';
 import { Header } from '@ab/ui';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
@@ -45,7 +45,7 @@ export class ResourcePage implements OnInit {
     this.seo.updateSeoTags({
       title: resource.name,
       description: resource.description,
-      image: (resource.gitHub as GhRepo)?.owner.avatar_url || '',
+      image: resource.gitHub?.owner.avatar_url || '',
       url: 'https://angular.builders/resource/' + this.route.snapshot.url[0],
     });
   }
