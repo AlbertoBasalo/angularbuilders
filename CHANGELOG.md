@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.18](https://github.com/angularbuilders/angularbuilders/compare/v0.1.17...v0.1.18) (2021-08-06)
+
+
+### Features
+
+* upsate refreshed resoource only when needed ([b45bdda](https://github.com/angularbuilders/angularbuilders/commit/b45bdda51f8b23be50db182ffb9f043ba2f6c8b1))
+
 ### [0.1.17](https://github.com/angularbuilders/angularbuilders/compare/v0.1.16...v0.1.17) (2021-08-05)
 
 

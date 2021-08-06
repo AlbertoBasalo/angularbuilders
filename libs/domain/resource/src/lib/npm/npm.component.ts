@@ -1,5 +1,5 @@
+import { NpmRegistry } from '@ab/data';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { NpmRegistry } from '../models/npm-registry';
 
 @Component({
   selector: 'ab-npm',

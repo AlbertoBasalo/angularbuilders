@@ -1,5 +1,5 @@
+import { GhRepo } from '@ab/data';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { GhRepo } from '../models/gh-repo';
 
 @Component({
   selector: 'ab-github',

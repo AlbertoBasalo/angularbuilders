@@ -1,8 +1,13 @@
-<ab-ui-page *ngIf="header$ | async as header" [header]="header">
-  <main class="section">
-    <ab-github *ngIf="ghRepo$ | async as ghRepo" [ghRepo]="ghRepo"></ab-github>
-    <ab-npm *ngIf="npmRegistry$ | async as npmRegistry" [npmRegistry]="npmRegistry"></ab-npm>
-    <ab-no-code *ngIf="noCode$ | async as noCode" [noCode]="noCode"></ab-no-code>
-    <ab-resource *ngIf="resource$ | async as resource" [resource]="resource"></ab-resource>
+<ab-ui-page *ngIf="header$ | async as header"
+            [header]="header">
+  <main *ngIf="resource$ | async as resource"
+        class="section">
+    <ab-github *ngIf="resource.gitHub"
+               [ghRepo]="resource.gitHub"></ab-github>
+    <ab-npm *ngIf="resource.npm"
+            [npmRegistry]="resource.npm"></ab-npm>
+    <ab-no-code *ngIf="!resource.gitHub && !resource.npm"
+                [noCode]="resource"></ab-no-code>
+    <ab-resource [resource]="resource"></ab-resource>
   </main>
 </ab-ui-page>
