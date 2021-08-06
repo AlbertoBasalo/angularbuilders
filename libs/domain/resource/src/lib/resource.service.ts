@@ -28,12 +28,20 @@ export class ResourceService {
 
   refreshResourceExternalData$(resource: Resource): Observable<Resource> {
     if (isPlatformBrowser(this.platformId) && resource.url.startsWith('https://github.com/')) {
+      const resourceOriginal = JSON.stringify(resource);
       return this.getGitHubRepoByRepoUrl$(resource.url).pipe(
         map((ghRepo) => this.toResourceWithGH(resource, ghRepo)),
-        switchMap((resourceWithGH) => this.getNpmRegistryByName$(resourceWithGH)),
+        switchMap((resourceWithGH) => this.getNpmRegistryByFullName$(resourceWithGH)),
+        switchMap((npm) => {
+          if (npm) {
+            return of(npm);
+          } else {
+            return this.getNpmRegistryByName$(resource);
+          }
+        }),
         map((npm) => this.toResourceWithNpm(resource, npm)),
         tap((resourceWithGH_NPM) => {
-          if (JSON.stringify(resource) != JSON.stringify(resourceWithGH_NPM)) {
+          if (JSON.stringify(resourceWithGH_NPM) !== resourceOriginal) {
             this.updateResource$(resourceWithGH_NPM).subscribe();
           }
         })
@@ -50,8 +58,16 @@ export class ResourceService {
     return this.http.get<GhRepo>(apiUrl);
   }
 
-  getNpmRegistryByName$(resource: Resource): Observable<NpmRegistry> {
+  private getNpmRegistryByFullName$(resource: Resource): Observable<NpmRegistry | undefined> {
     const name = (resource.gitHub as GhRepo)?.owner.login + ' ' + resource.name;
+    return this.getNpmRegistry$(name, resource);
+  }
+  private getNpmRegistryByName$(resource: Resource): Observable<NpmRegistry | undefined> {
+    const name = resource.name;
+    return this.getNpmRegistry$(name, resource);
+  }
+
+  private getNpmRegistry$(name: string, resource: Resource) {
     const apiUrl = `https://registry.npmjs.org/-/v1/search?text=${name}&size=10`;
     return this.http.get<{ objects: NpmRegistry[] }>(apiUrl).pipe(
       map((response) => response.objects),
@@ -63,35 +79,33 @@ export class ResourceService {
     const bestRegistry = registries.find(
       (registry) => registry.package.links.repository?.toLowerCase() === repoUrl.toLowerCase()
     );
-    return bestRegistry || registries[0];
+    return bestRegistry || undefined;
   }
 
   private toResourceWithGH(resource: Resource, ghRepo: GhRepo): Resource {
-    return {
-      ...resource,
-      gitHub: {
-        name: ghRepo.name,
-        full_name: ghRepo.full_name,
-        html_url: ghRepo.html_url,
-        description: ghRepo.description,
-        updated_at: ghRepo.updated_at,
-        stargazers_count: ghRepo.stargazers_count,
-        subscribers_count: ghRepo.subscribers_count,
-        homepage: ghRepo.homepage,
-        language: ghRepo.language,
-        owner: {
-          login: ghRepo.owner.login,
-          html_url: ghRepo.owner.html_url,
-          avatar_url: ghRepo.owner.avatar_url,
-        },
+    const resourceGH = {
+      name: ghRepo.name,
+      full_name: ghRepo.full_name,
+      html_url: ghRepo.html_url,
+      description: ghRepo.description,
+      updated_at: ghRepo.updated_at,
+      stargazers_count: ghRepo.stargazers_count,
+      subscribers_count: ghRepo.subscribers_count,
+      homepage: ghRepo.homepage,
+      language: ghRepo.language,
+      owner: {
+        login: ghRepo.owner.login,
+        html_url: ghRepo.owner.html_url,
+        avatar_url: ghRepo.owner.avatar_url,
       },
     };
+    resource.gitHub = resourceGH;
+    return resource;
   }
 
-  private toResourceWithNpm(resource: Resource, npm: NpmRegistry): Resource {
-    return {
-      ...resource,
-      npm: {
+  private toResourceWithNpm(resource: Resource, npm?: NpmRegistry): Resource {
+    if (npm) {
+      const resourceNpm = {
         package: {
           name: npm.package.name,
           description: npm.package.description,
@@ -103,7 +117,11 @@ export class ResourceService {
           publisher: npm.package.publisher,
         },
         score: npm.score,
-      },
-    };
+      };
+      resource.npm = resourceNpm;
+    } else {
+      resource.npm = undefined;
+    }
+    return resource;
   }
 }

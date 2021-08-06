@@ -7,6 +7,6 @@ export interface Resource {
   description: string;
   url: string;
   categoryId?: string;
-  gitHub: GhRepo;
-  npm: NpmRegistry;
+  gitHub: GhRepo | undefined;
+  npm: NpmRegistry | undefined;
 }
