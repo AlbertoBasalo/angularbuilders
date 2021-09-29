@@ -1,10 +1,19 @@
-<nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top has-shadow"
+     role="navigation"
+     aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" [routerLink]="['/']">
-      <img src="./assets/icons/logo.png" width="28" height="28"> <strong
-        class="ml-4 is-size-2 is-size-3-touch">Angular.Builders</strong> </a>
+    <a class="navbar-item"
+       [routerLink]="['/']">
+      <!-- <img src="./assets/icons/logo.png" width="28" height="28"> -->
+      <img src="./assets/angular-builders.svg"
+           width="64"
+           height="64">
+
+      <strong class="ml-4 is-size-2 is-size-3-touch">Angular.Builders</strong>
+    </a>
   </div>
-  <div id="navbarItems" class="navbar-menu">
+  <div id="navbarItems"
+       class="navbar-menu">
     <div class="mr-6">
       <ng-content select=".navbar-start">
       </ng-content>
@@ -12,7 +21,8 @@
     <div class="navbar-end">
       <ng-content select=".navbar-end">
       </ng-content>
-      <ab-notification *ngIf="notification$ |async as notification" [notification]="notification">
+      <ab-notification *ngIf="notification$ |async as notification"
+                       [notification]="notification">
       </ab-notification>
     </div>
   </div>
