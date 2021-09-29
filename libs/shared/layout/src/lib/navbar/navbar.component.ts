@@ -6,7 +6,11 @@ import { Notification } from '../models/notification';
 @Component({
   selector: 'ab-navbar',
   templateUrl: './navbar.component.html',
-  styles: [],
+  styles: [`
+  .navbar-item img {
+    max-height: 4rem;
+  }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
