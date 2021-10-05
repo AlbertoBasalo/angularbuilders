@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.24](https://github.com/angularbuilders/angularbuilders/compare/v0.1.23...v0.1.24) (2021-10-05)
+
+
+### Features
+
+* seo meta tags ([7a5a8ef](https://github.com/angularbuilders/angularbuilders/commit/7a5a8efd694d71effd75c1ca12333ead5f374f9a))
+
 ### [0.1.23](https://github.com/angularbuilders/angularbuilders/compare/v0.1.22...v0.1.23) (2021-10-05)
 
 
