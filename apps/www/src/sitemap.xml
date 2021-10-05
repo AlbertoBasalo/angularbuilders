@@ -9,357 +9,412 @@
 
 <url>
   <loc>https://www.angular.builders/</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/about</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/contact</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/category/libraries</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/category/tools</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/category/ui-components</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/category/books</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/category/events</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/category/courses</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/akita</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-extensions-elements</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-auth-oidc-client</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/angular-zen</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-three</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/apollo-angular</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/carbon-components-angular</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ng-web-apis-common</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/convoyr</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/lumberjack</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/mini-rx-store</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/ng-mocks</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ng-observe</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/ng-sortgrid</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngrx</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngsetstate</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/ngx-digit-only</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/ngx-toastr</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngx-errors</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngx-foldable</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/observable-store</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/polymorpheus</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/route-path-builder</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/rx-angular</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/rx-effects</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/rxjs</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/transloco</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/Web-apis-for-angular</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/xng-breadcrumb</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/jscutlerysemver</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngneat-lib</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/angular-bash</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-cli-ghpages</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-devtools</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-eslint</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-essentials</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-micro-frontend</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-testing-library</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular2-switcher</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/auto-spies</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/compodoc</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/componizer</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/cypress-schematic</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/jscutlery-test-utils</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/module-federation</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ng-morph</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngrev</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngx-electronify</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-console</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/scully</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/spectator</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-material</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/clarity-design</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/google-pay-button</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ng-zorro</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngneat-hot-toast</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ngx-bootstrap</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/prime-ng</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/save-to-google-pay-button</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/taiga-ui</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/teradatacovalent-ui-platform</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-12-with-examples</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-for-enterprise-ready-web-applications</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-projects</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/enterprise-angular</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/learn-angular-in-24-hours</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/learning-angular</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/pro-angular-9</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/the-complete-guide</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.angular.builders/resource/angular-malaga</loc>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ng-conf-2021</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/ng-rome-mmxxi</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.angular.builders/resource/angular-escalable</loc>
-  <lastmod>2021-07-14T11:40:40+00:00</lastmod>
+  <lastmod>2021-10-05T07:11:56+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
