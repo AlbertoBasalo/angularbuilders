@@ -20,12 +20,7 @@ export class HomePage {
   };
 
   constructor(private service: HomeService, seo: SeoService) {
-    seo.updateSeoTags({
-      title: 'Angular.Builders',
-      description: 'A resource catalog to help you build great applications with Angular.',
-      image: '',
-      url: '',
-    });
+    seo.updateSeoTags({ });
     this.categories$ = service
       .getCategories$()
       .pipe(switchMap((categoriesAPI) => this.getCategoriesWithCounter$(categoriesAPI)));

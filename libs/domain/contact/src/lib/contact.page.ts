@@ -13,8 +13,6 @@ export class ContactPage {
       title: 'Get in contact',
       description:
         'I can help you building your app, and you can help everybody adding resources to this catalog.',
-      image: '',
-      url: '',
     });
   }
 

@@ -9,9 +9,7 @@ export class NotFoundPage {
   constructor(seo: SeoService) {
     seo.updateSeoTags({
       title: 'Not Found Page',
-      description: '404',
-      image: '',
-      url: '',
+      description: '404 Page not found',
     });
   }
 }

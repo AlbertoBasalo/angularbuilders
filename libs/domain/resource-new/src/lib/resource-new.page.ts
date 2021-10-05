@@ -15,9 +15,7 @@ export class ResourceNewPage implements OnInit {
   constructor(private service: ResourceNewService, seo: SeoService) {
     seo.updateSeoTags({
       title: 'Add a new resource',
-      description: '404',
-      image: '',
-      url: '',
+      description: '404 work in progress',
     });
   }
 

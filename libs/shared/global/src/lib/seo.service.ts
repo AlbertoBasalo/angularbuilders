@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 export interface SeoData {
-  title: string;
-  description: string;
-  url: string;
-  image: string;
+  title?: string;
+  description?: string;
+  url?: string;
+  image?: string;
 }
 
 @Injectable({
@@ -19,10 +19,10 @@ export class SeoService {
     ]);
   }
   updateSeoTags(seoData: SeoData) {
-    this.updateTitle(seoData.title);
-    this.updateTag('image', seoData.image);
-    this.updateTag('description', seoData.description);
-    this.updateTag('url', seoData.url);
+    this.updateTitle(seoData.title || 'Angular Builders');
+    this.updateTag('image', seoData.image || 'https://www.angular.builders/assets/angular-builders.png');
+    this.updateTag('description', seoData.description || 'A place to help you build great Angular applications. Categorized resources, advise, consulting and courses by Angular seasoned professionals.');
+    this.updateTag('url', seoData.url || 'https://www.angular.builders');
   }
 
   private updateTitle(title: string) {

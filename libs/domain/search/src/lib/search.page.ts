@@ -42,8 +42,6 @@ export class SearchPage implements OnInit {
         this.seo.updateSeoTags({
           title: '? q = ' + query,
           description: 'Searching for ' + this.queryTerm,
-          image: '',
-          url: '',
         });
       }),
       switchMap((query) => this.service.getResourceByQuery$(query))
