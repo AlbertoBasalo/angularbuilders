@@ -1,22 +1,46 @@
 <ab-ui-page [header]="header">
   <main class="section">
-    <form [formGroup]="form" (submit)="onSubmit()" class="box">
+    <form [formGroup]="form"
+          (submit)="onSubmit()"
+          class="box">
+      <legend>
+        <img src="./assets/angular-builders.svg"
+             width="64"
+             height="64">
+        <strong>Just a couple of details so I can reach to help you.</strong>
+      </legend>
       <fieldset class="mb-4">
-        <ab-form-control [form]="form" formControlName="name" [label]="'Your name, please'" [placeholder]="'John Doe'">
+        <ab-form-control [form]="form"
+                         formControlName="name"
+                         [label]="'Your name, please'"
+                         [placeholder]="'John Doe'">
         </ab-form-control>
-        <ab-form-control [form]="form" formControlName="email" type="email" [label]="'Your email address'"
-          [placeholder]="'john.doe@acme.com'">
+        <ab-form-control [form]="form"
+                         formControlName="email"
+                         type="email"
+                         [label]="'Your email address'"
+                         [placeholder]="'john.doe@acme.com'">
         </ab-form-control>
-        <ab-form-control [form]="form" formControlName="interest" [label]="'What do you need or want to do?'"
-          [placeholder]="'consulting, courses, add resources...'">
+        <ab-form-control [form]="form"
+                         formControlName="interest"
+                         [label]="'What do you need or want to do?'"
+                         [placeholder]="'consulting, courses, add resources...'">
         </ab-form-control>
-        <ab-form-control [form]="form" formControlName="region" label="Where are you?" [placeholder]="'The internet'">
+        <ab-form-control [form]="form"
+                         formControlName="region"
+                         label="Where are you?"
+                         [placeholder]="'Your city, or country, or just The Internet....'">
         </ab-form-control>
-        <ab-form-control [form]="form" formControlName="isHuman" [label]="'Say yes if you are a human'"
-          [placeholder]="'Yes I´m not a robot'">
+        <ab-form-control [form]="form"
+                         formControlName="isHuman"
+                         [label]="'Say yes if you are a human'"
+                         [placeholder]="'Yes I´m not a robot'">
         </ab-form-control>
       </fieldset>
-      <input type="submit" value="Ok, get in touch!" [disabled]="form.invalid" class="button is-link is-large mt-4" />
+      <input type="submit"
+             value="📩 Ok, get in touch!"
+             [disabled]="form.invalid"
+             class="button is-link is-large mt-4" />
     </form>
   </main>
 </ab-ui-page>
