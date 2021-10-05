@@ -49,8 +49,7 @@ export class CategoryPage implements OnInit {
         this.seo.updateSeoTags({
           title: result.category.name,
           description: result.category.description,
-          image: '',
-          url: '',
+          url: 'https://angular.builders/resource/' + this.route.snapshot.url[0],
         });
       })
     );

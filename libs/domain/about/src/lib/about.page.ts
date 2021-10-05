@@ -17,8 +17,6 @@ export class AboutPage {
       title: 'About Angular.Builders',
       description:
         'Advise, consulting and learning services by Alberto Basalo, an Angular seasoned professional',
-      image: '',
-      url: '',
     });
   }
 }

@@ -45,7 +45,7 @@ export class ResourcePage implements OnInit {
     this.seo.updateSeoTags({
       title: resource.name,
       description: resource.description,
-      image: resource.gitHub?.owner.avatar_url || '',
+      image: resource.gitHub?.owner.avatar_url,
       url: 'https://angular.builders/resource/' + this.route.snapshot.url[0],
     });
   }
