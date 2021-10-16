@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.25](https://github.com/angularbuilders/angularbuilders/compare/v0.1.24...v0.1.25) (2021-10-16)
+
+
+### Features
+
+* resize cards, add twitter contact ([6d1ad4c](https://github.com/angularbuilders/angularbuilders/commit/6d1ad4ca7e878299f9069a4064ede844d8def465))
+* updated site map ([53f96e3](https://github.com/angularbuilders/angularbuilders/commit/53f96e3ea167634a276416377365cff056d9826c))
+
 ### [0.1.24](https://github.com/angularbuilders/angularbuilders/compare/v0.1.23...v0.1.24) (2021-10-05)
 
 
