@@ -2,7 +2,7 @@ import { Category } from '@ab/data';
 import { SeoService } from '@ab/global';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { forkJoin } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { HomeService } from './home.service';
 
 @Component({
@@ -12,10 +12,9 @@ import { HomeService } from './home.service';
 })
 export class HomePage {
   categories$ = this.service.getCategories$();
-
   header = {
     heroClass: 'is-info',
-    title: 'The home of the Angular Builders',
+    title: `The home of resources for Angular Builders like you`,
     subtitle: 'A site to help you build great applications with Angular',
   };
 
@@ -28,6 +27,10 @@ export class HomePage {
 
   getCategoriesWithCounter$(categories: Category[]) {
     return this.getCountersForEachCategory$(categories).pipe(
+      tap((counters) => {
+        const resourceCounter = counters.reduce((accumulator, current) => accumulator + current, 0);
+        this.header = {...this.header, title: `The home of ${resourceCounter} resources for Angular Builders like you.`};
+    }),
       map((counters) => this.fillCategoriesWithCounters(categories, counters)),
       map((categories) =>
         categories.sort((ca, cb) => (cb.resourcesCount || 0) - (ca.resourcesCount || 0))
